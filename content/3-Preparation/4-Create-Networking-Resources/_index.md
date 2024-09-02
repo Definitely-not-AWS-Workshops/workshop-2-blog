@@ -6,6 +6,9 @@ chapter : false
 pre : " <b> 3.4 </b> "
 ---
 
+In this section, you are going to create the necessary networking resources for the project.
+
+#### Content
 
 1. [Create VPC](1-create-vpc)
 2. [Create Subnets](2-create-subnets)

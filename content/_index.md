@@ -23,6 +23,14 @@ You might implement the following AWS architecture. Exciting, right?
 
 ![0001](/images/0/0001.svg?featherlight=false&width=100pc)
 
+I believe the word "DevOps" involves more than just toolings; it is about cultivating the right team culture and applying tool-agnostic techniques to truly speed up the development process. This workshop thus will not focus on mastering security scanning, testing, or CI/CD tools, but rather will use some of these tools to demonstrate the fundamental principles of a DevOps-driven CI/CD pipeline. Once you have grasped the fundamentals of DevOps, select your preferred tools for implementation!
+
+This workshop is inspired by my own ideas and one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca).
+
+![0002](/images/0/0001.jpg?featherlight=false&width=15pc)
+
+
+
 <!-- Take a look at some of the operations you might be engaged in. Do not worry if you do not understand now, it will be clear later!
 
 Local development to CI workflow triggers and update dependency cache (You will skip the majority of local development processes for the sake of simplicity in hands-on sections).
@@ -57,17 +65,6 @@ Assume that you own a domain name. The services used in this workshop charge per
 {{% notice note %}}
 To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section after the workshop to clean up the resources provisioned.
 {{% /notice %}}
-
-#### Github Repositories ####
-
-Visit the following Github repositories to find the complete workshop source codes:
-
-|  Repository |  Description |
-|---|---|
-| [workshop&#8209;1&#8209;web&#8209;app](https://github.com/Definitely-not-AWS-Workshops/workshop-1-web-app)  |  This repository contains the source code for both web and app components. You will deploy these components to AWS infrastructure|
-|  [workshop&#8209;1&#8209;tf&#8209;modules](https://github.com/Definitely-not-AWS-Workshops/workshop-1-tf-modules) |  This repository defines reusable modules. Consider every module to be a *"blueprint"* that describes specific elements of your infrastructure  |
-|  [workshop&#8209;1&#8209;tf&#8209;live](https://github.com/Definitely-not-AWS-Workshops/workshop-1-tf-live) | This repository defines the live infrastructure you are running in each environment (stage, prod, mgmt, etc.). Consider this as the *"houses"* you constructed using the *"blueprints"* found in the [workshop-1-tf-modules](https://github.com/Definitely-not-AWS-Workshops/workshop-1-tf-modules) |
-
 
 #### Main Content
 

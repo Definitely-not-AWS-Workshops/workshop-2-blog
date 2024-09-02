@@ -49,11 +49,11 @@ Do the same to add the other subnets. Replace the value of each field using the 
 | Availability Zone |    `US East (N. Virginia) / us-east-1a`   |
 | IPv4 subnet CIDR block | `10.0.64.0/19` |
 
-- For **fcj-public-04** subnet. 
+- For **fcj-private-04** subnet. 
 
 | Field   |      Value      |
 |----------|-------------|
-| Subnet name |  `fcj-public-04` |
+| Subnet name |  `fcj-private-04` |
 | Availability Zone |    `US East (N. Virginia) / us-east-1b`   |
 | IPv4 subnet CIDR block | `10.0.96.0/19` |
 
@@ -73,11 +73,11 @@ Do the same to add the other subnets. Replace the value of each field using the 
 | Availability Zone |    `US East (N. Virginia) / us-east-1b`   |
 | IPv4 subnet CIDR block | `10.0.160.0/19` |
     
-After completing, you got 2 public and 4 private subnets. Click **Create subnet**.
+After completing, you got 6 private subnets. Click **Create subnet**.
 
 ![0004-2](/images/3/4/2/0004-2.svg?featherlight=false&width=100pc)
 
-**4.** Choose **fcj-public-01** subnet. Click the **Actions** dropdown and choose **Edit subnet settings**.
+<!-- **4.** Choose **fcj-public-01** subnet. Click the **Actions** dropdown and choose **Edit subnet settings**.
 
 ![0005](/images/3/4/2/0005.svg?featherlight=false&width=100pc)
 
@@ -85,4 +85,4 @@ After completing, you got 2 public and 4 private subnets. Click **Create subnet*
 
 ![0006](/images/3/4/2/0006.svg?featherlight=false&width=100pc)
 
-**6.** Do the same for **fcj-public-04** from step **4** to **5**.
+**6.** Do the same for **fcj-public-04** from step **4** to **5**. -->

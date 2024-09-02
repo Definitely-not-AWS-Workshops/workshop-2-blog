@@ -12,7 +12,7 @@ Before proceeding with the major sections, you must initially set up some prereq
 You should follow the resource and configuration names throughout the workshop. If you wish to use your own naming convention or if you run into naming issues, you can use any names you like as long as you remember to reuse them later.
 {{% /notice %}}
 
-Content
+#### Content
 
 1. [Create AWSome Books Repository](1-create-awsome-books-repository)
 2. [Create Slack Channels](2-create-slack-channels)

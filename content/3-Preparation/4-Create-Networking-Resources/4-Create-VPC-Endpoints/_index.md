@@ -1,9 +1,9 @@
 ---
 title : "Create VPC Endpoints"
 date : "`r Sys.Date()`"
-weight : 5
+weight : 4
 chapter : false
-pre : " <b> 3.4.5 </b> "
+pre : " <b> 3.4.4 </b> "
 ---
 
 #### Create ecr.dkr Interface Endpoint
@@ -22,27 +22,27 @@ pre : " <b> 3.4.5 </b> "
   
 ![0002](/images/3/4/5/0002.svg?featherlight=false&width=100pc)
 
-In the **Services** section,
+**4.** In the **Services** section,
 - Filter with `ecr.dkr` value.
 - Choose **com.amazonaws.us-east-1.ecr.dkr**.
 
 ![0003](/images/3/4/5/0003.svg?featherlight=false&width=100pc)
 
-In the **VPC** section, select the VPC named `fcj`.
+**5.** In the **VPC** section, select the VPC named `fcj`.
 
 ![0004](/images/3/4/5/0004.svg?featherlight=false&width=100pc)
 
-In the **Subnets** section,
+**6.** In the **Subnets** section,
 - Select **us-east-1a** for **Availability Zone** and **subnet-id / fcj-private-02** for **Subnet ID**.
 - Select **us-east-1b** for **Availability Zone** and **subnet-id / fcj-private-05** for **Subnet ID**.
 
 ![0005](/images/3/4/5/0005.svg?featherlight=false&width=100pc)
 
-In the **Security groups** section, select **fcj-endpoint** security group.
+**7.** In the **Security groups** section, select **fcj-vpc-endpoint** security group.
 
 ![0006](/images/3/4/5/0006.svg?featherlight=false&width=100pc)
 
-In the **Policy** section,
+**8.** In the **Policy** section,
 - Select **custom**.
 - Fill out the following policy. Replace **\<YOUR-AWS-ACCOUNT-ID\>** with yours.
 
@@ -85,7 +85,7 @@ In the **Policy** section,
 
 ![0007](/images/3/4/5/0007.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create endpoint**.
+**9.** Scroll down to the bottom. Click **Create endpoint**.
 
 ![0008](/images/3/4/5/0008.svg?featherlight=false&width=100pc)
 
@@ -105,27 +105,27 @@ Scroll down to the bottom. Click **Create endpoint**.
   
 ![00010](/images/3/4/5/0009.svg?featherlight=false&width=100pc)
 
-In the **Services** section,
+**4.** In the **Services** section,
 - Filter with `ecr.api` value.
 - Choose **com.amazonaws.us-east-1.ecr.api**.
 
 ![00011](/images/3/4/5/00010.svg?featherlight=false&width=100pc)
 
-In the **VPC** section, select the VPC named `fcj`.
+**5.** In the **VPC** section, select the VPC named `fcj`.
 
 ![00012](/images/3/4/5/0004.svg?featherlight=false&width=100pc)
 
-In the **Subnets** section,
+**6.** In the **Subnets** section,
 - Select **us-east-1a** for **Availability Zone** and **subnet-id / fcj-private-02** for **Subnet ID**.
 - Select **us-east-1b** for **Availability Zone** and **subnet-id / fcj-private-05** for **Subnet ID**.
 
 ![00013](/images/3/4/5/0005.svg?featherlight=false&width=100pc)
 
-In the **Security groups** section, select **fcj-endpoint** security group.
+**7.** In the **Security groups** section, select **fcj-vpc-endpoint** security group.
 
 ![00014](/images/3/4/5/0006.svg?featherlight=false&width=100pc)
 
-In the **Policy** section,
+**8.** In the **Policy** section,
 - Select **custom**.
 - Fill out the following policy. Replace **\<YOUR-AWS-ACCOUNT-ID\>** with yours.
 
@@ -168,7 +168,7 @@ In the **Policy** section,
 
 ![00015](/images/3/4/5/0007.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create endpoint**.
+**9.** Scroll down to the bottom. Click **Create endpoint**.
 
 ![00016](/images/3/4/5/0008.svg?featherlight=false&width=100pc)
 
@@ -188,21 +188,21 @@ Scroll down to the bottom. Click **Create endpoint**.
   
 ![00018](/images/3/4/5/00011.svg?featherlight=false&width=100pc)
 
-In the **Services** section,
+**4.** In the **Services** section,
 - Filter with `gateway` type.
 - Choose **com.amazonaws.us-east-1.s3**.
 
 ![00019](/images/3/4/5/00012.svg?featherlight=false&width=100pc)
 
-In the **VPC** section, select the VPC named `fcj`.
+**5.** In the **VPC** section, select the VPC named `fcj`.
 
 ![00020](/images/3/4/5/00013.svg?featherlight=false&width=100pc)
 
-In the **Route tables** setion, choose the main route table.
+**6.** In the **Route tables** setion, choose the main route table.
 
 ![00021](/images/3/4/5/00014.svg?featherlight=false&width=100pc)
 
-In the **Policy** section,
+**7.** In the **Policy** section,
 - Select **custom**.
 - Fill out the following policy.
 
@@ -223,7 +223,7 @@ In the **Policy** section,
 
 ![00022](/images/3/4/5/00015.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create endpoint**.
+**8.** Scroll down to the bottom. Click **Create endpoint**.
 
 ![00023](/images/3/4/5/00016.svg?featherlight=false&width=100pc)
 
@@ -243,27 +243,27 @@ Scroll down to the bottom. Click **Create endpoint**.
   
 ![00025](/images/3/4/5/00017.svg?featherlight=false&width=100pc)
 
-In the **Services** section,
+**4.** In the **Services** section,
 - Filter with `secretsmanager` value.
 - Choose **com.amazonaws.us-east-1.secretsmanager**.
 
 ![00026](/images/3/4/5/00018.svg?featherlight=false&width=100pc)
 
-In the **VPC** section, select the VPC named `fcj`.
+**5.** In the **VPC** section, select the VPC named `fcj`.
 
 ![00027](/images/3/4/5/0004.svg?featherlight=false&width=100pc)
 
-In the **Subnets** section,
+**6.** In the **Subnets** section,
 - Select **us-east-1a** for **Availability Zone** and **subnet-id / fcj-private-02** for **Subnet ID**.
 - Select **us-east-1b** for **Availability Zone** and **subnet-id / fcj-private-05** for **Subnet ID**.
 
 ![00028](/images/3/4/5/0005.svg?featherlight=false&width=100pc)
 
-In the **Security groups** section, select **fcj-endpoint** security group.
+**7.** In the **Security groups** section, select **fcj-vpc-endpoint** security group.
 
 ![00029](/images/3/4/5/0006.svg?featherlight=false&width=100pc)
 
-In the **Policy** section,
+**8.** In the **Policy** section,
 - Select **custom**.
 - Fill out the following policy. Replace **\<YOUR-AWS-ACCOUNT-ID\>** with yours.
 
@@ -289,7 +289,7 @@ In the **Policy** section,
 
 ![00030](/images/3/4/5/00019.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create endpoint**.
+**9.** Scroll down to the bottom. Click **Create endpoint**.
 
 ![00031](/images/3/4/5/00020.svg?featherlight=false&width=100pc)
 

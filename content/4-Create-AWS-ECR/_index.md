@@ -68,6 +68,6 @@ docker tag awsome-books:latest <YOUR-AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws
 docker push <YOUR-AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/awsome-books:v0.0.0
 ```
 
-**7.** Checkout your AWS ECR private repository to see the Docker image with the tag v0.0.0.
+**7.** Check out your AWS ECR private repository to find the Docker image with the tag v0.0.0. Make a note of the **Image URI** using the **Copy URI** button for a later use.
 
 ![0005](/images/4/0005.svg?featherlight=false&width=100pc)
