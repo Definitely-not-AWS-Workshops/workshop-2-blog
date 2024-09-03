@@ -3,12 +3,12 @@ title : "Review CI Workflow"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
-pre : " <b> 8.2 </b> "
+pre : " <b> 9.2 </b> "
 ---
 
 You now explore the CI workflow.
 
-![0001](/images/8/2/0001.svg?featherlight=false&width=100pc)
+![0001](/images/9/2/0001.svg?featherlight=false&width=100pc)
 
 Check out **.github/workflows/ci.yml** file.
 
@@ -219,23 +219,28 @@ This GitHub Actions workflow is designed to perform Continuous Integration tasks
 
 #### Events
 
-**pull_request:** Triggers the workflow for pull requests targeting the main branch, specifically when they are opened, synchronized, or reopened. It ignores changes to documentation and certain configuration files.
+**pull_request:** triggers the workflow for pull requests targeting the *main* branch, specifically when they are *opened*, *synchronized*, or *reopened*. It ignores changes to documentation and certain configuration files.
 
-**merge_group:** Triggers the workflow when merge groups are created on the main branch.
+**merge_group:** triggers the workflow when merge groups are created on the main branch.
 
-**workflow_dispatch:** Allows the workflow to be manually started for debugging without inputs.
+**workflow_dispatch:** allows the workflow to be manually started for debugging without inputs.
   
 #### Concurrency
 
 Ensures that only one instance of the workflow runs for a specific pull request at a time, canceling any in-progress runs if a new one starts for that pull request.
   
 #### Jobs
-**unit-test**, **integration-test**, **scan-source-code**, and **build-image** jobs can run in parallel to reduce *overall* workflow execution time because they are independent of each other.
 
-**unit-test**, **integration-test**, and **scan-source-code** jobs might restore dependency cached from the *main (trunk)* branch to speed up execution time of *each job*.
+In general,
+
+**unit-test**, **integration-test**, **scan-source-code**, and **build-image** jobs can run in parallel to reduce overall workflow execution time because they are independent of each other.
+
+**unit-test**, **integration-test**, and **scan-source-code** jobs might restore dependency cached from the *main* branch to speed up execution time of each job.
+
+Have a look at what each job does,
 
 **unit-test**
-- Runs unit tests on the codebase.
+- Purpose: runs unit tests on the codebase.
 - Steps
   - Checkout the code.
   - Set up Java (JDK).
@@ -244,7 +249,7 @@ Ensures that only one instance of the workflow runs for a specific pull request 
   - Upload the unit test report for review later if the tests are not canceled. 
 
 **integration-test**
-- Runs integration tests.
+- Purpose: runs integration tests.
 - Steps
   - Checkout the code.
   - Set up Java (JDK).
@@ -253,7 +258,7 @@ Ensures that only one instance of the workflow runs for a specific pull request 
   - Upload the integration test report for review later if the tests are not canceled. 
 
 **scan-source-code**
-- Scans the source code for vulnerabilities.
+- Purpose: scans the source code for vulnerabilities.
 - Steps:
   - Checkout the code.
   - Set up Java (JDK).
@@ -263,7 +268,7 @@ Ensures that only one instance of the workflow runs for a specific pull request 
   - Upload the vulnerability report for review later if the scanning are not canceled.
 
 **build-image**
-- Builds a Docker image for the application.
+- Purpose: builds a Docker image for the application.
 - Steps:
   - Checkout the code.
   - Set up Docker Buildx.
@@ -271,7 +276,7 @@ Ensures that only one instance of the workflow runs for a specific pull request 
   - Upload the built image as an artifact.
 
 **scan-image**
-- Scans the Docker image for vulnerabilities.
+- Purpose: scans the Docker image for vulnerabilities.
 - Depends on: **build-image** job. This job might wait for the build-image job to be successful before running.
 - Steps:
   - Download the image artifact built in job **build-image**.

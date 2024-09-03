@@ -3,12 +3,12 @@ title : "Review Update Dependency Cache Workflow"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
-pre : " <b> 8.3 </b> "
+pre : " <b> 9.3 </b> "
 ---
 
 You now explore the Update dependency cache workflow.
 
-![0001](/images/8/3/0001.svg?featherlight=false&width=100pc)
+![0001](/images/9/3/0001.svg?featherlight=false&width=100pc)
 
 Check out **.github/workflows/update-cache.yml** file.
 
@@ -58,11 +58,12 @@ jobs:
           ./gradlew dependencies
 ```
 
-This GitHub Actions workflow is designed to update the dependency cache for a project, specifically for Gradle-based projects. Let's take a high-level look at key components of the workflow.
+This GitHub Actions workflow is designed to update the dependency cache for a project, specifically for Java Gradle-based projects. Let's take a high-level look at key components of the workflow.
 
 #### Events
-- **push**: Triggers the workflow when the merge group for a given pull request is successful and the PR is actually merged into the *main* branch.
-- **workflow_dispatch:** Allows the workflow to be manually started for debugging without inputs.
+**push**: triggers the workflow when the merge group for a given pull request is successful and the PR is actually merged into the *main* branch.
+
+**workflow_dispatch:** allows the workflow to be manually started for debugging without inputs.
 
 #### Concurrency
 
@@ -71,7 +72,7 @@ Ensures that only one instance of the workflow runs for a specific branch at a t
 #### Job
 
 **update-dependency-cache**
-- Update dependency cache in the *main* branch if needed.
+- Purpose: updates dependency cache in the *main* branch if needed.
 - Steps
   - Checkout the code.
   - Set up Java (JDK).

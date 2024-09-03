@@ -3,7 +3,7 @@ title : "Review Release Workflow"
 date : "`r Sys.Date()`"
 weight : 5
 chapter : false
-pre : " <b> 8.5 </b> "
+pre : " <b> 9.5 </b> "
 ---
 
 You now explore the Release workflow.

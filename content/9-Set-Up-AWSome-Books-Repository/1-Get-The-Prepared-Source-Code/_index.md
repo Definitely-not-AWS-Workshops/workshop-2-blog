@@ -3,7 +3,7 @@ title : "Get The Prepared Source Code"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
-pre : " <b> 8.1 </b> "
+pre : " <b> 9.1 </b> "
 ---
 
 **1.** Clone the following repository [github.com/Definitely-not-AWS-Workshops/workshop-2-awsome-books](https://github.com/Definitely-not-AWS-Workshops/workshop-2-awsome-books).
@@ -42,4 +42,4 @@ git branch -b config
 code .
 ```
 
-Next, let's go through parts that need to review or change for our CI/CD pipelines.
+Next, let's go through parts that need to review or change for our CI/CD pipeline.

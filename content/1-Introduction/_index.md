@@ -6,9 +6,15 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 
-AWS Developer Student Club of X University of Technology (AWSDSC-XUT), a group of students who enjoy leveraging AWS for community projects, is developing an online library called AWSome Books that helps other students in the university find learning materials easily.
+The AWS Developer Student Club at X University of Technology (AWSDSC-XUT) is developing an containerized API application called AWSome Books, designed to make accessing instructional resources easier for students.
 
-The AWSDSC-XUT team wants to put their idea into production as quickly as possible, without server administration overhead, and on a fair budget, thus they are looking into using AWS serverless technologies to create AWSome Books. They aim to apply DevOps practices and tools to accelerate development. However, none of the team members have extensive AWS and DevOps experience. You will collaborate with them to suggest AWS serverless and continuous delivery services that may meet their requirements. You may also provide a basic team workflow and design CI/CD pipelines to deliver AWSome Books to production faster and reliably.
+The team is eager to bring AWSome Books to life quickly and efficiently, without the burden of managing servers and within a reasonable budget. To achieve this, they are exploring AWS technologies to power their solution. Embracing DevOps practices and tools is central to their strategy, but the team members are relatively new to AWS and DevOps.
+
+You will collaborate with them to recommend the most suitable AWS services, design an effective team workflow, and create CI/CD pipelines that streamline the deployment of AWSome Books to production, ensuring a fast and reliable launch.
+
+![0001](/images/1/0001.png?featherlight=false&width=30pc)
+
+With AWS services handling the heavy lifting of infrastructure deployment and management, the team can concentrate on delivering the real value of AWSome Books faster — providing seamless access to learning materials for students across the university.
 
 #### Content
 
