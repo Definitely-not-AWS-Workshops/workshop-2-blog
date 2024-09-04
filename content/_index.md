@@ -9,7 +9,7 @@ chapter : false
 
 #### Overview
 
-Join our joyful workshop designed to elevate your CI/CD practices! Here’s what you will dive into:
+Join our joyful workshop designed to elevate your Continuous Integration / Continuous Delivery (CI/CD) practices! Here’s what you will dive into:
 
 - Experience the simplified *trunk-based development* branching strategy to reduce merge conflicts and make code reviews easier.
 - Craft and optimize *automation pipelines* using GitHub Actions, leveraging job parallelism, dependency caching, and concurrency group techniques.
@@ -26,10 +26,10 @@ You might implement the following AWS architecture. Exciting, right?
 If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1N3jMhLBQQzXQKa8JfW5R7RGvMHI2_wnb/view?usp=sharing).
 
 {{% notice note %}}
-I believe the word "DevOps" involves more than just toolings; it is about cultivating the right team culture and applying tool-agnostic techniques to truly speed up the development process. This workshop thus will not focus on mastering security scanning, testing, or CI/CD tools, but rather will use some of these tools to demonstrate the fundamental principles of a DevOps-driven CI/CD pipeline. Once you have grasped the fundamentals of DevOps, select your preferred tools for implementation!
+I believe the word "DevOps" involves more than just toolings; it is about cultivating the right team culture and applying tool-agnostic techniques to truly speed up the development process. This workshop aims to show the core ideas of a DevOps-driven CI/CD pipeline, rather than mastering security scanning, testing, or CI/CD technologies (other components of DevOps, including monitoring and observability, will not be addressed. Once you have grasped the fundamentals of a CI/CD pipeline, select your preferred tools for implementation!
 {{% /notice %}}
 
-This workshop is inspired by my own ideas and one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca). Give it a shot if you are interested in speeding up the software delivery process with any stack.
+This workshop is inspired by my own ideas and one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca). This book covers the foundations of continuous delivery and provides examples of how to use them in your project. Give it a shot if you are interested in speeding up the software delivery process with any stack.
 
 ![0002](/images/0/0001.jpg?featherlight=false&width=18pc)
 

@@ -1,12 +1,25 @@
 ---
-title : "Pipeline Designs"
+title : "Pipeline Design"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-In this section, you are going to examine suitable branching and deployment strategies that help deliver the application reliably and faster. After that, you define the team workflow and CI/CD pipelines using the Business Process Model and Notation 2.0. Lastly, you provide the overall AWS architecture that has all the services needed for the development and delivery of AWSome Books, which are going to be implemented in the hands-on sections. 
+In this section, you first understand what CI/CD refers to in the workshop. You then examine suitable branching and deployment strategies that help deliver the application reliably and faster. After that, you define the team workflow and CI/CD pipelines using the Business Process Model and Notation 2.0. Lastly, you provide the overall AWS architecture that has all the services needed for the development and delivery of AWSome Books, which are going to be implemented in the hands-on sections. 
+
+#### Yet another CI/CD Definition!
+
+The CI/CD space contains a lot of contradictory definitions. I might take the definitions from the book [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255):
+
+-  **Continuous integration (CI)** is the process of combining code changes frequently, with each change verified on check-in.
+-  **Continuous Delivery (CD)** involves being able to release changes to your software safely at any time, with the process being as simple as pushing a button.
+
+{{% notice note %}}
+**Continuous Deployment** is another CD that involves automatically delivering on every commit. In other words, when your commit is merged to the *main* branch, it will be instantly deployed to the production environment without human intervention. It's great; however, you need to guarantee that your development process and team are mature enough to use it in the real world. In this workshop, we consider CD to mean **Continuous Delivery**.
+{{% /notice %}}
+
+According to the definition of CD, in order to reliably deploy changes to your software at any time, your codebase must have been thoroughly tested by the CI process. CI and CD are thus tightly coupled; you cannot safely deploy code changes at any time until your codebase is verified and works as expected.
 
 #### Branching Strategy
 
@@ -20,13 +33,13 @@ As **feature branching** and **gitflow** approaches introduce long-lived branch
 - a higher chances of code conflicts as multiple developers work on separate features for an extended period. These conflicts can be complex and time-consuming to resolve, further delaying the integration of changes into the main codebase.
 - a higher rate of CI failures as the size and complexity of the changes introduce new bugs and errors that may not be immediately apparent. This can disrupt the development workflow and require additional time and effort to diagnose and address issues before they can be merged into the main codebase.
 
-The AWSDSC-XUT team has past experience with both branching strategies and their limits from other projects. They, of course, want to apply an alternative branching strategy that overcomes these constraints.  
+The AWSDSC-XUT team has past experience with *gitflow* branching strategy and its limits from other projects. They, of course, want to apply an alternative branching strategy that overcomes these constraints.  
 
-**Trunk-based development** is considered a companion for DevOps principles. One of the most interesting ideas of *trunk-based development* is that it requires regular commits to the main branch, even if a feature has not yet been fully developed. The complexity of this branching strategy is relatively low compared to others. *Trunked-based development* comes in both its original form and several variations. 
+**Trunk-based development** is considered a companion for DevOps principles. One of the most interesting ideas of this branching strategy is that it requires regular commits to the main branch, even if a feature has not yet been fully developed. The complexity of this branching strategy is relatively low compared to others. *Trunked-based development* comes in both its original form and several variations. 
 
-The main branch is the only branch included in the original form of *trunk-based development*. Changes are pushed straight to the trunk, which then generates release candidates. However, pushing code changes from a local copy of the trunk to the remote trunk without a code review process and CI check could be highly risky. This means that in the original form of *trunk-based development*, the main branch is not always in a production-ready state. Though frequently pushing code changes to the main codebase may speed up the development process, it may also increase the risk of production outages and cause stress for the team if each software release is unsafe. 
+The main branch is the only branch included in the original form of *trunk-based development*. Changes are pushed straight to the trunk, which then generates release candidates. However, pushing code changes from a local copy of the trunk to the remote trunk without a code review process and CI checks could be highly risky. This means that in the original form of *trunk-based development*, the main branch is not always in a production-ready state. Though frequently pushing code changes to the main codebase may speed up the development process, it may also increase the risk of production outages and cause stress for the team if each software release is unsafe. 
 
-A different variation of *trunk-based development* involves creating short-lived feature branches that can be used to verify code changes before merging them back into the trunk. These branches can last up to a day (or a few days). This sort of branching strategy involves proposing commits to the main branch via PRs, conducting CI and code review against those PRs, and then merging the branch and its changes into the main branch once CI passes and PR is approved. Then, the application can be released straight from the main branch or via another release branch created from the main.
+A different variation of *trunk-based development* involves creating short-lived feature branches that can be used to verify code changes before merging them back into the trunk. These branches can last up to a day (or a few days). This sort of branching strategy involves proposing commits to the main branch via pull requests (PRs), conducting CI and code review against those PRs, and then merging the branch and its changes into the main branch once CI passes and PR is approved. Then, the application can be released straight from the main branch or via another release branch created from the main.
 
 The following figure illustrates the idea of *trunk-based development* with short-lived feature branches:
 
@@ -44,21 +57,26 @@ The benefits of *trunk-based development* with short-lived feature branches allo
 
 #### Deployment Strategy
 
-Without a suitable deployment stastrategy, even with a CI pipeline acting as a quality gate before merging back the PRs to the trunk, it could still be unsafe to deliver your software continually. In other words, a bug-free trunk is not guaranteed by a CI pipeline; rather, it simply raises your confidence that the main codebase is in a releaseable state. If you want to release software more often without losing reliability, you may require a deployment strategy that reduces the impact of a production outage.
+Even with the best tools and a code coverage of 100%, a bug-free trunk is not guaranteed by a CI pipeline; rather, it simply raises your confidence that the main codebase is in a releaseable state. Without a suitable deployment strategy, even with a CI pipeline acting as a quality gate before merging back the PRs to the trunk, it could still be unsafe to deliver your software continually. If you want to release software more often without losing reliability, you may require a deployment strategy that reduces the impact of a production outage.
 
-Due to the AWSDSC-XUT team's lack of applying deployment strategies in earlier projects, production outages occur every two weeks of deployment. The majority of their users are students, and because their projects are relatively small in scope, production outages are acceptable. However, in order to lower potential risk with each software release, the team intends to employ an appropriate deployment strategy that achieves CI/CD in the AWSome Books project.  As a result, their college friends might be thrilled to use AWSome Books more.
+Production failures occur every two weeks due to the AWSDSC-XUT team's failure to adopt deployment methodologies in previous projects. The projects are non-profit, and the majority of their users are students, infrequent production interruptions are acceptable. To reduce risk and improve trust in users, the AWSome Books team plans to implement a suitable deployment strategy.  As a result, their college peers may be more enthusiastic about using AWSome Books.
 
-There are a number of deployment strategies that reduce stress when software is released. [canary release](https://martinfowler.com/bliki/CanaryRelease.html) (or *canary deployment*) is a popular one that is supported by AWS SAM and AWS CodeDeploy. The majority of deployment strategies have the common downsides of a lengthy rollback and launching the entire deployment before realizing anything is wrong. In *canary release*, one instance (called the *canary*) is updated with the new version of software, and a small percentage of traffic is directed to it.
+The majority of deployment strategies have the common downsides of a lengthy rollback and launching the entire deployment before realizing anything is wrong. There are a number of deployment strategies that reduce stress when software is released. [canary release](https://martinfowler.com/bliki/CanaryRelease.html) (or *canary deployment*) and [blue/green deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html?ref=dombat.co.uk) are popular ones. 
+
+In **canary release**, one instance (called the *canary*) is updated with the new version of software, and a small percentage of traffic is directed to it.
 
 ![0002](/images/2/2/0002.svg?featherlight=false&width=42pc)
 
- If the *canary* is in good condition, and there are two possible ways that the deployment can go forward: either by moving all traffic to instances that are running the updated version or by progressively generating more *canary* instances and rerouting all traffic to them until the old instances are no longer receiving any traffic at all. Only a small percentage of users may experience the outage if the *canary* is unhealthy. In that case, the entire process can be stopped and all traffic is routed back to the original instances. It drastically lowers the *time to restore service* in [DORA metrics](https://www.atlassian.com/devops/frameworks/dora-metrics) since the traffic is routed to the original instances all at once. 
+ If the *canary* is in good condition, and there are two possible ways that the deployment can go forward: either by moving all traffic to instances that are running the updated version or by progressively generating more *canary* instances and rerouting all traffic to them until the old instances are no longer receiving any traffic at all. The selling point of the strategy is that only a small percentage of selected users may experience the outage if the *canary* is unhealthy. In that case, the entire process can be stopped and all traffic is routed back to the original instances. It drastically lowers the *time to restore service* in [DORA metrics](https://www.atlassian.com/devops/frameworks/dora-metrics) since the traffic is routed to the original instances all at once. 
 
-With *canary release* for AWS Lambda function natively supported by AWS SAM and AWS CodePipeline, the AWSGSC-XUT team can release AWSome Books frequently and reliably.
+In my opinion, although *canary release* is supported by AWS CodeDeploy, it fails to demonstrate the real meaning and potential of the deployment strategy. *canary release* by AWS CodeDeploy allows all software users to have access to the application versions proportionally, rather than just a subset of software users. The real power of *canary release* comes from the ability to select which users will receive the new version.
+
+You, therefore, might want to try **Blue/Green Deployment** which is also supported by AWS CodeDeploy 
+
 
 #### Business Process Model and Notation (BPMN) 2.0
 
-[BPMN](https://www.omg.org/spec/BPMN#document-metadata) - has become the de-facto standard for business processes diagrams. It is meant for usage directly by stakeholders who create, manage, and implement business processes. A pipeline design defines the orchestration of a process or workflow and has many analogies to modeling business processes. The business process modeling paradigm can thus serve as the basis for pipeline design. BPMN diagrams used to build workflows or CI/CD pipelines provide insight into software delivery processes, such as stages, activities, and relationships with other systems. 
+[BPMN](https://www.omg.org/spec/BPMN#document-metadata) - has become the de-facto standard for business processes diagrams (you should be familiar with it if you are a Business Analyst). It is meant for usage directly by stakeholders who create, manage, and implement business processes. A pipeline design defines the orchestration of a process or workflow and has many analogies to modeling business processes. The business process modeling paradigm can thus serve as the basis for pipeline design. BPMN diagrams used to build workflows or CI/CD pipelines provide insight into software delivery processes, such as stages, activities, and relationships with other systems. 
 
 The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation with identifiable icons known as *elements*. The table below shows a subset of the most used BPMN 2.0 elements that might be enough for designing your pipelines.
 

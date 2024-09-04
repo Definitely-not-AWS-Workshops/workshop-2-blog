@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-Before stepping into the hands-on sections of the workshop, you will first discover the basic AWS architecture and pipeline designs for AWSome Books.
+Before stepping into the hands-on sections of the workshop, you will first discover the basic AWS architecture and pipeline design for AWSome Books.
 
 <!-- {{% notice note %}}
 If you missed it, please read [1. Introduction](../1-introduction/) to learn about how crucial it is of developing AnimeHub infrastructure with AWS and Terraform before progressing.
