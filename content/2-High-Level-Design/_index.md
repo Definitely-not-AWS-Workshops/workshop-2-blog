@@ -6,11 +6,13 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-Before stepping into the hands-on sections of the workshop, you will first discover the basic AWS architecture and pipeline design for AWSome Books.
+This section will provide an overview of pipeline design and AWS architecture for AWSome Books. There are additional tool-agnostic suggestions for how to accelerate your development process. 
 
-<!-- {{% notice note %}}
-If you missed it, please read [1. Introduction](../1-introduction/) to learn about how crucial it is of developing AnimeHub infrastructure with AWS and Terraform before progressing.
-{{% /notice %}} -->
+This section might be a bit lengthy and theory-heavy, but it's definitely worth your time. Give it a shot!
+
+{{% notice info %}}
+You can learn more about CI/CD topic from the book [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255).
+{{% /notice %}}
 
 #### Content
 

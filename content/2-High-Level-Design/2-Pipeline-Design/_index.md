@@ -6,20 +6,55 @@ chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-In this section, you first understand what CI/CD refers to in the workshop. You then examine suitable branching and deployment strategies that help deliver the application reliably and faster. After that, you define the team workflow and CI/CD pipelines using the Business Process Model and Notation 2.0. Lastly, you provide the overall AWS architecture that has all the services needed for the development and delivery of AWSome Books, which are going to be implemented in the hands-on sections. 
+<!-- In this section, you first understand what CI/CD refers to in the workshop. You then examine suitable branching and deployment strategies that help deliver the application reliably and faster. After that, you define the team workflow and CI/CD pipelines using the Business Process Model and Notation 2.0. Lastly, you provide the overall AWS architecture that has all the services needed for the development and delivery of AWSome Books, which are going to be implemented in the hands-on sections.  -->
+
+Dive into this section to explore the way to measure deployment efficiency and discover several components that impact your CI/CD process.
+
+But before we dive in, let's explore what CI/CD is all about in this workshop!
 
 #### Yet another CI/CD Definition!
 
 The CI/CD space contains a lot of contradictory definitions. I might take the definitions from the book [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255):
 
--  **Continuous integration (CI)** is the process of combining code changes frequently, with each change verified on check-in.
--  **Continuous Delivery (CD)** involves being able to release changes to your software safely at any time, with the process being as simple as pushing a button.
+-  **Continuous Integration (CI)** is the process of combining code changes frequently, with each change verified on check-in.
+-  **Continuous Delivery (CD)** involves being able to release code changes safely at any time, with the process being as simple as pushing a button.
 
 {{% notice note %}}
-**Continuous Deployment** is another CD that involves automatically delivering on every commit. In other words, when your commit is merged to the *main* branch, it will be instantly deployed to the production environment without human intervention. It's great; however, you need to guarantee that your development process and team are mature enough to use it in the real world. In this workshop, we consider CD to mean **Continuous Delivery**.
+**Continuous Deployment** is another CD that automatically triggers a deployment to production environment whenever commits are integrated into the *main* branch. While powerful, it requires a mature development process and team to implement effectively. In this workshop, "CD" refers to **Continuous Delivery**.
 {{% /notice %}}
 
-According to the definition of CD, in order to reliably deploy changes to your software at any time, your codebase must have been thoroughly tested by the CI process. CI and CD are thus tightly coupled; you cannot safely deploy code changes at any time until your codebase is verified and works as expected.
+To reliably deploy code changes at any time (CD), your codebase must *at least* undergo thorough testing and code reviews through the CI process before being merged into the *main* branch. This makes CI and CD closely connected — you cannot safely deploy until your code is fully verified and ready to perform as expected.
+
+#### The DevOps Research and Assessment (DORA) Metrics
+
+You have probably heard that *"DevOps accelerates the software development process"* quite often, and that CI involves *"frequently integrating code changes"* (as mentioned earlier). But just how fast is fast? Are you delivering software in weeks or months, or could you be delivering in hours?
+
+Organizations embracing DevOps often use various metrics to gauge the success of their CI/CD pipelines, infrastructure automation, testing strategies, and overall development practices. The most popular ones are the [DORA metrics](https://dora.dev/), which focus on evaluating software team performance through 4 key metrics (from [the 2021 DORA report](https://dora.dev/research/2021/dora-report/)). These metrics are divided into 2 main categories: *throughput* and *stability*, providing a comprehensive view of both the speed and reliability of software delivery.
+
+**Throughput**
+
+Throughput measures the velocity of changes that are being made. DORA assesses throughput using the following metrics:
+
+- **Change lead time** - this metric measures the time it takes for a code commit or change to be successfully deployed to production. It reflects the efficiency of your delivery pipeline.
+- **Deployment frequency** - this metric measures how often application changes are deployed to production. Higher deployment frequency indicates a more agile and responsive delivery process.
+
+**Stability**
+
+Stability measures the quality of the changes delivered and the team’s ability to repair failures. DORA assesses throughput using the following metrics:
+
+- **Change fail percentage** - this metric measures the percentage of deployments that cause failures in production, requiring hotfixes or rollbacks. A lower change failure rate indicates a more reliable delivery process.
+- **Failed deployment recovery time** - this metric measures the time it takes to recover from a failed deployment. A lower recovery time indicates a more resilient and responsive system.
+
+As part of their evaluation, the DORA team also categorized software development teams into four performance tiers: *low*, *medium*, *high*, and *elite*. This ranking system offers a clear perspective on each team’s overall effectiveness and success .
+
+|  Metric  |  Elite  | High  |  Medium  | Low  |
+|---|---|---|---|---|
+| **Deployment frequency** | multiple deploys per day | Between once per week and once per month  | Between once per month and once every 6 months  | Fewer than once per six months  |
+| **Lead time for changes** | Less than one hour | Between one day and one week | Between one month and six months | More than six months |
+| **Time to restore service** | Less than one hour | Less than one day | Between one day and one week | More than six months |
+| **Change failure rate** | 0%-15% | 16%-30% | 16%-30%| 16%-30% |
+
+Even with the latest and greatest tools, you cannot truly accelerate your software development process without the right team culture — one where every team member understands and follows the practices needed to increase the release rate.
 
 #### Branching Strategy
 
@@ -61,7 +96,7 @@ Even with the best tools and a code coverage of 100%, a bug-free trunk is not gu
 
 Production failures occur every two weeks due to the AWSDSC-XUT team's failure to adopt deployment methodologies in previous projects. The projects are non-profit, and the majority of their users are students, infrequent production interruptions are acceptable. To reduce risk and improve trust in users, the AWSome Books team plans to implement a suitable deployment strategy.  As a result, their college peers may be more enthusiastic about using AWSome Books.
 
-The majority of deployment strategies have the common downsides of a lengthy rollback and launching the entire deployment before realizing anything is wrong. There are a number of deployment strategies that reduce stress when software is released. [canary release](https://martinfowler.com/bliki/CanaryRelease.html) (or *canary deployment*) and [blue/green deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html?ref=dombat.co.uk) are popular ones. 
+The majority of deployment strategies have the common downsides of a lengthy rollback and launching the entire deployment before realizing anything is wrong. There are a number of deployment strategies that reduce stress when software is released. [canary release](https://martinfowler.com/bliki/CanaryRelease.html) (or *canary deployment*) and [blue/green deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html?ref=dombat.co.uk) (or *red-black deployment*) are popular ones. 
 
 In **canary release**, one instance (called the *canary*) is updated with the new version of software, and a small percentage of traffic is directed to it.
 
@@ -71,8 +106,13 @@ In **canary release**, one instance (called the *canary*) is updated with the ne
 
 In my opinion, although *canary release* is supported by AWS CodeDeploy, it fails to demonstrate the real meaning and potential of the deployment strategy. *canary release* by AWS CodeDeploy allows all software users to have access to the application versions proportionally, rather than just a subset of software users. The real power of *canary release* comes from the ability to select which users will receive the new version.
 
-**Blue/Green Deployment** is another deployment strategy supported by AWS CodeDeploy.
+**Blue/Green Deployment** is another deployment strategy supported by AWS CodeDeploy. With *blue/green deployment*, you build a completely new set of instances and update them. Only after those instances are ready do you move traffic from the old (the "blue" instances, but it is not really important which ones are which color) to the new (the "green" instances).
 
+Both deployment strategies significantly reduce application downtime during deployments and rollbacks by rerouting traffic between old and new versions. However, the main difference lies in the potential impact during an outage. With a *blue/green deployment*, all users might experience downtime if an issue arises. In contrast, a *canary release* restricts the impact to only a small subset of users.
+
+For deploying AWSome Books, you are going to use the *blue/green deployment* strategy, as implementing a *canary release* can require substantial effort in a real-world scenario. AWS CodeDeploy with *blue/green deployment* streamlines the process by offering a ready-made, production-grade solution, saving you the time and complexity of building one from scratch.
+
+ 
 
 #### Business Process Model and Notation (BPMN) 2.0
 
