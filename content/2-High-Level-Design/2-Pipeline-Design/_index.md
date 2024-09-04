@@ -71,7 +71,7 @@ In **canary release**, one instance (called the *canary*) is updated with the ne
 
 In my opinion, although *canary release* is supported by AWS CodeDeploy, it fails to demonstrate the real meaning and potential of the deployment strategy. *canary release* by AWS CodeDeploy allows all software users to have access to the application versions proportionally, rather than just a subset of software users. The real power of *canary release* comes from the ability to select which users will receive the new version.
 
-You, therefore, might want to try **Blue/Green Deployment** which is also supported by AWS CodeDeploy 
+**Blue/Green Deployment** is another deployment strategy supported by AWS CodeDeploy.
 
 
 #### Business Process Model and Notation (BPMN) 2.0
