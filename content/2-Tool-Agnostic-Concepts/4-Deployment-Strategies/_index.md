@@ -26,6 +26,10 @@ In my opinion, although *canary release* is supported by AWS CodeDeploy, it fai
 
 [blue/green deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html?ref=dombat.co.uk) is another deployment strategy supported by AWS CodeDeploy. With *blue/green deployment*, you build a completely new set of instances and update them. Only after those instances are ready do you move traffic from the old (the "blue" instances, but it is not really important which ones are which color) to the new (the "green" instances).
 
+*blue/green deployment* requires enough resources to run two full sets of instances at the same time. If you own and manage your own hardware, this might not be feasible unless you have a significant amount of extra capacity on hand. However, with AWS, this approach becomes much simpler and more cost-effective — you only pay for the extra resources during the deployment period.
+
+![0003](/images/2/2/0004.svg?featherlight=false&width=42pc)
+
 ---
 
 It drastically lowers the *failed deployment recovery time* in DORA metrics since both deployment strategies significantly reduce application downtime during deployments and rollbacks by rerouting traffic between old and new versions. However, the main difference lies in the potential impact during an outage. With *blue/green deployment*, all users might experience downtime if an issue arises. In contrast, *canary release* restricts the impact to only a small subset of users.
