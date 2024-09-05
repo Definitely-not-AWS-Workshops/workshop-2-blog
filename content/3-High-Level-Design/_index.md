@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
-This section will provide an overview of pipeline design and AWS architecture for AWSome Books. There are additional suggestions for how to improve your CI/CD pipeline execution time. 
+Let's next explore an overview of pipeline design and AWS architecture for AWSome Books. There are also additional suggestions for how to improve your CI/CD pipeline execution time. 
 
 #### Content
 

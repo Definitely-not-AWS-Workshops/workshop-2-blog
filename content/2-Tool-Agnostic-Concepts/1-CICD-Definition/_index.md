@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-One of the most often used buzzwords is CI/CD, which has different contradicting definitions. I might take the definitions from the book [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255):
+One of the most often used buzzwords in DevOps space is CI/CD, which has different contradicting definitions. I might take the definitions from the book [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255):
 
 -  **Continuous Integration (CI)** is the process of combining code changes frequently, with each change verified on check-in.
 -  **Continuous Delivery (CD)** involves being able to release code changes safely at any time, with the process being as simple as pushing a button.
