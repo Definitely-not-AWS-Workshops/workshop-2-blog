@@ -12,22 +12,22 @@ You now create a AWS ECR private repository and push a dummy Docker image to it.
 
 **2.** Click **Create**.
 
-![0001](/images/4/0001.svg?featherlight=false&width=100pc)
+![0001](/images/5/0001.svg?featherlight=false&width=100pc)
 
 **3.** In the **General settings** section,
 - For **Visibility settings**, choose **Private**.
 - For **Repository name**, enter `awsome-books`.
 - For **Tag immutability**, enable it.
 
-![0002](/images/4/0002.svg?featherlight=false&width=100pc)
+![0002](/images/5/0002.svg?featherlight=false&width=100pc)
 
 Scroll down to the bottom. Click **Create repository**.
 
-![0003](/images/4/0003.svg?featherlight=false&width=100pc)
+![0003](/images/5/0003.svg?featherlight=false&width=100pc)
 
 **4.** Turn on [Docker Desktop](https://www.docker.com/products/docker-desktop/) or any program that can build and push your Docker image to AWS ECR repository. This workshop will use Docker Desktop as an example.
 
-![0004](/images/4/0004.svg?featherlight=false&width=100pc)
+![0004](/images/5/0004.svg?featherlight=false&width=100pc)
 
 **5.** Clone the following repository [github.com/Definitely-not-AWS-Workshops/ip-printer](https://github.com/Definitely-not-AWS-Workshops/ip-printer).
 
@@ -70,4 +70,4 @@ docker push <YOUR-AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/awsome-books:v
 
 **7.** Check out your AWS ECR private repository to find the Docker image with the tag v0.0.0. Make a note of the **Image URI** using the **Copy URI** button for a later use.
 
-![0005](/images/4/0005.svg?featherlight=false&width=100pc)
+![0005](/images/5/0005.svg?featherlight=false&width=100pc)

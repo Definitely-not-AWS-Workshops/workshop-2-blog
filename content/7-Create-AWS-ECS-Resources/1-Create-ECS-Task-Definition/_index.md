@@ -16,18 +16,18 @@ Let's create an AWS ECS Task Definition - a JSON file that defines the configura
 - Choose **Task definitions**.
 - Click **Create new task definition**.
 
-![0001](/images/6/1/0001.svg?featherlight=false&width=100pc)
+![0001](/images/7/1/0001.svg?featherlight=false&width=100pc)
 
 **3.** In the **Task definition configuration** section, enter `awsome-books` for **Task definition family**.
 
-![0002](/images/6/1/0002.svg?featherlight=false&width=100pc)
+![0002](/images/7/1/0002.svg?featherlight=false&width=100pc)
 
 **4.** In the **Infrastructure requirements** section,
 
 - For **Task role**, choose **ecsTaskRole**.
 - For **Task execution role**, choose **Create new role**.
 
-![0003](/images/6/1/0003.svg?featherlight=false&width=100pc)
+![0003](/images/7/1/0003.svg?featherlight=false&width=100pc)
 
 
 **5.** In the **Container - 1** section, 
@@ -36,11 +36,11 @@ Let's create an AWS ECS Task Definition - a JSON file that defines the configura
 - For **Image URI**, choose one that you have noted down in step **7** in [4. Create AWS ECR](4-create-aws-ecr).
 - For **Container port**, enter `8080`.
 
-![0004](/images/6/1/0004.svg?featherlight=false&width=100pc)
+![0004](/images/7/1/0004.svg?featherlight=false&width=100pc)
 
 **6**. Scroll down to the bottom, click **Create**.
 
-![0005](/images/6/1/0005.svg?featherlight=false&width=100pc)
+![0005](/images/7/1/0005.svg?featherlight=false&width=100pc)
 
 
 

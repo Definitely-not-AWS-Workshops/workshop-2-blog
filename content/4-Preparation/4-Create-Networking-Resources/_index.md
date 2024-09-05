@@ -3,7 +3,7 @@ title : "Create Networking Resources"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
-pre : " <b> 3.4 </b> "
+pre : " <b> 4.4 </b> "
 ---
 
 In this section, you are going to create the necessary networking resources for the project.

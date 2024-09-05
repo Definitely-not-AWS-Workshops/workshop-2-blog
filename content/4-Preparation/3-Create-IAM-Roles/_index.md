@@ -3,7 +3,7 @@ title : "Create IAM Roles"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
-pre : " <b> 3.3 </b> "
+pre : " <b> 4.3 </b> "
 ---
 
 In this section, you are going to create required IAM roles for GitHub Actions workflows and AWS services.

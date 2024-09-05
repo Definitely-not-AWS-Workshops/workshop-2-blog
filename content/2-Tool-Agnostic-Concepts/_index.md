@@ -1,5 +1,5 @@
 ---
-title : "Tool-agnostic Concepts"
+title : "Tool-Agnostic Concepts"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
