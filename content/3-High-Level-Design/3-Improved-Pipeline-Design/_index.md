@@ -3,7 +3,7 @@ title : "Improved Pipeline Design"
 date : "`r Sys.Date()`"
 weight : 3
 chapter : false
-pre : " <b> 2.3 </b> "
+pre : " <b> 3.3 </b> "
 ---
 
 {{% notice note %}}

@@ -3,7 +3,7 @@ title : "Application Architecture"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
-pre : " <b> 2.2 </b> "
+pre : " <b> 3.2 </b> "
 ---
 
 Since the AWSDSC-XUT team might be responsible for building more complex serverless RESTful API application architecture, you just need to build up the serverless components required to facilitate minimal book administration operations. To meet AWS recommendations for running the application securely through isolated environments, these components will subsequently be deployed to two different accounts. The AWS serverless services in an account might include the following:

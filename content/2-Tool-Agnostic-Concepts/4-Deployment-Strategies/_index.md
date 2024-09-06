@@ -6,19 +6,19 @@ chapter : false
 pre : " <b> 2.4 </b> "
 ---
 
-Even with the best tools and a code coverage of 100%, a bug-free *trunk* is not guaranteed by a CI pipeline; rather, it simply raises your confidence that the main codebase is in a releaseable state. Without a suitable deployment strategy, even with a CI pipeline acting as a quality gate before merging back the PRs to the *trunk*, it could still be unsafe to deliver your software continually. If you want to release software more often without losing reliability, you may require a deployment strategy that reduces the impact of a production outage.
+Even with the best tools and a code coverage of 100%, a bug-free *trunk* is not guaranteed by the CI pipeline; rather, it simply raises your confidence that the main codebase is in a releasable state. Without a suitable deployment strategy, even with a CI pipeline acting as a quality gate before merging back the PRs to the *trunk*, it could still be unsafe to deliver your software continually. If you want to release software more often without losing reliability, you may require a deployment strategy that reduces the impact of a production outage.
 
-Frequent production failures have impacted all users with every deployment, as the AWSDSC-XUT team has not implemented effective deployment methodologies in past projects. While these projects are non-profit and most users are students who may tolerate occasional interruptions, the AWSome Books team is focused on reducing risks and enhancing user trust by adopting a more reliable deployment strategy. This change aims to create a more positive experience and encourage greater enthusiasm among their college peers for using AWSome Books.
+The AWSDSC-XUT team has faced challenges with prolonged production failures during deployments, affecting all users. Although these projects are non-profit and primarily serve students who may be more forgiving of occasional interruptions, the AWSome Books team is committed to building trust and minimizing risks by adopting a more reliable deployment strategy. This shift aims to provide a smoother experience and foster greater excitement and engagement among their college peers for using AWSome Books.
 
-The majority of deployment strategies have the common downsides of a lengthy rollback and launching the entire deployment before realizing anything is wrong. There are a number of deployment strategies that reduce stress when software is released. *canary release* (or *canary deployment*) and *blue/green deployment* (or *red-black deployment*) are popular ones. 
+A common drawback of most deployment strategies is a lengthy rollback. There are a number of deployment strategies that reduce stress when software is released. *canary release* (or *canary deployment*) and *blue/green deployment* (or *red-black deployment*) are popular ones. 
 
 #### Canary Release
 
 In [canary release](https://martinfowler.com/bliki/CanaryRelease.html), one instance (called the *canary*) is updated with the new version of software, and a small percentage of traffic is directed to it.
 
-![0002](/images/2/2/0002.svg?featherlight=false&width=42pc)
-
  If the *canary* is in good condition, and there are two possible ways that the deployment can go forward: either by moving all traffic to instances that are running the updated version or by progressively generating more *canary* instances and rerouting all traffic to them until the old instances are no longer receiving any traffic at all. The selling point of the strategy is that only a small percentage of selected users may experience the outage if the *canary* is unhealthy. In that case, the entire process can be stopped and all traffic is routed back to the original instances. 
+
+![0002](/images/2/2/0002.svg?featherlight=false&width=42pc)
 
 In my opinion, although *canary release* is supported by AWS CodeDeploy, it fails to demonstrate the real meaning and potential of the deployment strategy. *canary release* by AWS CodeDeploy allows all software users to have access to the application versions proportionally, rather than just a subset of software users. The real power of *canary release* comes from the ability to select which users will receive the new version.
 

@@ -3,7 +3,7 @@ title : "Pipeline Design"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
-pre : " <b> 2.1 </b> "
+pre : " <b> 3.1 </b> "
 ---
 
 <!-- In this section, you first understand what CI/CD refers to in the workshop. You then examine suitable branching and deployment strategies that help deliver the application reliably and faster. After that, you define the team workflow and CI/CD pipelines using the Business Process Model and Notation 2.0. Lastly, you provide the overall AWS architecture that has all the services needed for the development and delivery of AWSome Books, which are going to be implemented in the hands-on sections.  -->
