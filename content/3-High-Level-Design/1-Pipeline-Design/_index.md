@@ -23,4 +23,6 @@ Since AWS CodePipeline does not support stage execution in parallel
 
 In the next section, you learn how to improve the pipelines
 
-#### AWS Architecture
+#### GitHub Actions
+
+[GitHub Actions](https://github.com/features/actions)

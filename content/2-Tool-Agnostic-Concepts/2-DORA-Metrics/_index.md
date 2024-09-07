@@ -10,14 +10,14 @@ You have probably heard that *"DevOps accelerates the software development proce
 
 Organizations embracing DevOps often use various metrics to measure the success of their CI/CD pipelines, infrastructure automation, testing strategies, and overall development practices. The most popular ones are [DORA metrics](https://dora.dev/), which focus on evaluating software team performance through 4 key metrics ([2021 DORA report](https://dora.dev/research/2021/dora-report/)). These metrics are divided into 2 main categories: *throughput* and *stability*, providing a comprehensive view of both the speed and reliability of software delivery.
 
-##### Throughput
+**Throughput**
 
 Throughput measures the velocity of changes that are being made. DORA assesses throughput using the following metrics:
 
 - **Change lead time** - this metric measures the time it takes for a code commit or change to be successfully deployed to production. It reflects the efficiency of your delivery pipeline.
 - **Deployment frequency** - this metric measures how often application changes are deployed to production. Higher deployment frequency indicates a more agile and responsive delivery process.
 
-##### Stability 
+**Stability** 
 
 Stability measures the quality of the changes delivered and the team’s ability to repair failures. DORA assesses throughput using the following metrics:
 

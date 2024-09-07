@@ -24,7 +24,7 @@ The AWSDSC-XUT team has past experience with *gitflow* branching strategy and it
 
 [trunk-based development](https://trunkbaseddevelopment.com/) is considered a companion for DevOps principles. One of the most interesting ideas of this branching strategy is that it requires regular commits to the main branch, even if a feature has not yet been fully developed. The complexity of this branching strategy is relatively low compared to others. *Trunked-based development* comes in both its original form and several variations. 
 
-##### Original form
+**Original form**
 
 The main branch is the only branch included in the original form of *trunk-based development*. Changes are pushed straight to the *main* (*trunk*) branch, which then generates release candidates. However, pushing code changes from a local copy of the *trunk* to the remote *trunk* without a code review process and CI checks in another branch could be highly risky. This means that in the original form of *trunk-based development*, the main branch is not always in a production-ready state. Though frequently pushing code changes to the main codebase may speed up the development process, it may also increase the risk of production outages and cause stress for the team if each software release is unsafe. 
 
@@ -32,7 +32,7 @@ The main branch is the only branch included in the original form of *trunk-based
 *trunk-based development*, centered around a single main branch, aligns seamlessly with [extreme programming](https://en.wikipedia.org/wiki/Extreme_programming) practices. In this approach, two developers often work together to maintain high code quality, ensuring that every commit to the branch is clean, reliable, and well-maintained.
 {{% /notice %}}
 
-##### Another variation
+**Another variation**
 
 A different variation of *trunk-based development* involves creating short-lived feature branches that can be used to verify code changes before merging them back into the trunk. These branches can last up to a day (or a few days). This sort of branching strategy involves proposing commits to the main branch via pull requests (PRs), conducting CI and code review against those PRs, and then merging the branch and its changes into the main branch once CI passes and PR is approved. Then, the application can be released straight from the main branch or via another release branch created from the main.
 
@@ -50,4 +50,4 @@ Here are some helpful techniques for making small and frequent PRs:
 
 ---
 
-The AWSDSC-XUT team might apply *trunk-based development* with short-lived feature branches to speed up the delivery of AWSome Books. In this workshop, we will not cover *feature flags* or *build flags* — though they may be essential for handling incomplete features or specific business needs — as their implementation could demand considerable effort from your development team to manage the more complex codebase (due to the flags). Despite the challenges that call for experienced engineers, the team is eager to embrace this strategy, which enhances CI/CD practices and minimizes the headaches of dealing with long-lived branches.
+The AWSDSC-XUT team might apply *trunk-based development* with short-lived feature branches to speed up the delivery of AWSome Books. In this workshop, we will not cover *feature flags* or *build flags* — though they may be essential for handling incomplete features or specific business needs — as their implementation could demand considerable effort from your development team to manage a more complex codebase (due to the flags). Despite the challenges that call for experienced engineers, the team is eager to embrace this strategy, which enhances CI/CD practices and minimizes the headaches of dealing with long-lived branches.
