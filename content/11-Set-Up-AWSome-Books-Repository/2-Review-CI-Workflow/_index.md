@@ -3,12 +3,12 @@ title : "Review CI Workflow"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
-pre : " <b> 10.2 </b> "
+pre : " <b> 11.2 </b> "
 ---
 
 You now explore the CI workflow.
 
-![0001](/images/10/2/0001.svg?featherlight=false&width=100pc)
+![0001](/images/11/2/0001.svg?featherlight=false&width=100pc)
 
 Check out **.github/workflows/ci.yml** file.
 
@@ -215,7 +215,7 @@ jobs:
           category: image-scanning-report
 ```
 
-This GitHub Actions workflow is designed to perform Continuous Integration tasks when specific events occur on the repository. Let's take a high-level look at key components of the workflow.
+This GitHub Actions workflow is designed to perform CI jobs when specific events occur on the repository. Code review can only begin once all jobs in the CI workflow have successfully passed. Let's take a high-level look at key components of the workflow.
 
 #### Events
 

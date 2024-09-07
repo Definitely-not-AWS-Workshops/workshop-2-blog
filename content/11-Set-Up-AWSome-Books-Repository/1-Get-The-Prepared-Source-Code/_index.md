@@ -3,7 +3,7 @@ title : "Get The Prepared Source Code"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
-pre : " <b> 10.1 </b> "
+pre : " <b> 11.1 </b> "
 ---
 
 **1.** Clone the following repository [github.com/Definitely-not-AWS-Workshops/workshop-2-awsome-books](https://github.com/Definitely-not-AWS-Workshops/workshop-2-awsome-books).

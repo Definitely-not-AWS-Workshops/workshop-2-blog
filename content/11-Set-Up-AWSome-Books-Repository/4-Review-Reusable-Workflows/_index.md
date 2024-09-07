@@ -3,14 +3,14 @@ title : "Review Reusable Workflows"
 date : "`r Sys.Date()`"
 weight : 4
 chapter : false
-pre : " <b> 10.4 </b> "
+pre : " <b> 11.4 </b> "
 ---
 
 As mentioned in the High-Level Design section, there are several reusable jobs in the Release and Rollback workflows.
 
-![0001](/images/10/4/0001.svg?featherlight=false&width=100pc)
+![0001](/images/11/4/0001.svg?featherlight=false&width=100pc)
 
-![0002](/images/10/4/0002.svg?featherlight=false&width=100pc)
+![0002](/images/11/4/0002.svg?featherlight=false&width=100pc)
 
 - **Validate version format** job can be reused in both workflows to check [semantic versioning](https://semver.org/) of the project.
 - A **Release** job (in the Release workflow) and a **Rollback** job (in the Rollback process) can be combined to create a reusable job.
