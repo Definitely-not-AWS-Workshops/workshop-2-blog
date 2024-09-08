@@ -1,14 +1,14 @@
 ---
 title : "Review CI Workflow"
 date : "`r Sys.Date()`"
-weight : 2
+weight : 3
 chapter : false
-pre : " <b> 11.2 </b> "
+pre : " <b> 11.3 </b> "
 ---
 
 You now explore the CI workflow.
 
-![0001](/images/11/2/0001.svg?featherlight=false&width=100pc)
+![0001](/images/11/3/0001.svg?featherlight=false&width=100pc)
 
 Check out **.github/workflows/ci.yml** file.
 

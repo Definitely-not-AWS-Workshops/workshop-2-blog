@@ -54,6 +54,5 @@ Since AWS CodePipeline does not support stage execution in parallel
 
 ![0003](/images/3/1/00071.svg?featherlight=false&width=100pc)
 
-
 In the next section, you learn how to improve the pipelines
 

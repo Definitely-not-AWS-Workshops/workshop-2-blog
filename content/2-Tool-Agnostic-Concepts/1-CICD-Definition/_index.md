@@ -19,4 +19,9 @@ With these definitions, do you ensure that you perform CI/CD properly (at least 
 
 To reliably deploy code changes at any time (CD), your code changes (commits) must *at least* go through extensive testings and code reviews via the CI process in another branch before being merged into the *main* branch. This makes CI and CD tightly coupled; you cannot be ready for deployment until your code is fully checked and ready to function as expected. 
 
-**Take away**: make your *main* codebase (or *release* branch) as protected as possible.
+{{% notice info %}}
+Even with a comprehensive CI process, there is always a chance something could go wrong during a software release. To handle these situations effectively, a smart deployment strategy is key. You explore this further in Section [2.4 Deployment Strategies](2-tool-agnostic-concepts/4-deployment-strategies).
+
+{{% /notice %}}
+
+**Take away**: ensure your *main* codebase (or *release* branch) as protected as possible.

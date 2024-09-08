@@ -1,14 +1,14 @@
 ---
 title : "Review Release Workflow"
 date : "`r Sys.Date()`"
-weight : 5
+weight : 6
 chapter : false
-pre : " <b> 11.5 </b> "
+pre : " <b> 11.6 </b> "
 ---
 
 You now explore the Release workflow.
 
-![0001](/images/11/5/0001.svg?featherlight=false&width=100pc)
+![0001](/images/11/6/0001.svg?featherlight=false&width=100pc)
 
 Check out **.github/workflows/release.yml** file.
 

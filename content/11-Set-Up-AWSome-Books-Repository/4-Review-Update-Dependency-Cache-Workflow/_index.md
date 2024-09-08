@@ -1,14 +1,14 @@
 ---
 title : "Review Update Dependency Cache Workflow"
 date : "`r Sys.Date()`"
-weight : 3
+weight : 4
 chapter : false
-pre : " <b> 11.3 </b> "
+pre : " <b> 11.4 </b> "
 ---
 
 You now explore the Update dependency cache workflow.
 
-![0001](/images/11/3/0001.svg?featherlight=false&width=100pc)
+![0001](/images/11/4/0001.svg?featherlight=false&width=100pc)
 
 Check out **.github/workflows/update-cache.yml** file.
 

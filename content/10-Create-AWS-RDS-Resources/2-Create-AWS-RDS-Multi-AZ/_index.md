@@ -45,7 +45,7 @@ pre : " <b> 10.2 </b> "
 
 ![0007](/images/10/2/0007.svg?featherlight=false&width=100pc)
 
-**8.** In the **Instance configuration** section, select **db.m5.large**.
+**8.** In the **Instance configuration** section, select **Burstable classes (includes t classes)** and **db.t3.micro**.
 
 ![0008](/images/10/2/0008.svg?featherlight=false&width=100pc)
 

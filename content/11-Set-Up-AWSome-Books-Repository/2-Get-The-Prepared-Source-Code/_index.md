@@ -1,9 +1,9 @@
 ---
 title : "Get The Prepared Source Code"
 date : "`r Sys.Date()`"
-weight : 1
+weight : 2
 chapter : false
-pre : " <b> 11.1 </b> "
+pre : " <b> 11.2 </b> "
 ---
 
 **1.** Clone the following repository [github.com/Definitely-not-AWS-Workshops/workshop-2-awsome-books](https://github.com/Definitely-not-AWS-Workshops/workshop-2-awsome-books).
@@ -33,7 +33,7 @@ git init
 **4.** Create and switch to the *config* branch.
 
 ```git
-git branch -b config
+git checkout -b config
 ```
 
 **5.** Open up the source code.
