@@ -24,19 +24,7 @@ cd workshop-2-awsome-books
 rm -rf .git
 ```
 
-**3.** Initialize the local git repository.
-
-```git
-git init
-```
-
-**4.** Create and switch to the *config* branch.
-
-```git
-git checkout -b config
-```
-
-**5.** Open up the source code.
+**3.** Open up the source code.
 
 ```git
 code .
