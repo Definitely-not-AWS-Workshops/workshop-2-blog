@@ -73,6 +73,41 @@ Scroll down to the botttom. Click **Create repository**.
 
 ![00010](/images/4/1/00010.svg?featherlight=false&width=100pc)
 
-**9.** You have successfully created the AWSome Books repository. Go to your AWSome Books repository [github.com/fcj-workshops-2024/awsome-books](https://github.com/fcj-workshops-2024/awsome-books). It is now empty with zero settings, you might use the repository later.
+<!-- **9.** You have successfully created the AWSome Books repository. Go to your AWSome Books repository [github.com/fcj-workshops-2024/awsome-books](https://github.com/fcj-workshops-2024/awsome-books). It is now empty with zero settings, you might use the repository later.
 
-![00011](/images/4/1/00011.svg?featherlight=false&width=100pc)
+![00011](/images/4/1/00011.svg?featherlight=false&width=100pc) -->
+
+
+**9.** Create and move to the project folder in your favorite workspace on your local machine.
+
+```git
+cd path/to/your-workspace && mkdir awsome-books && cd awsome-books
+```
+
+**10.** Initialize the local git repository.
+
+```git
+git init
+```
+
+**11.** Link to the remote repository that you have just created.
+
+```git
+git remote add origin https://github.com/fcj-workshops-2024/awsome-books.git
+```
+
+**12.** Create a README.md file with the following content.
+
+```git
+echo "This is AWSome Books!" >> README.md
+```
+
+**13.** Make the first commit and push to the remote repository.
+
+```git
+git add . && git commit -m "first commit" && git push --set-upstream origin main
+```
+
+**14.** Your AWSome Books remote repository should now look like this.
+
+![00011](/images/4/1/00011.svg?featherlight=false&width=100pc) 

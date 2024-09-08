@@ -40,13 +40,13 @@ Discover how to efficiently store and manage information in variables within Git
 
 | Name  | Value  |
 |---|---|
-| PROJECT  | `awsome-books`  |
-| ROLE_TO_ASSUME  | enter the role arn you have created in [4.3.1 Create GitHub Actions Role](4-preparation/3-create-iam-roles/1-create-github-actions-role)  |
-| JAVA_VERSION  | `17`   |
-| JAVA_DISTRIBUTION  | `temurin`   |
-| ECS_CLUSTER  | `fcj` |
-| CODEDEPLOY_APPLICATION  | `AppECS-fcj-awsome-books`   |
-| CODEDEPLOY_APPLICATION_GROUP  | `DgpECS-fcj-awsome-books`   |
+| `PROJECT`  | `awsome-books`  |
+| `ROLE_TO_ASSUME`  | enter the role arn you have created in [4.3.1 Create GitHub Actions Role](4-preparation/3-create-iam-roles/1-create-github-actions-role)  |
+| `JAVA_VERSION`  | `17`   |
+| `JAVA_DISTRIBUTION`  | `temurin`   |
+| `ECS_CLUSTER`  | `fcj` |
+| `CODEDEPLOY_APPLICATION`  | `AppECS-fcj-awsome-books`   |
+| `CODEDEPLOY_APPLICATION_GROUP`  | `DgpECS-fcj-awsome-books`   |
 
 
 By the end, you should have a total of 8 variables configured at the repository level.
