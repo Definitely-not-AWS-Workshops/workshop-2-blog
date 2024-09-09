@@ -20,7 +20,7 @@ cd path/to/awsome-books
 git checkout -b config
 ```
 
-**3.** Make a commit and push to the remote repository.
+**3.** Make a commit and push to the remote **config** repository.
 
 ```git
 git add . && git commit -m "first config" && git push --set-upstream origin config
