@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 11.8 </b> "
 ---
 
-You first need to run the CI workflow to facilitate further settings.
+Because some settings require your jobs to be executed to enable protection (GitHub does not automatically scan your *yaml* files to identify the necessary jobs for these settings), you may need to run the initial CI workflow to set up the required configurations.
 
 **1.** Make sure you are still in the right project folder [11.2 Get The Prepared Source Code](11-set-up-awsome-books-repository/2-get-the-prepared-source-code).
 
@@ -38,7 +38,7 @@ git add . && git commit -m "first config" && git push --set-upstream origin conf
 
 ![0003](/images/11/8/0003.svg?featherlight=false&width=100pc)
 
-**7.** Alternatively, go to the **Actions** tab and select the workflow that's currently running.
+**7.** Alternatively, go to the **Actions** tab and select the workflow that is currently running.
 
 ![0004](/images/11/8/0004.svg?featherlight=false&width=100pc)
 
@@ -60,25 +60,35 @@ Each job have downloaded the necessary dependencies or libraries from the Intern
 
 ![0008](/images/11/8/0008.svg?featherlight=false&width=100pc)
 
-**11.** Click the **Cache dependencies** step. Since it is the very first time the CI workflow run, you might see *Cache not found for input keys*.
+**11.** Click the **Cache dependencies** step. Since it is the very first time the CI workflow runs, you might see *Cache not found for input keys*.
 
 ![0009](/images/11/8/0009.svg?featherlight=false&width=100pc)
 
 **12.** After completing the primary steps, the "post" steps may run to handle tasks such as cleanup or cache writing.
 
-For instance, if you click on the **Post Cache dependencies** step, you'll see that it saves the downloaded dependencies using a specific key.
+For instance, if you click on the **Post Cache dependencies** step, you might notice that it saves the downloaded dependencies using a specific key.
 
 ![00010](/images/11/8/00010.svg?featherlight=false&width=100pc)
 
-**13.** Click **CI** button to 
+**13.** Click **CI** button to navigate to list of CI workflow executions.
 
 ![00011](/images/11/8/00011.svg?featherlight=false&width=100pc)
 
-**14.** Click **CI** button to 
+**14.** Select **Caches**.
 
 ![00012](/images/11/8/00012.svg?featherlight=false&width=100pc)
 
-**15.** Click **CI** button to 
+**15.**  For this pull request (**refs/pull/1/merge**), the cache should be successfully saved. As outlined in Section [3.1 Pipeline Design](3-high-level-design/1-pipeline-design), any subsequent CI runs related to this pull request will leverage the saved cache for their jobs. This cache, however, is exclusive to this pull request and will not be accessible by other branches.
 
 ![00013](/images/11/8/00013.svg?featherlight=false&width=100pc)
+
+With GitHub Actions, you have built your first pipeline and made it run smoothly with just a few simple steps on GitHub!
+
+
+
+
+
+
+
+
 
