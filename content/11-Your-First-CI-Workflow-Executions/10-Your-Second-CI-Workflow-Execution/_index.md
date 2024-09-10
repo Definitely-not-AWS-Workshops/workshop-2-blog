@@ -137,7 +137,7 @@ Let's dive into several jobs to gain a deeper understanding of your CI workflow 
 
 ![0007](/images/11/10/0007.svg?featherlight=false&width=100pc)
 
-**15.** Click the **Cache dependencies** step dropdown. You might notice that **Cache restored successfully** and **Cache restored from key** with the key is the same as step **11** in [11.9 Update Dependency Cache](11-your-first-ci-workflow-executions/9-update-dependency-cache). 
+**15.** Click the **Cache dependencies** step dropdown. You might notice that **Cache restored successfully** and **Cache restored from key** with the key is the same as step **10** in [11.9 Update Dependency Cache](11-your-first-ci-workflow-executions/9-update-dependency-cache). 
 
 ![0008](/images/11/10/0008.svg?featherlight=false&width=100pc)
 
