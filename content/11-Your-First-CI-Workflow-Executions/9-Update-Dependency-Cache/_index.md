@@ -27,14 +27,30 @@ Your first CI run executed without restoring the cache from GitHub Actions Cache
 
 ![0004](/images/11/9/0004.svg?featherlight=false&width=100pc)
 
-**5.** Click on the **Actions** tab, and you notice that the Update Dependency Cache workflow has been triggered.
+**5.** Head over to the **Actions** tab, and you'll see that the Update Dependency Cache workflow has been triggered. Click on the running workflow to view more details.
 
 ![0005](/images/11/9/0005.svg?featherlight=false&width=100pc)
 
-**6.** Once the workflow execution has completed, click **Caches** to navigate to the GitHub Actions Cache.
+**6.** You might notice that the initial Update Dependency Cache workflow completed in about 30 seconds. Click on the **Update dependency cache** job to explore the details.
 
 ![0006](/images/11/9/0006.svg?featherlight=false&width=100pc)
 
-**7.** Check the GitHub Actions Cache to view the cache for the main branch. Now, other branches should be able to restore their dependencies from this cache, as long as the specific key remains unchanged.
+**7.** Click **Cache dependencies** step dropdown. You should see **Cache not found for input keys**.
 
 ![0007](/images/11/9/0007.svg?featherlight=false&width=100pc)
+
+**8.**
+
+![0008](/images/11/9/0008.svg?featherlight=false&width=100pc)
+
+**9.**
+
+![0009](/images/11/9/0009.svg?featherlight=false&width=100pc)
+
+**10.**
+
+![000100](/images/11/9/000100.svg?featherlight=false&width=100pc)
+
+**11.** Check the GitHub Actions Cache to view the cache for the main branch. Now, other branches should be able to restore their dependencies from this cache, as long as the specific key remains unchanged.
+
+![000101](/images/11/9/000101.svg?featherlight=false&width=100pc)
