@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 11.10 </b> "
 ---
 
-Now, try creating a failed CI workflow execution from a pull request and merging it into the *main* branch. You may notice that your CI workflow execution restores the cache from the *main* branch for its dependencies which might help speed up the CI jobs. Additionally, GitHub will allow you to merge a failed workflow execution into the main branch if no protection rules are in place.
+Now, try creating a failed CI workflow execution from a pull request and merging it into the *main* branch. You may notice that your CI workflow execution restores the cache from the *main* branch for its dependencies which might help speed up the CI jobs. Additionally, GitHub will allow you to merge a failed workflow execution into the *main* branch if no protection rules are in place.
 
 
 **1.** Make sure you are still in the right project folder [11.2 Get The Prepared Source Code](11-create-your-first-ci-workflow-executions/2-get-the-prepared-source-code).
