@@ -1,9 +1,9 @@
 ---
-title : "Configure Ruleset for Protecting Branch"
+title : "Configure Ruleset for Branch Protection"
 date : "`r Sys.Date()`"
-weight : 11
+weight : 12
 chapter : false
-pre : " <b> 11.11 </b> "
+pre : " <b> 12. </b> "
 ---
 
 Your *main* branch should be thoroughly protected against bad commits or destructive behaviors. In this workshop, you can start with basic rules in the ruleset to control how people can interact with branches and tags in a repository. 
@@ -23,7 +23,7 @@ Learn more about [rulesets](https://docs.github.com/en/repositories/configuring-
 - Choose **Branches**.
 - Click **Add branch ruleset**.
 
-![0001](/images/11/11/0001.svg?featherlight=false&width=100pc)
+![0001](/images/12/0001.svg?featherlight=false&width=100pc)
 
 
 **2.** 
@@ -31,14 +31,14 @@ Learn more about [rulesets](https://docs.github.com/en/repositories/configuring-
 - For **Ruleset Name**, enter `main-protection`.
 - For **Enforcement status**, select `Active`.
 
-![0002](/images/11/11/0002.svg?featherlight=false&width=100pc)
+![0002](/images/12/0002.svg?featherlight=false&width=100pc)
 
 **3.** In the **Target branches** section,
 
 - Click **Add target** dropdown.
 - Choose **Include default branch**. Your default branch should be *main* branch.
 
-![0003](/images/11/11/0003.svg?featherlight=false&width=100pc)
+![0003](/images/12/0003.svg?featherlight=false&width=100pc)
 
 **4.** In the **Branch rules** section,
 
@@ -46,7 +46,7 @@ Learn more about [rulesets](https://docs.github.com/en/repositories/configuring-
 - Enable **Restrict updates**.
 - Enable **Require merge queue**.
 
-![0004](/images/11/11/0004.svg?featherlight=false&width=100pc)
+![0004](/images/12/0004.svg?featherlight=false&width=100pc)
 
 - Enable **Restrict deletions**.
 - Enable **Require a pull request before merging**.
@@ -58,7 +58,7 @@ Learn more about [rulesets](https://docs.github.com/en/repositories/configuring-
 
 Turn back to the ruleset settings. Click **Add bypass** dropdown and then select **Organization admin** role.
 
-![000100](/images/11/11/000100.svg?featherlight=false&width=100pc)
+![000100](/images/12/000100.svg?featherlight=false&width=100pc)
 
 **x.** In your local AWSome Books repository, make a small change to any file of your choice. Then, create a commit and push it to the remote *main* branch.
 
@@ -68,6 +68,6 @@ git add . && git commit -m "a small change to x file" && git push
 
 You are now allowed to push directly to the remote *main* branch without being affected by the **Require a pull request before merging** rule.
 
-![000101](/images/11/11/000101.svg?featherlight=false&width=100pc)
+![000101](/images/12/000101.svg?featherlight=false&width=100pc)
 
 For this workshop, you should leave the **Bypass list** empty to maintain an experimental setup.

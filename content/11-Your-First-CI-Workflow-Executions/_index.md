@@ -1,5 +1,5 @@
 ---
-title : "Set Up AWSome Books Repository"
+title : "Your First CI Workflow Executions"
 date : "`r Sys.Date()`"
 weight : 11
 chapter : false
