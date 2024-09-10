@@ -27,7 +27,7 @@ Your first CI run executed without restoring the cache from GitHub Actions Cache
 
 ![0004](/images/11/9/0004.svg?featherlight=false&width=100pc)
 
-**5.** Head over to the **Actions** tab, and you'll see that the Update Dependency Cache workflow has been triggered. Click on the running workflow to view more details.
+**5.** Head over to the **Actions** tab, and you will see that the Update Dependency Cache workflow has been triggered. Click on the running workflow to view more details.
 
 ![0005](/images/11/9/0005.svg?featherlight=false&width=100pc)
 

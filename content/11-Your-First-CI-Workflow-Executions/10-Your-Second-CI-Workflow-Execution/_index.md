@@ -137,7 +137,7 @@ Let's dive into several jobs to gain a deeper understanding of your CI workflow 
 
 ![0007](/images/11/10/0007.svg?featherlight=false&width=100pc)
 
-**15.** Click the **Cache dependencies** step dropdown. You might notice that **Cache restored successfully** and **Cache restored from key** with the key is the same as step **7** in [11.9 Update Dependency Cache](11-your-first-ci-workflow-executions/9-update-dependency-cache). 
+**15.** Click the **Cache dependencies** step dropdown. You might notice that **Cache restored successfully** and **Cache restored from key** with the key is the same as step **11** in [11.9 Update Dependency Cache](11-your-first-ci-workflow-executions/9-update-dependency-cache). 
 
 ![0008](/images/11/10/0008.svg?featherlight=false&width=100pc)
 
@@ -174,22 +174,22 @@ You can check the **.github/workflows/ci.yml** file in the remote *main* branch 
 
 ![00015](/images/11/10/00015.svg?featherlight=false&width=100pc)
 
-**22.** Click on the **Actions** tab, and you notice that the Update Dependency Cache workflow has been triggered. Click the running workflow to see more in details.
+**22.** Click on the **Actions** tab, and you notice that the **Update dependency cache** workflow has been triggered. Click the running workflow to see more in details.
 
 ![00016](/images/11/10/00016.svg?featherlight=false&width=100pc)
 
-**23.** Wait unitl the pipeline execution has completed.
+**23.** Wait for the pipeline execution to complete, and you may notice that the execution time has decreased by around 20 seconds compared to step **6** in [11.9 Update Dependency Cache](11-your-first-ci-workflow-executions/9-update-dependency-cache). Click the job to see more in details.
 
 ![00017](/images/11/10/00017.svg?featherlight=false&width=100pc)
 
-**24.**
+**24.** Expand the **Cache dependencies** step dropdown, and you will see the message **Cache found and can be restored from key** and thus the **Update cache** job did not run. That indicates your job did restore the cache from the previous **Update dependency cache** workflow execution with a appropriate cache key.
 
 ![00018](/images/11/10/00018.svg?featherlight=false&width=100pc)
 
-**25.**
+**25.** Next, expand the **Post Cache dependencies** step dropdown. You will see the messages **Cache hit occurred on the primary key** and **not saving cache**. This indicates a cache hit, so no new cache needs to be saved.
 
 ![00019](/images/11/10/00019.svg?featherlight=false&width=100pc)
 
-**26.**
+**26.** In the GitHub Actions Cache, you will notice there is no new cache entry. In addition, the cache from the *main* branch is being used, as indicated by the **last used** attribute when compared to **refs/pull/1/merge**.
 
 ![00020](/images/11/10/00020.svg?featherlight=false&width=100pc)
