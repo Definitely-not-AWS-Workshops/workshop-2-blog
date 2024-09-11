@@ -9,9 +9,8 @@ pre : " <b> 12. </b> "
 Your *main* branch should be thoroughly protected against bad commits or destructive behaviors. In this workshop, you can start with basic rules in the ruleset to control how people can interact with branches and tags in a repository. 
 
 {{% notice tip %}}
-For more advanced configurations, consider enabling them as needed in real-world scenarios.
+Consider enabling advanced configurations as needed in real-world scenarios.
 {{% /notice %}}
-
 
 {{% notice info %}}
 Learn more about [rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) and [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
