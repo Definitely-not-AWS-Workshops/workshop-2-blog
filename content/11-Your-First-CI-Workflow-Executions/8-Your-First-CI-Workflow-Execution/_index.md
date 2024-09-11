@@ -6,9 +6,9 @@ chapter : false
 pre : " <b> 11.8 </b> "
 ---
 
-Because some settings require your jobs to be executed to enable protection (GitHub does not automatically scan your *yaml* files to identify the necessary jobs for these settings), you may need to run the initial CI workflow to set up the required configurations.
+Because some settings require your jobs to be executed to enable protection (GitHub does not automatically scan your *yaml* files to identify the necessary jobs for these settings), you may need to run the initial CI workflow to set up the required configurations for branch protection.
 
-**1.** Make sure you are still in the right project folder [11.2 Get The Prepared Source Code](11-your-first-ci-workflow-executions/2-get-the-prepared-source-code).
+**1.** Make sure you are still in the right project folder.
 
 ```git
 cd path/to/awsome-books
@@ -46,21 +46,21 @@ git add . && git commit -m "first config" && git push --set-upstream origin conf
 
 ![0005](/images/11/8/0005.svg?featherlight=false&width=100pc)
 
-Once all the jobs are complete, it will look like this.
+Once all the jobs are complete, it should look like this.
 
 ![0006](/images/11/8/0006.svg?featherlight=false&width=100pc)
 
-Each job have downloaded the necessary dependencies or libraries from the Internet rather than using the cache. Take note of the execution time for each job for comparison. You can later improve their execution time by implementing dependency caching.
+Each job now have downloaded the necessary dependencies or libraries from the Internet rather than using the cache. Take note of the execution time for each job for comparison. You can later improve their execution time by implementing dependency caching.
 
 **9.** Select **Run unit tests** job.
 
 ![0007](/images/11/8/0007.svg?featherlight=false&width=100pc)
 
-**10.**  In addition to the steps you have defined in the *yaml* file, there are many other steps within the **Run unit tests** job. You can review the execution time and detailed logs for each step here, which will help you debug and enhance your pipeline.
+**10.**  In addition to the steps you have defined in the *yml* file, there are many other steps within the **Run unit tests** job. You can review the execution time and detailed logs for each step here, which will help you debug and enhance your pipeline.
 
 ![0008](/images/11/8/0008.svg?featherlight=false&width=100pc)
 
-**11.** Click the **Cache dependencies** step. Since it is the very first time the CI workflow runs, you might see *Cache not found for input keys*.
+**11.** Click the **Cache dependencies** step. Since it is the very first time the CI workflow runs, you might see **Cache not found for input keys**.
 
 ![0009](/images/11/8/0009.svg?featherlight=false&width=100pc)
 
@@ -74,7 +74,7 @@ For instance, if you click on the **Post Cache dependencies** step, you might no
 
 ![00011](/images/11/8/00011.svg?featherlight=false&width=100pc)
 
-**14.** Select **Caches**.
+**14.** Click on **Caches** to access the GitHub Actions Cache (and remember this step for future reference when you need to navigate back).
 
 ![00012](/images/11/8/00012.svg?featherlight=false&width=100pc)
 

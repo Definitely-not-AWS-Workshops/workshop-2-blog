@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 4.1 </b> "
 ---
 
-To enable advanced CI/CD pipeline features, you have to set up the AWSome Books repository within a GitHub organization rather than a personal repository under your GitHub username.
+To enable advanced CI/CD pipeline features, you have to set up the AWSome Books repository within a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations) rather than a personal repository under your GitHub username.
 
 {{% notice info %}}
 The GitHub setup in the workshop does not fully align with GitHub's best practices. For more details, please refer to the [GitHub Docs](https://docs.github.com/en). 
@@ -66,10 +66,10 @@ You next create the AWSome Books repository.
 ![0009](/images/4/1/0009.svg?featherlight=false&width=100pc)
 
 {{% notice tip %}}
-You might want to make the repository **Private** in the real-world project.
+You might want to make the repository **Private** in the real-world projects.
 {{% /notice %}}
 
-Scroll down to the botttom. Click **Create repository**.
+**9.** Scroll down to the botttom. Click **Create repository**.
 
 ![00010](/images/4/1/00010.svg?featherlight=false&width=100pc)
 
@@ -78,36 +78,36 @@ Scroll down to the botttom. Click **Create repository**.
 ![00011](/images/4/1/00011.svg?featherlight=false&width=100pc) -->
 
 
-**9.** Create and move to the project folder in your favorite workspace on your local machine.
+**10.** Create and move to the project folder in your favorite workspace on your local machine.
 
 ```git
 cd path/to/your-workspace && mkdir awsome-books && cd awsome-books
 ```
 
-**10.** Initialize the local git repository.
+**11.** Initialize the local git repository.
 
 ```git
 git init
 ```
 
-**11.** Link to the remote repository that you have just created.
+**12.** Link to the remote repository that you have just created.
 
 ```git
 git remote add origin https://github.com/fcj-workshops-2024/awsome-books.git
 ```
 
-**12.** Create a README.md file with the following content.
+**13.** Create a README.md file with the following content.
 
 ```git
 echo "This is AWSome Books!" >> README.md
 ```
 
-**13.** Make the first commit and push to the remote repository.
+**14.** Make the first commit and push to the remote repository.
 
 ```git
 git add . && git commit -m "first commit" && git push --set-upstream origin main
 ```
 
-**14.** Your AWSome Books remote repository should now look like this.
+**15.** Your AWSome Books remote repository should now look like this.
 
 ![00011](/images/4/1/00011.svg?featherlight=false&width=100pc) 

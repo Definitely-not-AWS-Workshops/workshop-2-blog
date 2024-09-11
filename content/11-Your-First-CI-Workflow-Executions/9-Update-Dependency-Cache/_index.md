@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 11.9 </b> "
 ---
 
-Your first CI run executed without restoring the cache from GitHub Actions Cache. Next, merge your pull request back into the *main* branch to automatically update the dependency cache.
+Your first CI run completed successfully, but it did not restore the cache from GitHub Actions Cache. To optimize future runs, merge your pull request into the *main* branch to automatically update the dependency cache. This way, subsequent workflow executions in other branches will benefit from the cache created in the *main* branch, improving speed and efficiency.
 
 **1.** Under your remote repository,
 

@@ -6,10 +6,10 @@ chapter : false
 pre : " <b> 11.10 </b> "
 ---
 
-Now, try creating a failed CI workflow execution from a pull request and merging it into the *main* branch. You may notice that your CI workflow execution restores the cache from the *main* branch for its dependencies which might help speed up the CI jobs. Additionally, GitHub will allow you to merge a failed workflow execution into the *main* branch if no protection rules are in place.
+Now, try creating a failed CI workflow execution from a pull request and merging it into the *main* branch. You may notice that your CI workflow execution restores the cache from the *main* branch for its dependencies which might help speed up the CI jobs. Additionally, GitHub will allow you to merge a pull request with failed workflow execution into the *main* branch if no protection rules are in place.
 
 
-**1.** Make sure you are still in the right project folder [11.2 Get The Prepared Source Code](11-create-your-first-ci-workflow-executions/2-get-the-prepared-source-code).
+**1.** Make sure you are still in the right project folder.
 
 ```git
 cd path/to/awsome-books
@@ -37,7 +37,7 @@ git checkout -b failed-job
 
 change from
 
-```git
+```yml
   build-image:
     name: Build image
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ change from
 
 to
 
-```git
+```yml
   build-image:
     name: Build image
     runs-on: ubuntu-latest
@@ -61,11 +61,13 @@ to
 
 **6.** Additionally, add the `--offline` option to the **Run unit tests** and **Run integration tests** steps in the **unit-test** and **integration-test** jobs, respectively.
 
+Gradle's [offline mode](https://www.baeldung.com/gradle-offline-mode)  to build projects without accessing remote repositories or resources. When you run Gradle with the *--offline* flag, it will only use dependencies and resources that are already cached locally, avoiding any network activity and thus accelerating the command execution time.
+
 - For step **Run unit tests** in **unit-test** job.
 
 change from
 
-```git
+```yml
 - name: Run unit tests
   run: |
     chmod +x gradlew
@@ -74,7 +76,7 @@ change from
 
 to
 
-```git
+```yml
 - name: Run unit tests
   run: |
     chmod +x gradlew
@@ -129,7 +131,7 @@ Let's dive into several jobs to gain a deeper understanding of your CI workflow 
 
 ![0005](/images/11/10/0005.svg?featherlight=false&width=100pc)
 
-**13.** You notice that the **Build image** job has failed due to the `exit 1` command specified in step **5**, which prevented it from executing the subsequent core steps.
+**13.** You notice that the **Build image** job has failed due to the **exit 1** command specified in step **5**, which prevented it from executing the subsequent core steps.
 
 ![0006](/images/11/10/0006.svg?featherlight=false&width=100pc)
 
@@ -141,7 +143,7 @@ Let's dive into several jobs to gain a deeper understanding of your CI workflow 
 
 ![0008](/images/11/10/0008.svg?featherlight=false&width=100pc)
 
-The cache key for the **refs/pull/1/merge** pull request is also identical. To determine which cache was utilized, check the **last used** attribute. The **last used** attribute for **main** should be more recent than that of **refs/pull/1/merge**.
+The cache key for the **refs/pull/1/merge** pull request, however, is also identical. To determine which cache was utilized, check the **last used** attribute. The **last used** attribute for **main** should be more recent than that of **refs/pull/1/merge**.
 
 ![0009](/images/11/10/0009.svg?featherlight=false&width=100pc)
 
