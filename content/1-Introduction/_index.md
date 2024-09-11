@@ -14,7 +14,10 @@ You will collaborate with them to recommend the most suitable AWS services, desi
 
 ![0001](/images/1/0001.png?featherlight=false&width=30pc)
 
-With AWS services handling the heavy lifting of infrastructure deployment and management, the team can concentrate on delivering the real value of AWSome Books faster — providing seamless access to learning materials for students across the university.
+With a reliable CI/CD pipeline and AWS services taking care of the heavy lifting of infrastructure deployment and management, the team can focus on delivering the real value of AWSome Books more quickly, which is to give students throughout the university easy access to learning materials.
+
+
+
 
 <!-- #### Content
 

@@ -12,7 +12,7 @@ chapter : false
 Join our joyful workshop designed to elevate your Continuous Integration / Continuous Delivery (CI/CD) practices! Here’s what you will dive into:
 
 - experience the simplified *trunk-based development* branching strategy to reduce merge conflicts and make code reviews easier.
-- craft and optimize *automation pipelines* using GitHub Actions, leveraging job parallelism, dependency caching, and concurrency group techniques.
+- craft and optimize *automation pipelines* using GitHub Actions, leveraging job parallelism, dependency caching, merge group, and concurrency group techniques.
 - implement *blue/green deployment* with AWS CodeDeploy to minimize application deployment downtime.
 
 In addition, a simple ChatOps approach will be used to centralize the pipeline and deployment results to Slack channels.
@@ -33,6 +33,9 @@ This workshop is inspired by my own ideas and one of my favorite books, [continu
 
 ![0002](/images/0/0001.jpg?featherlight=false&width=18pc)
 
+{{% notice info %}}
+You should work more on setting up and configuring this workshop to fit your needs and your projects, as it was made for me to learn from and has not been used on any real-world projects yet. If you found it useful and were able to apply anything to your projects, please give it a star 🌟 [here](https://github.com/Definitely-not-AWS-Workshops/workshop-2-blog).
+{{% /notice %}}
 
 <!-- Take a look at some of the operations you might be engaged in. Do not worry if you do not understand now, it will be clear later!
 
@@ -53,11 +56,11 @@ This beginner-level workshop is designed primarily for individuals in technical 
 
 To participate in this workshop, the following prerequisites are recommended:
 
-- An AWS account with an administrative user.
-- A GitHub account.
-- Familiarity with AWS CLI and related services.
-- Familiarity with Java-based API development and Docker (good to know).
-- Basic knowledge of shell and Git commands.
+- an AWS account with an administrative user.
+- a GitHub account.
+- familiarity with AWS CLI and related services.
+- familiarity with Spring-based API development and Docker (good to know).
+- basic knowledge of shell and Git commands.
 
 You do not need deep knowledge on any of these, and if needed, you can research them as you go!
 
@@ -83,6 +86,5 @@ To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section aft
 8. [Cleanup](./8-cleanup/)
 9. [Further Improvements](./9-further-improvements/)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
-
 
 We welcome your suggestions or improvements! If you have any feedback while running this workshop, feel free to send us an email to [tu.lna07@gmail.com](mailto:tu.lna07@gmail.com).
