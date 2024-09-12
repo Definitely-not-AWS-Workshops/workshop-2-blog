@@ -78,10 +78,10 @@ You might want to make the repository **Private** in the real-world projects.
 ![00011](/images/4/1/00011.svg?featherlight=false&width=100pc) -->
 
 
-**10.** Create and move to the project folder in your favorite workspace on your local machine.
+**10.** Choose your favorite workspace on your local machine. Next, create and move to the project folder.
 
 ```git
-cd path/to/your-workspace && mkdir awsome-books && cd awsome-books
+mkdir awsome-books && cd awsome-books
 ```
 
 **11.** Initialize the local git repository.
