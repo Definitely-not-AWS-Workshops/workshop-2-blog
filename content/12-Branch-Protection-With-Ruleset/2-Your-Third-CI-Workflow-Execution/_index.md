@@ -24,33 +24,31 @@ git checkout main
 git pull
 ```
 
-**4.** Create and switch to another branch named **branch-protection**.
+**4.** Create and switch to another branch named **ruleset-experiment**.
 
 ```git
-git checkout -b branch-protection
+git checkout -b ruleset-experiment
 ```
 
 **5.** Run the following command to modify *README.md* file. Remember that your **build-image** job still run **exit 1**.
 
 ```git
-echo "branch protection experiment!" > README.md
+echo "ruleset experiment!" > README.md
 ```
 
-**6.** Make a commit and push to the remote **branch-protection** repository.
+**6.** Make a commit and push to the remote **ruleset-experiment** repository.
 
 ```git
-git add . && git commit -m "branch protection experiment!" && git push --set-upstream origin branch-protection
+git add . && git commit -m "ruleset experiment" && git push --set-upstream origin ruleset-experiment
 ```
 
 **7.** Go to the AWSome Books remote repository. Click **Compare & pull request**.
 
-![0001](/images/12/2/0001.svg?featherlight=false&width=100pc)
+![0001](/images/11/10/0001.svg?featherlight=false&width=100pc)
 
 **8.** Click **Create pull request**.
 
-![0002](/images/12/2/0002.svg?featherlight=false&width=100pc)
-
-**9.** Wait for your jobs to complete
+![0002](/images/11/10/0002.svg?featherlight=false&width=100pc)
 
 **x.** You can bypass the rules by adding the right actors to the Bypass list section. For example, if the list includes roles like **Organization admin** or **Repository admin**, your GitHub account will have the ability to bypass the existing rules since you have organization or repository administrative permissions by default.
 
