@@ -33,7 +33,7 @@ git pull
 git checkout -b failed-job
 ```
 
-**5.** Now, simulate a failed job in your CI workflow. In your **.github/workflows/ci.yaml** file, add a new step to the **build-image** job that could cause the workflow to fail.
+**5.** Now, simulate a failed job in your CI workflow. In your **.github/workflows/ci.yml** file, add a new step to the **build-image** job that could cause the workflow to fail.
 
 change from
 

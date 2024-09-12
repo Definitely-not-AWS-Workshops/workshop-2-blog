@@ -1,5 +1,5 @@
 ---
-title : "Branch Protection With Ruleset"
+title : "Branch Protection Settings"
 date : "`r Sys.Date()`"
 weight : 12
 chapter : false
