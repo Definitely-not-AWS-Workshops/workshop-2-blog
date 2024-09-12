@@ -87,7 +87,7 @@ to
 
 change from
 
-```git
+```yml
 - name: Run integration tests
   run: |
     chmod +x gradlew
@@ -96,7 +96,7 @@ change from
 
 to
 
-```git
+```yml
 - name: Run unit tests
   run: |
     chmod +x gradlew
