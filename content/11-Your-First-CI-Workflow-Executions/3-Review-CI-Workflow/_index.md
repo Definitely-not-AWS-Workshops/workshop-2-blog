@@ -18,9 +18,9 @@ name: CI
 on:
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened]
     paths-ignore:
       - docs/**
-      - README.md
       - docker-compose.dev.yml
 
   merge_group:

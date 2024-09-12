@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 11.8 </b> "
 ---
 
-Because some settings require your jobs to be executed to enable protection (GitHub does not automatically scan your *yaml* files to identify the necessary jobs for these settings), you may need to run the initial CI workflow to set up the required configurations for branch protection.
+Because some settings require your jobs to be executed to enable protection (GitHub does not automatically scan your *yml* files to identify the necessary jobs for these settings), you may need to run the initial CI workflow to set up the required configurations for branch protection.
 
 **1.** Make sure you are still in the right project folder.
 
