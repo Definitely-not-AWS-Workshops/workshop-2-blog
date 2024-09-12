@@ -99,7 +99,7 @@ git remote add origin https://github.com/fcj-workshops-2024/awsome-books.git
 **13.** Create a README.md file with the following content.
 
 ```git
-echo "This is AWSome Books!" >> README.md
+echo "This is AWSome Books!" > README.md
 ```
 
 **14.** Make the first commit and push to the remote repository.
