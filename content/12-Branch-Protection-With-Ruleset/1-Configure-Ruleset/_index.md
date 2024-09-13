@@ -1,10 +1,16 @@
 ---
 title : "Configure Ruleset"
 date : "`r Sys.Date()`"
-weight : 12
+weight : 1
 chapter : false
 pre : " <b> 12.1 </b> "
 ---
+
+Start configuring the ruleset by getting familiarized with the basic rules that control how users interact with the *main* branch.
+
+{{% notice tip %}}
+Consider enabling advanced configurations as needed in real-world scenarios.
+{{% /notice %}}
 
 **1.** Under your remote repository name,
 
