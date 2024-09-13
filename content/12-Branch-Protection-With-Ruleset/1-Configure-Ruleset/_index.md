@@ -37,8 +37,6 @@ Consider enabling advanced configurations as needed in real-world scenarios.
 **4.** In the **Branch rules** section,
 
 - Enable **Restrict deletions**.
-- Enable **Restrict updates**.
-- Enable **Require merge queue**.
 
 ![0004](/images/12/1/0004.svg?featherlight=false&width=100pc)
 
