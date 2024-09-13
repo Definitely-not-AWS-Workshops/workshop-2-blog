@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 12.2 </b> "
 ---
 
-After completing your third execution of the CI workflow, you discover that GitHub required all of the checks to pass in order for the pull request to be merged into the main branch.
+After completing your third execution of the CI workflow, you might discover that GitHub required all of the checks to pass in order for the pull request to be merged into the *main* branch.
 
 **1.** Make sure you are still in the right project folder.
 
