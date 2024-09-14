@@ -80,25 +80,35 @@ DEFAULT=1
     return [1] * n
 ```
 
-**11.** Make a commit.
+**11.** Run the test.
+
+```git
+python test.py
+```
+
+It should be successful for your test to run.
+
+![0003](/images/13/1/0003.svg?featherlight=false&width=100pc)
+
+**12.** Make a commit.
 
 ```git
 git add . && git commit -m "change the default value of the parameter n from DEFAULT to 7"
 ```
 
-**12.** Switch to the *main* branch.
+**13.** Switch to the *main* branch.
 
 ```git
 git checkout main
 ```
 
-**13.** Create and switch to the *person-b* branch.
+**14.** Create and switch to the *person-b* branch.
 
 ```git
 git checkout -b person-b
 ```
 
-**14.** Make a change to *main.py* file.
+**15.** Make a change to *main.py* file.
 
 ```python {linenos=table,hl_lines=["9-10"],linenostart=1}
 DEFAULT=1
@@ -113,7 +123,7 @@ def get_1s(n=DEFAULT):
 +   return [1] * (30 if n==DEFAULT else n)
 ```
 
-**15.** Add a test to *test.py* file.
+**16.** Add a test to *test.py* file.
 
 ```python {linenos=table,hl_lines=["12-16"],linenostart=1}
 import unittest
@@ -138,7 +148,17 @@ if __name__ == "__main__":
 
 ```
 
-**16.** Make a commit.
+**17.** Run the test.
+
+```git
+python test.py
+```
+
+It should be successful for your test to run.
+
+![0004](/images/13/1/0004.svg?featherlight=false&width=100pc)
+
+**18.** Make a commit.
 
 ```git
 git add . && git commit -m "modify the get_1s return and add another test"

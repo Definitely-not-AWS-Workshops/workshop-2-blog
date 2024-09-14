@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 13.2 </b> "
 ---
 
-You should set up the required repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code). 
+You should set up the required repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet. 
 
 In this section, you are going to first merge person *a*'s code changes into the *main* branch. Once that’s done, you create a pull request to integrate person *b*'s updates. This action trigger the CI workflow, and you might discover something interesting along the way. Let's and explore!
 
@@ -36,7 +36,7 @@ git push --set-upstream origin person-a
 
 ![0002](/images/13/2/0002.svg?featherlight=false&width=100pc)
 
-**6.** Wait for all jobs have passed and then click **Merge pull request**.
+**6.** Wait for the job has passed and then click **Merge pull request**.
 
 ![0003](/images/13/2/0003.svg?featherlight=false&width=100pc)
 
@@ -80,6 +80,10 @@ git push --set-upstream origin person-b
 
 ![00010](/images/13/2/00010.svg?featherlight=false&width=100pc)
 
-**16.** Expand the **Show main.py content** dropdown, and you might notice the default value of *n* is now 7. You should recall that person *b* did not modify this in his code changes. Turn out ...
+**16.** Expand the **Show main.py content** dropdown, and you might notice the default value of *n* is now 7. You should recall that person *b* did not modify this in his code changes.
 
 ![00011](/images/13/2/00011.svg?featherlight=false&width=100pc)
+
+It turns out that GitHub Actions Checkout will retrieve the merged code between the pull request and the target (*main*) branch. Learn more about the issuse [here](https://github.com/actions/checkout/issues/881).
+
+This experiment demonstrates that even if your code passes all local tests and shows no conflicts on the pull request, you may still face check failures on the remote CI workflow. This can occur if you forget to pull the latest updates from the *main* branch and test them with your local changes to catch any hidden issues.
