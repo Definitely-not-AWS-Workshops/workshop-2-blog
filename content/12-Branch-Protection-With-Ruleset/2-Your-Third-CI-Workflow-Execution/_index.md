@@ -58,28 +58,15 @@ git add . && git commit -m "ruleset experiment" && git push --set-upstream origi
 
 You next modifies the CI workflow to get all the jobs run successfully.
 
-**10.** In **.github/workflows/ci.yml** file on your local machine, remove the **run: exit 1** step from the **buid-image** job.
+**10.** In *.github/workflows/ci.yml* file on your local machine, remove the **run: exit 1** step from the **buid-image** job.
 
-change from
-
-```yml
+```yml {linenos=table,hl_lines=[5],linenostart=1}
   build-image:
     name: Build image
     runs-on: ubuntu-latest
     steps:
-      - run: exit 1
+-     - run: exit 1
 
-      - name: Checkout
-        uses: actions/checkout@v4
-```
-
-to
-
-```yml
-  build-image:
-    name: Build image
-    runs-on: ubuntu-latest
-    steps:
       - name: Checkout
         uses: actions/checkout@v4
 ```

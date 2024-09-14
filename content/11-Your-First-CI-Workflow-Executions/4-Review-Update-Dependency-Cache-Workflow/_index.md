@@ -10,7 +10,7 @@ You now explore the Update dependency cache workflow.
 
 ![0001](/images/11/4/0001.svg?featherlight=false&width=100pc)
 
-Check out **.github/workflows/update-cache.yml** file.
+Check out *.github/workflows/update-cache.yml* file.
 
 ```yml
 name: Update dependency cache

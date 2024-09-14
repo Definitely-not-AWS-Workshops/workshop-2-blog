@@ -33,27 +33,14 @@ git pull
 git checkout -b failed-job
 ```
 
-**5.** Now, simulate a failed job in your CI workflow. In your **.github/workflows/ci.yml** file, add a new step to the **build-image** job that could cause the workflow to fail.
+**5.** Now, simulate a failed job in your CI workflow. In your *.github/workflows/ci.yml* file, add a step to the **build-image** job that could cause the workflow to fail.
 
-change from
-
-```yml
+```yml {linenos=table,hl_lines=[5],linenostart=1}
   build-image:
     name: Build image
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-```
-
-to
-
-```yml
-  build-image:
-    name: Build image
-    runs-on: ubuntu-latest
-    steps:
-      - run: exit 1
++     - run: exit 1      
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -65,42 +52,22 @@ Gradle's [offline mode](https://www.baeldung.com/gradle-offline-mode)  to build 
 
 - For step **Run unit tests** in **unit-test** job.
 
-change from
-
-```yml
+```yml {linenos=table,hl_lines=["4-5"],linenostart=1}
 - name: Run unit tests
   run: |
     chmod +x gradlew
-    ./gradlew test
-```
-
-to
-
-```yml
-- name: Run unit tests
-  run: |
-    chmod +x gradlew
-    ./gradlew test --offline
+-   ./gradlew test
++   ./gradlew test --offline
 ```
 
 - For step **Run integration tests** in **integration-test** job.
 
-change from
-
-```yml
+```yml {linenos=table,hl_lines=["4-5"],linenostart=1}
 - name: Run integration tests
   run: |
     chmod +x gradlew
-    ./gradlew integrationTest
-```
-
-to
-
-```yml
-- name: Run unit tests
-  run: |
-    chmod +x gradlew
-    ./gradlew integrationTest --offline
+-   ./gradlew integrationTest
++   ./gradlew integrationTest --offline
 ```
 
 **7.** Make a commit and then push to the remote **failed-job** branch.
@@ -172,7 +139,7 @@ The cache key for the **refs/pull/1/merge** pull request, however, is also ident
 
 **21.** Boom!!! A problematic commit has just made its way into your *main* codebase. While this is just a simulation of a failed job, in real-world situations, GitHub without proper branch protection settings could let these bad code changes slip into your *main* codebase.
 
-You can check the **.github/workflows/ci.yml** file in the remote *main* branch to see the step running **exit 1** in the **build-image** job.
+You can check the *.github/workflows/ci.yml* file in the remote *main* branch to see the step running **exit 1** in the **build-image** job.
 
 ![00015](/images/11/10/00015.svg?featherlight=false&width=100pc)
 

@@ -10,7 +10,7 @@ You now explore the Release workflow.
 
 ![0001](/images/11/6/0001.svg?featherlight=false&width=100pc)
 
-Check out **.github/workflows/release.yml** file.
+Check out *.github/workflows/release.yml* file.
 
 ```yml
 name: Release

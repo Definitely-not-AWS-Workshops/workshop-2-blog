@@ -20,7 +20,7 @@ You now explore the reusable workflows.
 
 #### "Validate format of semantic version" Workflow
 
-Check out **.github/workflows/wc-validate-version-format.yml** file.
+Check out *.github/workflows/wc-validate-version-format.yml* file.
 
 ```
 #  This workflow will be called in release and rollback workflows

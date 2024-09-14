@@ -6,8 +6,6 @@ chapter : false
 pre : " <b> 13. </b> "
 ---
 
-You are going to make a basic demo to demonstrate the functionality of the merge group, considering how complicated it is to implement at scale in a real-world setting.
-
-Also, you may require additional codebases in order to implement the demos in the next subsections. You can just turn it on for the AWSome Books project after that is finished.
+In the upcoming sections, you will start by running several experiments on different codebases, exploring why you might opt not to use the merge group. Once those tests are complete, you are going to conduct a final experiment to demonstrate the core functionality of the merge group. Afterward, you can simply enable it for the AWSome Books project.
 
 #### Content

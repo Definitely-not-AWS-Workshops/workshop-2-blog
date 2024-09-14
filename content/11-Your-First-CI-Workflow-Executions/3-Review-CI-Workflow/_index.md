@@ -10,7 +10,7 @@ You now explore the CI workflow.
 
 ![0001](/images/11/3/0001.svg?featherlight=false&width=100pc)
 
-Check out **.github/workflows/ci.yml** file.
+Check out *.github/workflows/ci.yml* file.
 
 ```yml
 name: CI
