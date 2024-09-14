@@ -113,7 +113,7 @@ def get_1s(n=DEFAULT):
 +   return [1] * (30 if n==DEFAULT else n)
 ```
 
-**15.** Add a test in *test.py* file.
+**15.** Add a test to *test.py* file.
 
 ```python {linenos=table,hl_lines=["12-16"],linenostart=1}
 import unittest
