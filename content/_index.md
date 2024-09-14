@@ -25,6 +25,8 @@ You might implement the following AWS architecture. Exciting, right?
 
 *If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1N3jMhLBQQzXQKa8JfW5R7RGvMHI2_wnb/view?usp=sharing).*
 
+You might notice that the VPC is primarily private, with no public subnets or Internet Gateway configurations. In this workshop, you are going to discover how to securely access private resources from the outside and how these resources initiate connections with other AWS services!
+
 {{% notice note %}}
 I believe the word "DevOps" involves more than just toolings; it is about cultivating the right team culture and applying tool-agnostic techniques to truly speed up the development process. This workshop aims to show the core ideas of a DevOps-driven CI/CD pipeline, rather than mastering security scanning, testing, or CI/CD technologies (other components of DevOps, including monitoring and observability, will not be addressed). Once you have grasped the fundamentals of a CI/CD pipeline, select your preferred tools for implementation!
 {{% /notice %}}
