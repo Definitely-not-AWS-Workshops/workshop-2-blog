@@ -12,7 +12,7 @@ chapter : false
 Join our joyful workshop designed to elevate your Continuous Integration / Continuous Delivery (CI/CD) practices! Here’s what you will dive into:
 
 - experience the simplified *trunk-based development* branching strategy to reduce merge conflicts and make code reviews easier.
-- craft and optimize *automation pipelines* using GitHub Actions, leveraging job parallelism, dependency caching, merge group, and concurrency group techniques.
+- craft and optimize *automation pipelines* using GitHub Actions, leveraging job parallelism, dependency caching, merge queue, and concurrency group techniques.
 - implement *blue/green deployment* with AWS CodeDeploy to minimize application deployment downtime.
 
 In addition, a simple ChatOps approach will be used to centralize the pipeline and deployment results to Slack channels.
