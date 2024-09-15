@@ -47,58 +47,81 @@ In this section, you are going to start by creating a pull request for person *a
 
 ![0005](/images/12/1/00010.svg?featherlight=false&width=100pc)
 
-**1.** Make sure you are still in the right project folder.
+**6.** Make sure you are still in the right project folder.
 
 ```git
 cd path/to/experiment-3
 ```
 
-**2.** Switch to *person-a* branch.
+**7.** Switch to *person-a* branch.
 
 ```git
 git checkout person-a
 ```
 
-**3.** Push your changes to the remote repository on the corresponding branch.
+**8.** Push your changes to the remote repository on the corresponding branch.
 
 ```git
 git push --set-upstream origin person-a
 ```
 
-**4.** On your remote repository, click **Compare & pull request**.
+**9.** On your remote repository, click **Compare & pull request**.
 
-![0001](/images/13/3/0001.svg?featherlight=false&width=100pc)
+![0006](/images/13/4/0004.svg?featherlight=false&width=100pc)
 
-**5.** Click **Create pull request**.
+**10.** Click **Create pull request**.
 
-![0002](/images/13/2/0002.svg?featherlight=false&width=100pc)
+![0007](/images/13/2/0002.svg?featherlight=false&width=100pc)
 
-**6.** On your local repository, switch to *person-b* branch.
+**11.** On your local repository, switch to *person-b* branch.
 
 ```git
 git checkout person-b
 ```
 
-**7.** Push your changes to the remote repository on the corresponding branch.
+**12.** Push your changes to the remote repository on the corresponding branch.
 
 ```git
 git push --set-upstream origin person-b
 ```
 
-**8.** On your remote repository, click **Compare & pull request**.
+**13.** On your remote repository, click **Compare & pull request**.
 
-![0003](/images/13/3/0002.svg?featherlight=false&width=100pc)
+![0008](/images/13/4/0005.svg?featherlight=false&width=100pc)
 
-**9.** Click **Create pull request**.
+**14.** Click **Create pull request**.
 
-![0004](/images/13/2/0009.svg?featherlight=false&width=100pc)
+![0009](/images/13/2/0009.svg?featherlight=false&width=100pc)
 
-**10.** You should now have passed CI workflow executions of both pull requests. Do not click **Merge pull request** yet.
+**15.** You should now have passed CI workflow executions of both pull requests. Do not click **Merge pull request** yet.
 
 - Console for the person *a*'s pull request.
 
-![0005](/images/13/3/0003.svg?featherlight=false&width=100pc)
+![00010](/images/13/3/0003.svg?featherlight=false&width=100pc)
 
 - Console for the person *b*'s pull request.
 
-![0006](/images/13/3/0004.svg?featherlight=false&width=100pc)
+![00011](/images/13/3/0004.svg?featherlight=false&width=100pc)
+
+**16.** On the person *a*'s pull request console, click **Merge pull request**.
+
+![00012](/images/13/3/0005.svg?featherlight=false&width=100pc)
+
+**17.** Click **Confirm merge**.
+
+![00013](/images/13/3/0006.svg?featherlight=false&width=100pc)
+
+**18.** Click **Delete branch**.
+
+![00014](/images/13/3/0007.svg?featherlight=false&width=100pc)
+
+**19.** On the person *b*'s pull request console, you should now see the **This branch is out-of-date with the base branch** notification. Before you manually update the branch, click **Details** to review the logs from the previous CI check.
+
+![00015](/images/13/4/0006.svg?featherlight=false&width=100pc)
+
+**20.** Click the **Show main.py content** step dropdown, you might notice that
+
+- The default value of *n* should remain **DEFAULT**.
+- The return value of the function has changed.
+
+![00016](/images/13/4/0007.svg?featherlight=false&width=100pc)
