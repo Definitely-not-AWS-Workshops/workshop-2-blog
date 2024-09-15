@@ -86,4 +86,4 @@ git push --set-upstream origin person-b
 
 It turns out that GitHub Actions Checkout will retrieve the merged code between the pull request and the target (*main*) branch by default. Learn more about the issuse [here](https://github.com/actions/checkout/issues/881).
 
-This experiment demonstrates that even if your code passes all local tests and shows no conflicts on the pull request, you may still have a chance of CI failures on the remote CI workflow. This can occur if you forget to pull the latest updates from the *main* branch and test them with your local changes to catch any hidden issues before making a pull request.
+This experiment shows that even if your code passes all local tests and shows no conflicts in the pull request, you could still face CI failures in the remote workflow. This happens because GitHub Actions Checkout for person *b*’s pull request integrates both *b*’s changes and the latest updates from the *main* branch, which includes changes from person *a* already. 
