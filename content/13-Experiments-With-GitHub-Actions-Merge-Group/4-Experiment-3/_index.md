@@ -119,9 +119,26 @@ git push --set-upstream origin person-b
 
 ![00015](/images/13/4/0006.svg?featherlight=false&width=100pc)
 
-**20.** Click the **Show main.py content** step dropdown, you might notice that
-
-- The default value of *n* should remain **DEFAULT**.
-- The return value of the function has changed.
+**20.** Click the **Show main.py content** step dropdown, you might notice that the default value of *n* should be **DEFAULT** since the person *b* did not change it.
 
 ![00016](/images/13/4/0007.svg?featherlight=false&width=100pc)
+
+**21.** Back to the person *b*'s pull request console, click **Update branch**.
+
+![00017](/images/13/4/0008.svg?featherlight=false&width=100pc)
+
+**22.** Another CI workflow execution should be triggered.
+
+![00018](/images/13/4/0009.svg?featherlight=false&width=100pc)
+
+Wait for seconds, you should see that the CI check has failed.
+
+![00019](/images/13/4/00010.svg?featherlight=false&width=100pc)
+
+**23.** Click **Details** to show the job's logs.
+
+![00020](/images/13/4/00011.svg?featherlight=false&width=100pc)
+
+**24.** Expand the **Shown main.py content** step dropdown, you might now notice that default value of *n* has turned into 7.
+
+![00021](/images/13/4/00012.svg?featherlight=false&width=100pc)
