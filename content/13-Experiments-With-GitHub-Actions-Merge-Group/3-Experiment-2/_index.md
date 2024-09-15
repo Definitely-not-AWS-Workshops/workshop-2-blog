@@ -66,4 +66,68 @@ git push --set-upstream origin person-b
 
 ![0006](/images/13/3/0004.svg?featherlight=false&width=100pc)
 
-Even when CI workflows pass on individual pull requests, your *main* codebase can still break if it is not tested with the latest merged code on the local machine. To help prevent this, let’s take the next step and create a basic branch protection rule to safeguard your workflow and reduce the chances of errors slipping through.
+**11.** On the person *a*'s pull request console, click **Merge pull request**.
+
+![0007](/images/13/3/0005.svg?featherlight=false&width=100pc)
+
+**12.** Click **Confirm merge**.
+
+![0008](/images/13/3/0006.svg?featherlight=false&width=100pc)
+
+**13.** Click **Delete branch**.
+
+![0009](/images/13/3/0007.svg?featherlight=false&width=100pc)
+
+**14.** Click the **Code** tab and then open the *main.py* file.
+
+![00010](/images/13/3/0008.svg?featherlight=false&width=100pc)
+
+**15.** You might notice that the default value of *n* is now 7.
+
+![00011](/images/13/3/0009.svg?featherlight=false&width=100pc)
+
+**16.** On the person *b*'s pull request console, click **Merge pull request**.
+
+![00012](/images/13/3/00010.svg?featherlight=false&width=100pc)
+
+**12.** Click **Confirm merge**.
+
+![00013](/images/13/3/00011.svg?featherlight=false&width=100pc)
+
+**13.** Click **Delete branch**.
+
+![00014](/images/13/3/00012.svg?featherlight=false&width=100pc)
+
+**14.** Click the **Code** tab and then open the *main.py* file.
+
+![00015](/images/13/3/00013.svg?featherlight=false&width=100pc)
+
+**15.** In addition to the default value of *n* is  7, you might notice that the return value of the function has changed.
+
+Boom!!! Your *main* branch is now broken. Even if each pull request passes its CI checks, code changes made to different lines — without any visible conflicts — can still break your codebase.
+
+![00016](/images/13/3/00014.svg?featherlight=false&width=100pc)
+
+**16.** On your local repository, switch to the *main* branch.
+
+```git
+git checkout main
+```
+
+**17.** Pull the lasted codes from the remote *main* branch.
+
+```git
+git pull
+```
+
+**18.** Run the test.
+
+```git
+python test.py
+```
+
+Your test cases should now fail. 
+
+![00017](/images/13/3/00015.svg?featherlight=false&width=100pc)
+
+Even with local testings and CI workflow executions have passed on individual pull requests, your *main* codebase can still break if it is not tested with the latest merged code on the local machine earlier. To help prevent this, let’s take the next step and create a basic branch protection rule to safeguard your workflow and reduce the chances of errors slipping through.
