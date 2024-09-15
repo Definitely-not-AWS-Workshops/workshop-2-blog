@@ -23,7 +23,7 @@ Consider enabling advanced configurations as needed in real-world scenarios.
 **2.** 
 
 - For **Ruleset Name**, enter `main-protection`.
-- For **Enforcement status**, select `Active`.
+- For **Enforcement status**, select **Active**.
 
 ![0002](/images/12/1/0002.svg?featherlight=false&width=100pc)
 
@@ -62,7 +62,7 @@ Consider enabling advanced configurations as needed in real-world scenarios.
 
 ![0009](/images/12/1/0009.svg?featherlight=false&width=100pc)
 
-**10.** Scroll down to the bottom, click **Save changes**.
+**10.** Scroll down to the bottom, click **Create**.
 
 ![00010](/images/12/1/00010.svg?featherlight=false&width=100pc)
 
