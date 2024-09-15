@@ -142,3 +142,5 @@ Wait for seconds, you should see that the CI check has failed.
 **24.** Expand the **Shown main.py content** step dropdown, you might now notice that default value of *n* has turned into 7.
 
 ![00021](/images/13/4/00012.svg?featherlight=false&width=100pc)
+
+In this experiment, you see that the **Require branches to be up to date before merging** rule forces the person-b branch to be synced with the *main* branch before merging. This can lead to a scenario where one merge blocks others. For instance, imagine 100 pull requests, all with passing CI checks, ready to be merged into main. If one pull request merges first, the others will have to wait. Additionally, any pull request could fail later when rerun against the newly updated main *branch*. In the worst case, a single pull request might have to wait for 99 others to merge first before it can be integrated.
