@@ -90,9 +90,9 @@ To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section aft
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
 
 {{% notice info %}}
-It is definitely built with love 💖. If you found it useful and were able to apply anything to your projects, do not hesitate to give it a star 🌟 [here](https://github.com/Definitely-not-AWS-Workshops/workshop-2-blog).
+while it may have some shortcomings, it is definitely built with love 💖. If you found it useful and were able to apply anything to your projects, do not hesitate to give it a star 🌟 [here](https://github.com/Definitely-not-AWS-Workshops/workshop-2-blog).
 {{% /notice %}}
 
-We welcome your suggestions or improvements! If you have any feedback while running this workshop, feel free to send us an email to [tu.lna07@gmail.com](mailto:tu.lna07@gmail.com).
+We welcome your suggestions or improvements! If you have any feedback while running this workshop, feel free to send me an email to [tu.lna07@gmail.com](mailto:tu.lna07@gmail.com).
 
 
