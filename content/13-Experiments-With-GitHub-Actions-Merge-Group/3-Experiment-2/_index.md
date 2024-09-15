@@ -8,7 +8,7 @@ pre : " <b> 13.3 </b> "
 
 You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet.
 
-In this section, you are going to start by creating a pull request for person *a*'s changes, followed by a separate pull request for person *b*'s. Once both pull requests are up, you will wait for the CI workflows to run. Since person *a*'s changes have not been merged into the *main* branch yet, person *b*'s CI check completes successfully without incorporating person *a*'s updates. Feeling confident, you merge person *b*'s code changes into the *main* branch. But then — boom! The codebase is now broken, even though both pull requests had passed all their tests.
+In this section, you are going to start by creating a pull request for person *a*'s changes, followed by a separate pull request for person *b*'s. Once both pull requests are up, you will wait for the CI workflows to run. Since person *a*'s changes have not been merged into the *main* branch yet, person *b*'s CI check completes successfully without incorporating person *a*'s updates. Feeling confident, you merge person *a*'s code changes into the *main* branch. Subsequently, you go ahead and merge person *b*'s pull request, and it should be successful. But then — boom! The codebase is now broken, despite both pull requests passing all their tests.
 
 **1.** Make sure you are still in the right project folder.
 

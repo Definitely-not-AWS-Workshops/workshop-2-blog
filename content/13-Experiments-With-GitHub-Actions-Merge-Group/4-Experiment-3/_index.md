@@ -8,7 +8,7 @@ pre : " <b> 13.4 </b> "
 
 You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet.
 
-In this section, you are going to start by creating a pull request for person *a*'s changes, followed by a separate pull request for person *b*'s. Once both pull requests are up, you will wait for the CI workflows to run. Since person *a*'s changes have not been merged into the *main* branch yet, person *b*'s CI check completes successfully without incorporating person *a*'s updates. Feeling confident, you merge person *b*'s code changes into the *main* branch. But then — boom! The codebase is now broken, even though both pull requests had passed all their tests.
+In this section, you are going to begin by securing your *main* branch with the *Require branches to be up to date before merging* rule. Next, you create a pull request for person *a*'s code changes, followed by a separate one for person *b*'s. After both pull requests are submitted, you wait for the CI workflows to complete. Since person *a*'s changes have not been merged into *main* branch yet, person *b*'s CI check passes successfully without including person *a*'s updates. Confidently, you merge person *a*'s pull request into the *main* branch. However, with the new branch protection rule in place, person *b*'s pull request triggers an "update required" notification immediately. At this point, you manually update the *person-b* branch, which then invokes a new CI workflow run that tests person *b*'s changes now integrated with person *a*'s updates in the *main* branch.
 
 **1.** On the remote repository,
 
@@ -144,3 +144,5 @@ Wait for seconds, you should see that the CI check has failed.
 ![00021](/images/13/4/00012.svg?featherlight=false&width=100pc)
 
 In this experiment, you see that the **Require branches to be up to date before merging** rule forces the *person-b* branch to be synced with the *main* branch before merging. Though your *main* branch is now protected, this can lead to a scenario where one merge blocks others. For instance, imagine 100 pull requests, all with passing CI checks, ready to be merged into main. If one pull request merges first, the others will have to wait. Additionally, any pull request could fail later when rerun against the newly updated main *branch*. In the worst case, a single pull request might have to wait for 99 others to merge first before it can be integrated.
+
+To handle with this issue at scale, you might want to leverage GitHub Actions Merge Group. Let's dive into the final experiment!

@@ -35,8 +35,8 @@ This workshop is inspired by my own ideas and one of my favorite books, [continu
 
 ![0002](/images/0/0001.jpg?featherlight=false&width=18pc)
 
-{{% notice info %}}
-You should work more on setting up and configuring this workshop to fit your needs and your projects, as it was made for me to learn from and has not been used on any real-world projects yet. If you found it useful and were able to apply anything to your projects, please give it a star 🌟 [here](https://github.com/Definitely-not-AWS-Workshops/workshop-2-blog).
+{{% notice note %}}
+You should work more on setting up and configuring this workshop to fit your needs and your projects, as it was made for me to learn from and has not been used on any real-world projects yet.
 {{% /notice %}}
 
 <!-- Take a look at some of the operations you might be engaged in. Do not worry if you do not understand now, it will be clear later!
@@ -89,4 +89,10 @@ To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section aft
 9. [Further Improvements](./9-further-improvements/)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
 
+{{% notice info %}}
+It is definitely built with love 💖. If you found it useful and were able to apply anything to your projects, do not hesitate to give it a star 🌟 [here](https://github.com/Definitely-not-AWS-Workshops/workshop-2-blog).
+{{% /notice %}}
+
 We welcome your suggestions or improvements! If you have any feedback while running this workshop, feel free to send us an email to [tu.lna07@gmail.com](mailto:tu.lna07@gmail.com).
+
+
