@@ -163,3 +163,5 @@ It should be successful for your test to run.
 ```git
 git add . && git commit -m "modify the get_1s return and add another test"
 ```
+
+Next, you run a series of experiments to check if your tested code changes on local machine can still fail to execute on pull requests, even without any visible code conflicts.

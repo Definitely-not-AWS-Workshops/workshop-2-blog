@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 13.2 </b> "
 ---
 
-You should set up the required repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet. 
+You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet. 
 
 In this section, you are going to first merge person *a*'s code changes into the *main* branch. Once that’s done, you create a pull request to integrate person *b*'s updates. This action trigger the CI workflow, and you might discover something interesting along the way. Let's and explore!
 
