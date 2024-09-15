@@ -8,7 +8,7 @@ pre : " <b> 13.3 </b> "
 
 You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet.
 
-In this section, you are going to start by creating a pull request for person *a*'s changes, followed by a separate pull request for person *b*'s. Once both pull requests are up, you will wait for the CI workflows to run. Since person *a*'s changes have not been merged into the *main* branch yet, person *b*'s CI check completes successfully without incorporating person *b*'s updates. Feeling confident, you merge person *b*'s code changes into the *main* branch. But then—boom! The codebase is now broken, even though both pull requests had passed all their tests.
+In this section, you are going to start by creating a pull request for person *a*'s changes, followed by a separate pull request for person *b*'s. Once both pull requests are up, you will wait for the CI workflows to run. Since person *a*'s changes have not been merged into the *main* branch yet, person *b*'s CI check completes successfully without incorporating person *a*'s updates. Feeling confident, you merge person *b*'s code changes into the *main* branch. But then — boom! The codebase is now broken, even though both pull requests had passed all their tests.
 
 **1.** Make sure you are still in the right project folder.
 
@@ -126,8 +126,8 @@ git pull
 python test.py
 ```
 
-Your test cases should now fail. 
+By now, your test cases are expected to fail.
 
 ![00017](/images/13/3/00015.svg?featherlight=false&width=100pc)
 
-Even with local testings and CI workflow executions have passed on individual pull requests, your *main* codebase can still break if it is not tested with the latest merged code on the local machine earlier. To help prevent this, let’s take the next step and create a basic branch protection rule to safeguard your workflow and reduce the chances of errors slipping through.
+Just like in the first experiment, even with successful local testing on each branch and passing CI workflows for individual pull requests, your *main* codebase can still end up broken. In this case, it gets worse — since the person *b*'s pull request did not catch the bad merge early on. To help avoid this, let's take the next step: set up a basic branch protection rule to strengthen your workflow and prevent these issues from slipping through.
