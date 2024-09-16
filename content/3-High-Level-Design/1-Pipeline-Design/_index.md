@@ -5,12 +5,13 @@ weight : 1
 chapter : false
 pre : " <b> 3.1 </b> "
 ---
-
-<!-- In this section, you first understand what CI/CD refers to in the workshop. You then examine suitable branching and deployment strategies that help deliver the application reliably and faster. After that, you define the team workflow and CI/CD pipelines using the Business Process Model and Notation 2.0. Lastly, you provide the overall AWS architecture that has all the services needed for the development and delivery of AWSome Books, which are going to be implemented in the hands-on sections.  -->
  
+Let's first take a look at several tools that the AWSDSC-XUT team may find useful for the deployment and collaboration of AWSome Books. The CI, Deployment, and Rollback processes for the project are then examined.
+
+
 #### GitHub Actions
 
-![0001](/images/3/1/0001.png?featherlight=false&width=5pc)
+![0001](/images/3/1/0001.png?featherlight=false&width=4pc)
 
 [GitHub Actions](https://github.com/features/actions) is a robust CI/CD and automation tool embedded within GitHub, designed to streamline the development workflow. Here are its key features:
 
@@ -19,22 +20,30 @@ pre : " <b> 3.1 </b> "
 - *extensive marketplace:* access a wide range of pre-built actions for various tasks, enhancing functionality and saving time.
 - *cross-platform support:* run workflows across multiple operating systems and environments either GitHub-hosted or self-hosted, including Linux, Windows, and macOS.
 - *complex workflow management:* utilize features like conditions and matrix builds to handle sophisticated automation scenarios efficiently.
-  
-These features collectively enhance productivity and streamline the CI/CD process, making GitHub Actions a valuable tool for developers.
+
+The AWSDSC-XUT team is well-versed in using GitHub but has yet to explore GitHub Actions. Given its seamless integration with GitHub and powerful features, the team is excited to leverage GitHub Actions for building their CI/CD pipelines.
 
 #### Slack
 
 ![0002](/images/3/1/0002.png?featherlight=false&width=6pc)
 
-Slack is a collaborative messaging platform designed to enhance team communication and productivity. It provides a centralized space for conversations, file sharing, and integration with various tools and services. Key selling points of Slack include:
+Prior to adopting Slack, the AWSDSC-XUT team faced several challenges in collaboration:
 
-- *organized communication:* channels help keep conversations organized by topic, project, or team, making it easy to find and reference past discussions.
-- *real-time messaging:* facilitate instant communication with direct messages and group chats, improving team responsiveness and collaboration.
-- *integration capabilities:* connect with a wide range of apps and services, such as Google Drive, GitHub, and Trello, to streamline workflows and keep everything in one place.
-- *search functionality:* powerful search features allow users to quickly find messages, files, and conversations, enhancing information retrieval.
-- *customization and automation:* customize notifications and use workflows to automate repetitive tasks, increasing efficiency and reducing manual work.
+- *siloed communication:* communication between the team members are usually fragmented across different tools. In other words, without Slack and ChatOps, team members often switch between various tools (e.g., GitHub, AWS) to perform tasks like checking system health or deployment status.
 
-These features make Slack a versatile and effective tool for enhancing team collaboration and streamlining communication.
+- *delayed feedback loops:* it does not provide immediate feedback for tasks such as deployments, incident response, or code merges. Team members cannot see logs, results, and errors right in the chat, increasing delays caused by waiting for email notifications or checking dashboards.
+
+[Slack](https://slack.com/) simplifies [ChatOps](https://www.atlassian.com/incident-management/devops/chatops). The combination addresses the challenge of improving communication and collaboration in software development, IT operations, and DevOps processes. The core problems it solves include:
+
+- *operational visibility:* all stakeholders can view the execution of tasks like deployments, system health checks, or incident handling in real-time, fostering transparency and alignment among teams.
+
+- *incident response efficiency:* during outages or incidents, teams can use ChatOps to trigger remediation actions, gather metrics, or coordinate responses without leaving Slack, improving response times.
+
+- *automation:* teams can automate repetitive tasks, such as triggering builds or deploying applications, directly from Slack, improving efficiency and reducing human error.
+
+While ChatOps offers extensive capabilities, the AWSDSC-XUT team could start by experimenting with a simple approach — integrating deployment and pipeline notifications into Slack. This would provide valuable insights and a streamlined communication process in one place.
+
+Before diving into CI/CD design, it is helpful to familiarize yourself with some fundamental components of Business Process Model and Notation (BPMN) that are used in design diagrams. This will provide you with a clearer understanding of the overall design.
 
 #### Business Process Model and Notation (BPMN) 2.0
 
