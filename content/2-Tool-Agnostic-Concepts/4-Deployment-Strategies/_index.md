@@ -18,7 +18,7 @@ In [canary release](https://martinfowler.com/bliki/CanaryRelease.html), one inst
 
  If the *canary* is in good condition, and there are two possible ways that the deployment can go forward: either by moving all traffic to instances that are running the updated version or by progressively generating more *canary* instances and rerouting all traffic to them until the old instances are no longer receiving any traffic at all. The selling point of the strategy is that only a small percentage of selected users may experience the outage if the *canary* is unhealthy. In that case, the entire process can be stopped and all traffic is routed back to the original instances. 
 
-![0002](/images/2/2/0002.svg?featherlight=false&width=42pc)
+![0001](/images/2/4/0001.svg?featherlight=false&width=42pc)
 
 In my opinion, although *canary release* is supported by AWS CodeDeploy, it fails to demonstrate the real meaning and potential of the deployment strategy. *canary release* by AWS CodeDeploy allows all software users to have access to the application versions proportionally, rather than just a subset of software users. The real power of *canary release* comes from the ability to select which users will receive the new version.
 
@@ -28,7 +28,7 @@ In my opinion, although *canary release* is supported by AWS CodeDeploy, it fai
 
 *blue/green deployment* requires enough resources to run two full sets of instances at the same time. If you own and manage your own hardware, this might not be feasible unless you have a significant amount of extra capacity on hand. However, with AWS, this approach becomes much simpler and more cost-effective — you only pay for the extra resources during the deployment period.
 
-![0003](/images/2/2/0004.svg?featherlight=false&width=42pc)
+![0002](/images/2/4/0002.svg?featherlight=false&width=42pc)
 
 ---
 

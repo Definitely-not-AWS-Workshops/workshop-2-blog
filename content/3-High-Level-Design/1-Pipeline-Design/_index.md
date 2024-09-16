@@ -6,8 +6,7 @@ chapter : false
 pre : " <b> 3.1 </b> "
 ---
  
-Let's first take a look at several tools that the AWSDSC-XUT team may find useful for the deployment and collaboration of AWSome Books. The CI, Deployment, and Rollback processes for the project are then examined.
-
+Let's first take a look at several tools that the AWSDSC-XUT team may find useful for the deployment and collaboration of AWSome Books. The CI, Release, and Rollback processes for the project are then examined.
 
 #### GitHub Actions
 
@@ -51,7 +50,7 @@ Before diving into CI/CD design, it is helpful to familiarize yourself with some
 
 The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation with identifiable icons known as *elements*. The table below shows a subset of the most used BPMN 2.0 elements that might be enough for designing your pipelines.
 
-![0003](/images/2/2/0003.svg?featherlight=false&width=40pc)
+![0003](/images/3/1/0003.svg?featherlight=false&width=40pc)
 
 #### The Proposal Workflow and Pipelines
 

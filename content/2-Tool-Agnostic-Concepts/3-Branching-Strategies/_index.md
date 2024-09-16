@@ -38,7 +38,7 @@ A different variation of *trunk-based development* involves creating short-liv
 
 The following figure illustrates the idea of *trunk-based development* with short-lived feature branches:
 
-![0001](/images/2/2/0001.svg?featherlight=false&width=32pc)
+![0001](/images/2/3/0001.svg?featherlight=false&width=32pc)
 
 As previously stated, the general goal of *trunk-based development* is to commit back to the main codebase as frequently as feasible, even if a feature has not yet been fully completed, which may align with the fast feedback of the DevOps culture. You break down your task into small chunks, each of which corresponds to a feature branch and can be completed in less than one day. That being said, it is hard! And it may feel easier not to do it. Despite minimizing difficulties when working with long-lived feature branches on other branching strategies, *trunk-based development* requires experienced teams to control incompleted parts of the codebase. 
 
