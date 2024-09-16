@@ -79,15 +79,19 @@ To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section aft
 
 #### Main Content
 
-1. [Introduction](./1-introduction/)
-2. [High-Level Design](./2-high-level-design/)
-3. [Preparation](./3-preparation/)
-4. [Terraform Modules Repository](./4-terraform-modules-repository/)
-5. [Terraform Live Repository](./5-terraform-live-repository/)
-6. [AnimeHub Deployment](./6-animehub-deployment/)
-7. [Experiments](./7-experiments/)
-8. [Cleanup](./8-cleanup/)
-9. [Further Improvements](./9-further-improvements/)
+1. [Introduction](1-introduction)
+2. [Tool-Agnostic Concepts](2-tool-agnostic-concepts)
+3. [High-Level Design](3-high-level-design)
+4. [Preparation](4-preparation)
+5. [Create AWS ECR](5-create-aws-ecr)
+6. [Create Application Load Balancer](6-create-application-load-balancer)
+7. [Create AWS ECS Resources](7-create-aws-ecs-resources)
+8. [Create Network Load Balancer](8-create-network-load-balancer)
+9. [Create AWS API Gateway Resources](9-create-aws-api-gateway-resources)
+10. [Create AWS RDS Resources](10-create-aws-rds-resources)
+11. [Your First CI Workflow Executions](11-your-first-ci-workflow-executions)
+12. [Branch Protection With Ruleset](12-branch-protection-with-ruleset)
+13. [Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
 
 {{% notice info %}}
