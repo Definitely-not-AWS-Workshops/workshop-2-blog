@@ -23,7 +23,7 @@ You might implement the following AWS architecture. Exciting, right?
 
 ![0001](/images/0/0001.svg?featherlight=false&width=100pc)
 
-*If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1N3jMhLBQQzXQKa8JfW5R7RGvMHI2_wnb/view?usp=sharing).*
+*If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1T6UTfYhVNh_XZzH9yYn-3AG1LSZwzfXg/view?usp=sharing).*
 
 You might notice that the VPC is primarily private, with no public subnets or Internet Gateway configurations. In this workshop, you are going to discover how to securely access private resources from the outside and how these resources initiate connections with other AWS services!
 

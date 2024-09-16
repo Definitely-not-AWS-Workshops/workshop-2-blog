@@ -131,6 +131,6 @@ You might build the following AWS architecture for the AWSome Books application,
 
 ![AWS architecture diagram](/images/0/0001.svg?featherlight=false&width=100pc)
 
-*If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1N3jMhLBQQzXQKa8JfW5R7RGvMHI2_wnb/view?usp=sharing).*
+*If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1T6UTfYhVNh_XZzH9yYn-3AG1LSZwzfXg/view?usp=sharing).*
 
  You should not be surprised by the architecture where all subnets are private and no Internet Gateway configurations. We have covered this in detail throughout this section already.
