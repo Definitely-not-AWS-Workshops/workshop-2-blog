@@ -54,13 +54,40 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 #### The Proposal Workflow and Pipelines
 
-**1.** To align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to detect issues early before publishing a pull request, is one of the software development methodologies that couple particularly well with DevOps methods. During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world job circumstances. 
+Let's have a look at how the AWSome Books development and integration processes would work.
 
-**2.**
+**Local Development**
+
+![0004](/images/3/1/0004.svg?featherlight=false&width=100pc)
 
 
+To align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to discover issues early before publishing a pull request, is one of the software development methodologies that couple particularly well with DevOps practices.
 
-![0003](/images/3/1/00069.svg?featherlight=false&width=100pc)
+During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world circumstances. 
+
+**Integration of Code Changes to the Remote Repository**
+
+![0005](/images/3/1/0005.svg?featherlight=false&width=100pc)
+
+**1.** After verifying that your code changes pass all tests locally on the short-lived *feature* branch, you are ready to commit and push them to the corresponding remote branch.
+
+**2.** On the remote short-lived *feature* branch, you might create a pull request (PR).
+
+**3.** The PR creation might trigger a GitHub Actions CI workflow execution. While the *Scan image* job depends on the *Build image* job, you may have noticed that the *Run unit tests*, *Run integration tests*, *Scan source code*, and *Build image* are independent and execute in parallel to reduce the CI workflow execution time.
+
+**4a.** In the event of any job failures, your CI workflow should send a notification to the Slack channel and conclude with a failed status.
+
+**4b.** If all jobs complete successfully, your CI workflow sends a notification to the Slack channel before wrapping up. You then move to the next step.
+
+**5a.** Make sure your team members review and approve the PR. If they have not done so already, they should conduct a code review before moving on to step **6**.
+
+**5b.** If your PR has been reviewed and approved, merge the PR to the *main* (*trunk*) branch. Proceed to step **7**.
+
+**6a.** If the PR is not approved, start by reviewing the issues and comments. Resolve these on your local branch, then recommit and push the updated code changes as step **1**.
+
+**6b.** Otherwise, you can add the PR to the merge queue. This will trigger another CI workflow to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
+
+**7.** Merging the PR might trigger an Update dependency cache workflow, which writes the dependency cache to the GitHub Actions Cache storage for the *main* branch.
 
 ![0003](/images/3/1/00070.svg?featherlight=false&width=100pc)
 
