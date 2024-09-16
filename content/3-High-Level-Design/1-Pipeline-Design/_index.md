@@ -55,7 +55,11 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 #### The Proposal Workflow and Pipelines
 
-Since AWS CodePipeline does not support stage execution in parallel
+**1.** To align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to detect issues early before publishing a pull request, is one of the software development methodologies that couple particularly well with DevOps methods. During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world job circumstances. 
+
+**2.**
+
+
 
 ![0003](/images/3/1/00069.svg?featherlight=false&width=100pc)
 
