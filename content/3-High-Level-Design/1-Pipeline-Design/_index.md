@@ -14,7 +14,7 @@ Let's first take a look at several tools that the AWSDSC-XUT team may find us
 
 [GitHub Actions](https://github.com/features/actions) is a robust CI/CD and automation tool embedded within GitHub, designed to streamline the development workflow. Here are its key features:
 
-- *seamless integration:* directly integrated with GitHub repositories, enabling smooth automation of development processes.
+- *seamless integration with GitHub:* directly integrated with GitHub repositories, enabling smooth automation of development processes.
 - *custom workflows:* create and manage workflows using YAML configuration files to automate tasks such as building, testing, and deploying code.
 - *extensive marketplace:* access a wide range of pre-built actions for various tasks, enhancing functionality and saving time.
 - *cross-platform support:* run workflows across multiple operating systems and environments either GitHub-hosted or self-hosted, including Linux, Windows, and macOS.
@@ -89,9 +89,28 @@ During the hands-on sections, you just skip this phase. It is essential to inc
 
 **7.** Merging the PR might trigger an Update dependency cache workflow, which writes the dependency cache to the GitHub Actions Cache storage for the *main* branch.
 
-![0003](/images/3/1/00070.svg?featherlight=false&width=100pc)
+#### Release Process
 
-![0003](/images/3/1/00071.svg?featherlight=false&width=100pc)
+![0006](/images/3/1/0006.svg?featherlight=false&width=100pc)
 
-In the next section, you learn how to improve the pipelines
+You may have noticed that the jobs in the workflow are interdependent and must be completed in the correct order. Any job failure has the potential to bring down the Release workflow as a whole. The workflow will alert the Slack channel and then finish, whether it is successful or not.
 
+#### Rollback Process
+
+Let's look at the Rollback process, which lets you use GitHub Actions to manually roll back to earlier versions.
+
+![0007](/images/3/1/0007.svg?featherlight=false&width=100pc)
+
+**1.** Start by specifying the version in [Semantic Versioning](https://semver.org/) (SemVer) format you want to manually roll back to.
+
+**2.** The Rollback workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format. If the version format is valid, proceed to the next step. Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
+
+**3.** This job verifies whether the version exists. If it does, proceed to the next step. If not, the workflow will notify the Slack channel and terminate execution.
+
+**4.** At this point, your *rollback* job should revert the specified version from step **1**. Regardless of whether it passes or fails, the workflow will send the notification to the Slack channel.
+
+You may have noticed that the jobs in the workflow are interdependent and must be completed in the correct order. Any job failure has the potential to bring down the Rollback workflow as a whole. The workflow will alert the Slack channel and then finish, whether it is successful or not.
+
+{{% notice tip %}}
+For advanced incident management, prioritize automated rollback techniques, keeping manual rollbacks as a secondary option.
+{{% /notice %}}
