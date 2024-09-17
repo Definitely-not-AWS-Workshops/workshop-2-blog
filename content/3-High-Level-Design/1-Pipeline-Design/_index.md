@@ -54,6 +54,13 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 #### From Local Development to Integration of Code Changes to the Remote Main Branch
 
+The AWSDSC-XUT team may want to experiment with a simplified *trunk-based development* branching strategy that consists of the *main* (*trunk*) branch and several short-lived *feature* branches. All thoroughly tested code changes should be merged via pull requests and reviewed by your team members before being integrated into the *main* branch. This minimal setup allows for direct deployment of the AWSome Books application from the *main* branch at any time. You can refer to [trunk-based development](https://trunkbaseddevelopment.com/) for other advanced variants of this branching strategy or design your own for a customized branching strategy that nevertheless adheres to DevOps practices.
+
+{{% notice tip %}}
+While pure DevOps practices emphasize automation and aim to minimize the need for manual testing or multiple environments beyond production, real-world scenarios often require a more nuanced approach. In practice, teams typically manage several environments (dev, testing, UAT, production, etc.), incorporating manual testing to ensure everything runs smoothly before the final release to customers.
+{{% /notice %}}
+
+
 Let's have a look at how the AWSome Books local development and integration processes would work.
 
 **Local Development**
@@ -98,6 +105,11 @@ During the hands-on sections, you just skip this phase. It is essential to inc
 
 **6.** If the cache key has changed or the cache entry does not exist, merging the PR may cause an Update dependency cache workflow to start, which automatically uploads the dependency cache to the GitHub Actions Cache storage for the *main* branch.  (see [11. Your First CI Workflow Executions](11-your-first-ci-workflow-executions) for more experiments showing how caching reduces your pipeline execution time).
 
+
+{{% notice tip %}}
+It is necessary to use techniques to shorten the pipeline running time since modern CI/CD technologies factor execution time into the pricing model. Among the various pipeline optimization techniques, dependency caching is one to take into account in the workshop.
+{{% /notice %}}
+
 #### Release Process
 
 Let's examine the Release process, which enables you to make available the most recent version of AWSome Books to AWS.
@@ -122,7 +134,6 @@ Let's examine the Release process, which enables you to make available the most 
 - If not, the workflow will stop the execution and alert the Slack channel.
 
 **5.** Your *Release* job delivers the AWSome Books using the version that was chosen in step **1**. Part of this job is uploading the container image to the AWS ECR. If you want to, you may think about splitting the image publishing to another job. Whether the process succeeds or fails, it will then stop execution and send a notification to the Slack channel.
-
 
 You may have noticed that the jobs in the workflow are interdependent and must be completed in the correct order. Any job failure has the potential to bring down the Release workflow as a whole. The workflow will alert the Slack channel and then finish, whether it is successful or not.
 
