@@ -54,10 +54,14 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 #### From Local Development to Integration of Code Changes to the Remote Main Branch
 
-The AWSDSC-XUT team may want to experiment with a simplified *trunk-based development* branching strategy that consists of the *main* (*trunk*) branch and several short-lived *feature* branches. All thoroughly tested code changes should be merged via pull requests and reviewed by your team members before being integrated into the *main* branch. This minimal setup allows for direct deployment of the AWSome Books application from the *main* branch at any time. You can refer to [trunk-based development](https://trunkbaseddevelopment.com/) for other advanced variants of this branching strategy or design your own for a customized branching strategy that nevertheless adheres to DevOps practices.
+The AWSDSC-XUT team may want to experiment with a simplified *trunk-based development* branching strategy that consists of the *main* (*trunk*) branch and several short-lived *feature* branches. All thoroughly tested code changes should be merged via pull requests and reviewed by your team members before being integrated into the *main* branch. This minimal setup allows for direct deployment of the AWSome Books application from the *main* branch at any time. 
 
 {{% notice tip %}}
-While pure DevOps practices emphasize automation and aim to minimize the need for manual testing or multiple environments beyond production, real-world scenarios often require a more nuanced approach. In practice, teams typically manage several environments (dev, testing, UAT, production, etc.), incorporating manual testing to ensure everything runs smoothly before the final release to customers.
+You can refer to [trunk-based development](https://trunkbaseddevelopment.com/) for other advanced variants of this branching strategy or design your own for a customized branching strategy that nevertheless adheres to DevOps practices.
+{{% /notice %}}
+
+{{% notice tip %}}
+While pure DevOps practices emphasize automation and aim to minimize the need for manual testing and multiple environments before production, real-world scenarios often require a more nuanced approach. In practice, teams typically manage several environments (dev, testing, UAT, production, etc.), incorporating manual testing to ensure everything runs smoothly before the final release to customers.
 {{% /notice %}}
 
 
@@ -65,7 +69,7 @@ Let's have a look at how the AWSome Books local development and integration proc
 
 **Local Development**
 
-In general, writing test cases should be the first step in the local development process for AWSome Books. You may then run unit tests. You may want to refactor the well-tested code changes you made before rerunning the tests.
+In general, start your local development process for AWSome Books by writing test cases. Next, implement your business logic and run unit tests. If necessary, refactor your well-tested code and rerun the tests to ensure everything remains reliable.
 
 ![0004](/images/3/1/0004.svg?featherlight=false&width=100pc)
 
@@ -78,6 +82,10 @@ In addition to unit tests, you may also carry out different static and dynamic c
 During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world circumstances. 
 
 **Integration of Code Changes to the Remote Main Branch**
+
+Make sure to run tests on your local machine before submitting a pull request for fast feedback. If a team member skips this step and creates a pull request, the CI workflow should automatically run the tests on the remote branch.
+
+Let's take a look at the integration of code changes from the local machine to the *main* branch.
 
 ![0005](/images/3/1/0005.svg?featherlight=false&width=100pc)
 
