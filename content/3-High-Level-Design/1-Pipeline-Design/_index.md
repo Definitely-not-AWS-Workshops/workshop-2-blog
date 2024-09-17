@@ -102,11 +102,20 @@ Let's examine the Release process, which enables you to make available the most 
 
 **1.** To begin, you create a tag with the version that you plan to release using the [Semantic Versioning](https://semver.org/) (SemVer) format.
 
-**2.** The Release workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format. If the version format is valid, proceed to the next step. Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
+**2.** The Release workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format.
 
-**3.** The *Build image* job creates a Docker image, which may be necessary for your application to operate properly on AWS. If the image is built successfully, proceed to the next step. If not, the workflow will notify the Slack channel and terminate the execution.
+- If the version format is valid, proceed to the next step.
+- Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
 
-**4.** You can now perform another image analysis to check for any updates to the [Common Vulnerabilities and Exposures](https://jfrog.com/learn/devsecops/cve/) (CVE) database. If it finds no vulnerabilities, move on to the following step. If not, the workflow will stop the execution and alert the Slack channel.
+**3.** The *Build image* job creates a Docker image, which may be necessary for your application to operate properly on AWS.
+
+- If the image is built successfully, proceed to the next step.
+- If not, the workflow will notify the Slack channel and terminate the execution.
+
+**4.** You can now perform another image analysis to check for any updates to the [Common Vulnerabilities and Exposures](https://jfrog.com/learn/devsecops/cve/) (CVE) database.
+
+- If it finds no vulnerabilities, move on to the following step.
+- If not, the workflow will stop the execution and alert the Slack channel.
 
 **5.** Your *Release* job delivers the AWSome Books using the version that was chosen in step **1**. Part of this job is uploading the container image to the AWS ECR. If you want to, you may think about splitting the image publishing to another job. Whether the process succeeds or fails, it will then stop execution and send a notification to the Slack channel.
 
@@ -121,9 +130,15 @@ Let's look at the Rollback process, which lets you use GitHub Actions to manuall
 
 **1.** To begin, identify the version you want to manually roll back to in SemVer format (such as step **1** in the Release process).
 
-**2.** The Release workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format. If the version format is valid, proceed to the next step. Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
+**2.** The Release workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format.
 
-**3.** This job verifies whether the version exists. If it does, proceed to the next step. If not, the workflow will notify the Slack channel and terminate the execution.
+- If the version format is valid, proceed to the next step.
+- Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
+
+**3.** This job verifies whether the version exists.
+
+- If it does, proceed to the next step.
+- If not, the workflow will notify the Slack channel and terminate the execution.
 
 **4.** At this point, your *Rollback* job should revert the specified version from step **1**. Regardless of whether it passes or fails, the workflow then sends the notification to the Slack channel and stop the execution.
 
