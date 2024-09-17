@@ -80,19 +80,23 @@ During the hands-on sections, you just skip this phase. It is essential to inc
 
 **3.** The PR creation might trigger a GitHub Actions CI workflow execution. While the *Scan image* job depends on the *Build image* job, you may have noticed that the *Run unit tests*, *Run integration tests*, *Scan source code*, and *Build image* are independent and execute in parallel to reduce the CI workflow execution time as a whole.
 
-**4a.** In the event of any job failures, your CI workflow should send a notification to the Slack channel and conclude with a failed status.
+- In the event of any job failures, your CI workflow should send a notification to the Slack channel and conclude with a failed status.
 
-**4b.** If all jobs complete successfully, your CI workflow sends a notification to the Slack channel before wrapping up. You then move to the next step.
+- If all jobs complete successfully, your CI workflow sends a notification to the Slack channel before wrapping up. You then move to the next step.
 
-**5a.** Make sure your team members review and approve the PR. If they have not done so already, they should conduct a code review before moving on to step **6**.
+**4** Make sure your team members review and approve the PR.
 
-**5b.** If your PR has been reviewed and approved, merge the PR to the *main* (*trunk*) branch. Proceed to step **7**.
+- If they have not done so already, they should conduct a code review before moving on to step **5**.
 
-**6a.** If the PR is not approved, start by reviewing the issues and comments. Resolve these on your local branch, then recommit and push the updated code changes as step **1**.
+- If your PR has been reviewed and approved, merge the PR to the *main* (*trunk*) branch. Proceed to step **6**.
 
-**6b.** Otherwise, you can add the PR to the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) (or merge group), which helps increase velocity by automating PR merges into a busy branch and ensuring the branch is never broken by incompatible changes (see [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group) for more experiments on why you might want to use this feature). This will trigger another CI workflow execution to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
+**5.**
 
-**7.** If the cache key has changed or the cache entry does not exist, merging the PR may cause an Update dependency cache workflow to start, which automatically uploads the dependency cache to the GitHub Actions Cache storage for the *main* branch.  (see [11. Your First CI Workflow Executions](11-your-first-ci-workflow-executions) for more experiments showing how caching reduces your pipeline execution time).
+- If the PR is not approved, start by reviewing the issues and comments. Resolve these on your local branch, then recommit and push the updated code changes as step **1**.
+
+- Otherwise, you can add the PR to the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) (or merge group), which helps increase velocity by automating PR merges into a busy branch and ensuring the branch is never broken by incompatible changes (see [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group) for more experiments on why you might want to use this feature). This will trigger another CI workflow execution to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
+
+**6.** If the cache key has changed or the cache entry does not exist, merging the PR may cause an Update dependency cache workflow to start, which automatically uploads the dependency cache to the GitHub Actions Cache storage for the *main* branch.  (see [11. Your First CI Workflow Executions](11-your-first-ci-workflow-executions) for more experiments showing how caching reduces your pipeline execution time).
 
 #### Release Process
 
