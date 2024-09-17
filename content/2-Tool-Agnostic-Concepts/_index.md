@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 2. </b> "
 ---
 
-Dive into this section to explore the way to measure deployment efficiency and discover several components that impact your CI/CD process. But before we dive in, let's explore what CI/CD in this workshop is all about!
+Dive into this section to explore the way to measure the efficiency of CI/CD processes and discover several components that impact them. But before we dive in, let's explore what CI/CD in this workshop is all about!
 
 It might be a theory-heavy section, but it's definitely worth your time. Give it a shot!
 

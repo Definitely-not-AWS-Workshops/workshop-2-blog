@@ -54,7 +54,7 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 #### From Local Development to Integration of Code Changes to the Remote Main Branch
 
-The AWSDSC-XUT team may want to experiment with a simplified *trunk-based development* branching strategy that consists of the *main* (*trunk*) branch and several short-lived *feature* branches. All thoroughly tested code changes should be merged via pull requests and reviewed by your team members before being integrated into the *main* branch. This minimal setup allows for direct deployment of the AWSome Books application from the *main* branch at any time. 
+The AWSDSC-XUT team may want to experiment with a simplified *trunk-based development* branching strategy that consists of the *main* (*trunk*) branch and short-lived *feature* branches. All thoroughly tested code changes should be merged via pull requests and reviewed by your team members before being integrated into the *main* branch. This minimal setup allows for direct deployment of the AWSome Books application from the *main* branch at any time. 
 
 {{% notice tip %}}
 You can refer to [trunk-based development](https://trunkbaseddevelopment.com/) for other advanced variants of this branching strategy or design your own for a customized branching strategy that nevertheless adheres to DevOps practices.
@@ -83,7 +83,7 @@ During the hands-on sections, you just skip this phase. It is essential to inc
 
 **Integration of Code Changes to the Remote Main Branch**
 
-Make sure to run tests on your local machine before submitting a pull request for fast feedback. If a team member skips this step and creates a pull request, the CI workflow should automatically run the tests on the remote branch.
+Make sure to run tests on your local machine for fast feedback before submitting a pull request. If a team member skips this step and creates a pull request, the CI workflow should automatically run the tests on the remote branch.
 
 Let's take a look at the integration of code changes from the local machine to the *main* branch.
 
@@ -93,19 +93,19 @@ Let's take a look at the integration of code changes from the local machine to t
 
 **2.** On the remote short-lived *feature* branch, you might create a pull request (PR).
 
-**3.** The PR creation might trigger a GitHub Actions CI workflow execution. While the *Scan image* job depends on the *Build image* job, you may have noticed that the *Run unit tests*, *Run integration tests*, *Scan source code*, and *Build image* are independent and execute in parallel to reduce the CI workflow execution time as a whole.
+**3.** The PR creation might trigger a GitHub Actions CI workflow execution. While the *Scan image* job depends on the *Build image* job, you may have noticed that the *Run unit tests*, *Run integration tests*, *Scan source code*, and *Build image* are independent each other and execute in parallel to reduce the CI workflow execution time as a whole.
 
 - In the event of any job failures, your CI workflow should send a notification to the Slack channel and conclude with a failed status.
 
 - If all jobs complete successfully, your CI workflow sends a notification to the Slack channel before wrapping up. You then move to the next step.
 
-**4** Make sure your team members review and approve the PR.
+**4.** Make sure your team members review and approve the PR (you may skip simulating this in the hands-on sections).
 
 - If they have not done so already, they should conduct a code review before moving on to step **5**.
 
-- If your PR has been reviewed and approved, merge the PR to the *main* (*trunk*) branch. Proceed to step **6**.
+- If your PR has been reviewed and approved, an automatic process merges the PR to the *main* (*trunk*) branch. Proceed to step **6**.
 
-**5.**
+**5.** After reviewing the PR,
 
 - If the PR is not approved, start by reviewing the issues and comments. Resolve these on your local branch, then recommit and push the updated code changes as step **1**.
 
@@ -115,7 +115,7 @@ Let's take a look at the integration of code changes from the local machine to t
 
 
 {{% notice tip %}}
-It is necessary to use techniques to shorten the pipeline running time since modern CI/CD technologies factor execution time into the pricing model. Among the various pipeline optimization techniques, dependency caching is one to take into account in the workshop.
+It is necessary to use techniques to shorten the pipeline running time since several modern CI/CD technologies factor execution time into the pricing model. Among the various pipeline optimization techniques, dependency caching is one to take into account in the workshop.
 {{% /notice %}}
 
 #### Release Process
@@ -136,12 +136,12 @@ Let's examine the Release process, which enables you to make available the most 
 - If the image is built successfully, proceed to the next step.
 - If not, the workflow will notify the Slack channel and terminate the execution.
 
-**4.** You can now perform another image analysis to check for any updates to the [Common Vulnerabilities and Exposures](https://jfrog.com/learn/devsecops/cve/) (CVE) database.
+**4.** You can now perform another image analysis to check for any updates of the [Common Vulnerabilities and Exposures](https://jfrog.com/learn/devsecops/cve/) (CVE) database.
 
 - If it finds no vulnerabilities, move on to the following step.
 - If not, the workflow will stop the execution and alert the Slack channel.
 
-**5.** Your *Release* job delivers the AWSome Books using the version that was chosen in step **1**. Part of this job is uploading the container image to the AWS ECR. If you want to, you may think about splitting the image publishing to another job. Whether the process succeeds or fails, it will then stop execution and send a notification to the Slack channel.
+**5.** Your *Release* job delivers the AWSome Books to AWS ECS using the version that was chosen in step **1**. Part of this job is uploading the container image to the AWS ECR. If you want to, you may think about splitting the image publishing to another job. Whether the process succeeds or fails, it will then stop execution and send a notification to the Slack channel.
 
 You may have noticed that the jobs in the workflow are interdependent and must be completed in the correct order. Any job failure has the potential to bring down the Release workflow as a whole. The workflow will alert the Slack channel and then finish, whether it is successful or not.
 
