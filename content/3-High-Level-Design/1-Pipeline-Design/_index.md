@@ -52,7 +52,7 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 ![0003](/images/3/1/0003.svg?featherlight=false&width=40pc)
 
-#### From Local Development to Integration of Code Changes to the Main Branch.
+#### From Local Development to Integration of Code Changes to the Remote Main Branch
 
 Let's have a look at how the AWSome Books local development and integration processes would work.
 
@@ -70,15 +70,15 @@ In addition to unit tests, you may also carry out different static and dynamic c
 
 During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world circumstances. 
 
-**Integration of Code Changes to the Remote Repository**
+**Integration of Code Changes to the Remote Main Branch**
 
 ![0005](/images/3/1/0005.svg?featherlight=false&width=100pc)
 
-**1.** After verifying that your code changes pass all tests locally on the short-lived *feature* branch, you are ready to commit and push them to the corresponding remote branch.
+**1.** After verifying that your refactored code changes pass all tests locally on the short-lived *feature* branch, you are ready to commit and push them to the corresponding remote branch.
 
 **2.** On the remote short-lived *feature* branch, you might create a pull request (PR).
 
-**3.** The PR creation might trigger a GitHub Actions CI workflow execution. While the *Scan image* job depends on the *Build image* job, you may have noticed that the *Run unit tests*, *Run integration tests*, *Scan source code*, and *Build image* are independent and execute in parallel to reduce the CI workflow execution time.
+**3.** The PR creation might trigger a GitHub Actions CI workflow execution. While the *Scan image* job depends on the *Build image* job, you may have noticed that the *Run unit tests*, *Run integration tests*, *Scan source code*, and *Build image* are independent and execute in parallel to reduce the CI workflow execution time as a whole.
 
 **4a.** In the event of any job failures, your CI workflow should send a notification to the Slack channel and conclude with a failed status.
 
@@ -92,7 +92,7 @@ During the hands-on sections, you just skip this phase. It is essential to inc
 
 **6b.** Otherwise, you can add the PR to the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) (or merge group), which helps increase velocity by automating pull request merges into a busy branch and ensuring the branch is never broken by incompatible changes (see [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group) for more experiments on why you might want to use this feature). This will trigger another CI workflow execution to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
 
-**7.** Merging the PR might trigger an Update dependency cache workflow, which writes the dependency cache to the GitHub Actions Cache storage for the *main* branch.
+**7.** Merging the PR might trigger an Update dependency cache workflow, which writes the dependency cache to the GitHub Actions Cache storage for the *main* branch (see [11. Your First CI Workflow Executions](11-your-first-ci-workflow-executions) for more experiments on how caching reduces your pipeline execution time).
 
 #### Release Process
 
