@@ -54,15 +54,19 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 #### From Local Development to Integration of Code Changes to the Main Branch.
 
-Let's have a look at how the AWSome Books development and integration processes would work.
+Let's have a look at how the AWSome Books local development and integration processes would work.
 
 **Local Development**
 
-In general, writing test cases should be the first step in the local development process for AWSome Books. You may then run unit tests or even different static and dynamic code analyses after that. You may want to refactor the well-tested code changes you made before rerunning the tests.
+In general, writing test cases should be the first step in the local development process for AWSome Books. You may then run unit tests. You may want to refactor the well-tested code changes you made before rerunning the tests.
 
 ![0004](/images/3/1/0004.svg?featherlight=false&width=100pc)
 
-In other words, to align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to discover issues early before publishing a pull request, is one of the software development methodologies that couple particularly well with DevOps practices.
+In other words, to align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to discover issues early before creating a pull request, is one of the software development methodologies that couple particularly well with DevOps practices.
+
+{{% notice tip %}}
+In addition to unit tests, you may also carry out different static and dynamic code analyses if needed. Remember to keep the analysis execution duration as reasonable as possible in order to get quick feedback. Extended analyses should be saved for later phases.
+{{% /notice %}}
 
 During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world circumstances. 
 

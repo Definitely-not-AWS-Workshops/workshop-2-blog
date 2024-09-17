@@ -6,12 +6,11 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
-Let's next explore an overview of pipeline design and AWS architecture for AWSome Books. There are also additional suggestions for how to improve your CI/CD pipeline execution time. 
+Let's next explore an overview of pipeline design and AWS architecture for AWSome Books. 
 
 #### Content
 
-1. [AWS Architecture](1-aws-architecture)
-2. [Terraform Modules](2-terraform-modules)
-3. [Terraform Cloud Workspaces](3-terraform-cloud-workspaces)
+1. [Pipeline Design](1-pipeline-design)
+2. [AWS Architecture](2-aws-architecture)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
 
