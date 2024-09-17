@@ -92,7 +92,7 @@ During the hands-on sections, you just skip this phase. It is essential to inc
 
 **6b.** Otherwise, you can add the PR to the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) (or merge group), which helps increase velocity by automating PR merges into a busy branch and ensuring the branch is never broken by incompatible changes (see [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group) for more experiments on why you might want to use this feature). This will trigger another CI workflow execution to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
 
-**7.** If the cache key or dependencies have not changed, merging the PR may cause an Update dependency cache workflow to start, which automatically uploads the dependency cache to the GitHub Actions Cache storage for the *main* branch.  (see [11. Your First CI Workflow Executions](11-your-first-ci-workflow-executions) for more experiments on how caching reduces your pipeline execution time).
+**7.** If the cache key have changed or does not exist, merging the PR may cause an Update dependency cache workflow to start, which automatically uploads the dependency cache to the GitHub Actions Cache storage for the *main* branch.  (see [11. Your First CI Workflow Executions](11-your-first-ci-workflow-executions) for more experiments on how caching reduces your pipeline execution time).
 
 #### Release Process
 
