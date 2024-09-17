@@ -1,9 +1,9 @@
 ---
 title : "Prepare Source Code"
 date : "`r Sys.Date()`"
-weight : 1
+weight : 2
 chapter : false
-pre : " <b> 13.1 </b> "
+pre : " <b> 13.2 </b> "
 ---
 
 Please begin by reading the following subsections, **Experiment-n** (where *n* ranges from **1** to **4**). You then return to this section to complete the codebase setup for each section.
@@ -17,7 +17,7 @@ The provided code does not adhere to best practices and is intended solely for d
 - Click the dropdown.
 - Select **New repository**.
 
-![0001](/images/13/1/0001.svg?featherlight=false&width=100pc)
+![0001](/images/13/2/0001.svg?featherlight=false&width=100pc)
 
 **2.** Fill out the following information.
 
@@ -25,7 +25,7 @@ The provided code does not adhere to best practices and is intended solely for d
 - For **Repository name**, enter `experiment-n` where *n* is the experimental subsection you are working on.
 - Select **Public** option.
 
-![0002](/images/13/1/0002.svg?featherlight=false&width=100pc)
+![0002](/images/13/2/0002.svg?featherlight=false&width=100pc)
 
 **3.** Choose your favorite workspace on your local machine. Clone this remote repository [Definitely-not-AWS-Workshops/get-1s](https://github.com/Definitely-not-AWS-Workshops/get-1s).
 
@@ -92,7 +92,7 @@ python test.py
 
 It should be successful for your test to run.
 
-![0003](/images/13/1/0003.svg?featherlight=false&width=100pc)
+![0003](/images/13/2/0003.svg?featherlight=false&width=100pc)
 
 **12.** Make a commit.
 
@@ -160,7 +160,7 @@ python test.py
 
 It should be successful for your test to run.
 
-![0004](/images/13/1/0004.svg?featherlight=false&width=100pc)
+![0004](/images/13/2/0004.svg?featherlight=false&width=100pc)
 
 **18.** Make a commit.
 

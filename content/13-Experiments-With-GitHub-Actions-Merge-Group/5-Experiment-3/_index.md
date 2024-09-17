@@ -1,9 +1,9 @@
 ---
 title : "Experiment 3"
 date : "`r Sys.Date()`"
-weight : 4
+weight : 5
 chapter : false
-pre : " <b> 13.4 </b> "
+pre : " <b> 13.5 </b> "
 ---
 
 You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet.
@@ -16,14 +16,14 @@ In this section, you are going to begin by securing your *main* branch with the 
 - Select **Branches** on the left sidebar.
 - Click **Add branch ruleset**.
 
-![0001](/images/13/4/0001.svg?featherlight=false&width=100pc)
+![0001](/images/13/5/0001.svg?featherlight=false&width=100pc)
 
 **2.**
 
 - For **Ruleset Name**, enter `main-protection`.
 - For **Enforcement status**, select **Active**.
 
-![0002](/images/13/4/0002.svg?featherlight=false&width=100pc)
+![0002](/images/13/5/0002.svg?featherlight=false&width=100pc)
 
 **3.** In the **Target branches** section,
 
@@ -41,7 +41,7 @@ In this section, you are going to begin by securing your *main* branch with the 
 - Filter with `run-test` value.
 - Select **Add run-test**.
 
-![0004](/images/13/4/0003.svg?featherlight=false&width=100pc)
+![0004](/images/13/5/0003.svg?featherlight=false&width=100pc)
 
 **5.** Scroll down to the bottom, click **Create**.
 
@@ -67,7 +67,7 @@ git push --set-upstream origin person-a
 
 **9.** On your remote repository, click **Compare & pull request**.
 
-![0006](/images/13/4/0004.svg?featherlight=false&width=100pc)
+![0006](/images/13/5/0004.svg?featherlight=false&width=100pc)
 
 **10.** Click **Create pull request**.
 
@@ -87,7 +87,7 @@ git push --set-upstream origin person-b
 
 **13.** On your remote repository, click **Compare & pull request**.
 
-![0008](/images/13/4/0005.svg?featherlight=false&width=100pc)
+![0008](/images/13/5/0005.svg?featherlight=false&width=100pc)
 
 **14.** Click **Create pull request**.
 
@@ -117,31 +117,31 @@ git push --set-upstream origin person-b
 
 **19.** On the person *b*'s pull request console, you should now see the **This branch is out-of-date with the base branch** notification. Before you manually update the branch, click **Details** to review the logs from the previous CI check.
 
-![00015](/images/13/4/0006.svg?featherlight=false&width=100pc)
+![00015](/images/13/5/0006.svg?featherlight=false&width=100pc)
 
 **20.** Click the **Show main.py content** step dropdown, you might notice that the default value of *n* should be **DEFAULT** since the person *b* did not change it.
 
-![00016](/images/13/4/0007.svg?featherlight=false&width=100pc)
+![00016](/images/13/5/0007.svg?featherlight=false&width=100pc)
 
 **21.** Back to the person *b*'s pull request console, click **Update branch**.
 
-![00017](/images/13/4/0008.svg?featherlight=false&width=100pc)
+![00017](/images/13/5/0008.svg?featherlight=false&width=100pc)
 
 **22.** Another CI workflow execution should be triggered.
 
-![00018](/images/13/4/0009.svg?featherlight=false&width=100pc)
+![00018](/images/13/5/0009.svg?featherlight=false&width=100pc)
 
 Wait for seconds, you should see that the CI check has failed.
 
-![00019](/images/13/4/00010.svg?featherlight=false&width=100pc)
+![00019](/images/13/5/00010.svg?featherlight=false&width=100pc)
 
 **23.** Click **Details** to show the job's logs.
 
-![00020](/images/13/4/00011.svg?featherlight=false&width=100pc)
+![00020](/images/13/5/00011.svg?featherlight=false&width=100pc)
 
 **24.** Expand the **Shown main.py content** step dropdown, you might now notice that default value of *n* has turned into 7. This means that GitHub Actions Checkout now pulls in person *b*'s code changes, fully integrated with the latest updates from the *main* branch. As a result the CI check should be failed.
 
-![00021](/images/13/4/00012.svg?featherlight=false&width=100pc)
+![00021](/images/13/5/00012.svg?featherlight=false&width=100pc)
 
 In this experiment, you see that the **Require branches to be up to date before merging** rule forces the *person-b* branch to be synced with the *main* branch before merging. Though your *main* branch is now protected, this can lead to a scenario where one merge blocks others. For instance, imagine 100 pull requests, all with passing CI checks, ready to be merged into main. If one pull request merges first, the others will have to wait. Additionally, any pull request could fail later when rerun against the newly updated main *branch*. In the worst case, a single pull request might have to wait for 99 others to merge first before it can be integrated.
 

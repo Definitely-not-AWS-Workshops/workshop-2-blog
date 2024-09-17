@@ -1,9 +1,9 @@
 ---
 title : "Experiment 1"
 date : "`r Sys.Date()`"
-weight : 2
+weight : 3
 chapter : false
-pre : " <b> 13.2 </b> "
+pre : " <b> 13.3 </b> "
 ---
 
 You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet. 
