@@ -52,16 +52,17 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 ![0003](/images/3/1/0003.svg?featherlight=false&width=40pc)
 
-#### The Proposal Workflow and Pipelines
+#### From Local Development to Integration of Code Changes to the Main Branch.
 
 Let's have a look at how the AWSome Books development and integration processes would work.
 
 **Local Development**
 
+In general, writing test cases should be the first step in the local development process for AWSome Books. You may then run unit tests or even different static and dynamic code analyses after that. You may want to refactor the well-tested code changes you made before rerunning the tests.
+
 ![0004](/images/3/1/0004.svg?featherlight=false&width=100pc)
 
-
-To align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to discover issues early before publishing a pull request, is one of the software development methodologies that couple particularly well with DevOps practices.
+In other words, to align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to discover issues early before publishing a pull request, is one of the software development methodologies that couple particularly well with DevOps practices.
 
 During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world circumstances. 
 
@@ -85,13 +86,26 @@ During the hands-on sections, you just skip this phase. It is essential to inc
 
 **6a.** If the PR is not approved, start by reviewing the issues and comments. Resolve these on your local branch, then recommit and push the updated code changes as step **1**.
 
-**6b.** Otherwise, you can add the PR to the merge queue. This will trigger another CI workflow to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
+**6b.** Otherwise, you can add the PR to the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) (or merge group), which helps increase velocity by automating pull request merges into a busy branch and ensuring the branch is never broken by incompatible changes (see [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group) for more experiments on why you might want to use this feature). This will trigger another CI workflow execution to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
 
 **7.** Merging the PR might trigger an Update dependency cache workflow, which writes the dependency cache to the GitHub Actions Cache storage for the *main* branch.
 
 #### Release Process
 
+Let's examine the Release process, which enables you to make available the most recent version of AWSome Books to AWS.
+
 ![0006](/images/3/1/0006.svg?featherlight=false&width=100pc)
+
+**1.** To begin, you create a tag with the version that you plan to release using the [Semantic Versioning](https://semver.org/) (SemVer) format.
+
+**2.** The Release workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format. If the version format is valid, proceed to the next step. Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
+
+**3.** The *Build image* job creates a Docker image, which may be necessary for your application to operate properly on AWS. If the image is built successfully, proceed to the next step. If not, the workflow will notify the Slack channel and terminate the execution.
+
+**4.** You can now perform another image analysis to check for any updates to the [Common Vulnerabilities and Exposures](https://jfrog.com/learn/devsecops/cve/) (CVE) database. If it finds no vulnerabilities, move on to the following step. If not, the workflow will stop the execution and alert the Slack channel.
+
+**5.** Your *Release* job delivers the AWSome Books using the version that was chosen in step **1**. Part of this job is uploading the container image to the AWS ECR. If you want to, you may think about splitting the image publishing to another job. Whether the process succeeds or fails, it will then stop execution and send a notification to the Slack channel.
+
 
 You may have noticed that the jobs in the workflow are interdependent and must be completed in the correct order. Any job failure has the potential to bring down the Release workflow as a whole. The workflow will alert the Slack channel and then finish, whether it is successful or not.
 
@@ -101,13 +115,13 @@ Let's look at the Rollback process, which lets you use GitHub Actions to manuall
 
 ![0007](/images/3/1/0007.svg?featherlight=false&width=100pc)
 
-**1.** Start by specifying the version in [Semantic Versioning](https://semver.org/) (SemVer) format you want to manually roll back to.
+**1.** To begin, identify the version you want to manually roll back to in SemVer format (such as step **1** in the Release process).
 
-**2.** The Rollback workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format. If the version format is valid, proceed to the next step. Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
+**2.** The Release workflow may be triggered by first running the *Validate version format* job, ensuring the version adheres to the SemVer format. If the version format is valid, proceed to the next step. Otherwise, the workflow will send an alert to the Slack channel and stop the execution.
 
-**3.** This job verifies whether the version exists. If it does, proceed to the next step. If not, the workflow will notify the Slack channel and terminate execution.
+**3.** This job verifies whether the version exists. If it does, proceed to the next step. If not, the workflow will notify the Slack channel and terminate the execution.
 
-**4.** At this point, your *rollback* job should revert the specified version from step **1**. Regardless of whether it passes or fails, the workflow will send the notification to the Slack channel.
+**4.** At this point, your *Rollback* job should revert the specified version from step **1**. Regardless of whether it passes or fails, the workflow then sends the notification to the Slack channel and stop the execution.
 
 You may have noticed that the jobs in the workflow are interdependent and must be completed in the correct order. Any job failure has the potential to bring down the Rollback workflow as a whole. The workflow will alert the Slack channel and then finish, whether it is successful or not.
 
