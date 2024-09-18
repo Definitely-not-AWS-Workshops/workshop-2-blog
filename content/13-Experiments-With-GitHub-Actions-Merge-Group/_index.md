@@ -6,6 +6,6 @@ chapter : false
 pre : " <b> 13. </b> "
 ---
 
-In the upcoming sections, you will start by running several experiments on different codebases, exploring why you might opt to use the merge group. Once those tests are complete, you are going to conduct a final experiment to demonstrate the core functionality of the merge group. Afterward, you can simply enable it for the AWSome Books project.
+In the upcoming sections, you start to discover a scenario where your *main* codebase might be disrupted due to unexpected issues from conflict-free code changes. You then run several experiments on different codebases, exploring why you might opt to use the merge group. Once those tests are complete, you are going to conduct a final experiment to demonstrate the core functionality of the merge group. Afterward, you can simply enable it for the AWSome Books project.
 
 #### Content

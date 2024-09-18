@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
 This *test.py* file uses the *unittest* framework to test the **get_1s** function. The **test_with_10** method checks if calling **get_1s(10)** returns a list of ten **1**s by comparing the result with **[1] * 10**. If the outputs match, the test passes.  
 
-Both developers begin by pulling the latest codebase from the *main* branch. From the *main* branch, person *a* creates a new branch, naming it *person-a*, while person *b* checks out a separate branch called *person-b*.
+Both developers begin by pulling the latest codebase from the remote *main* branch to the local machine. From the *main* branch, person *a* creates a new branch, naming it *person-a*, while person *b* checks out a separate branch called *person-b*.
 
 #### On 'person-a' branch
 
@@ -132,7 +132,7 @@ if __name__ == "__main__":
 
 Person *b* then runs the tests, successfully passing both the new and existing test cases.
 
-#### Conflicts are not Always Caught
+#### Conflicts are not always caught
 
 Both developers have modified the same function, **get_1s**, so you might expect the version control system to flag this as a conflict during the merge, right?
 
@@ -192,6 +192,6 @@ if __name__ == "__main__":
 
 Oops! The *main* branch is now broken. If you run the test, you will find that the **test_with_default** case fails. Until now, you should have seen that even well-tested and conflict-free code changes can still pose a risk of breaking your codebase.
 
-Running CI triggered by pull requests is a fantastic way to catch these kinds of bugs before they reach the *main* branch (as you will see in the upcoming experimental subsections). However, there is a case where CI might not catch the bug, potentially leading to a broken codebase.
+Running CI triggered by pull requests is a fantastic way to catch this kind of bug before they reach the *main* branch (as you will see in the upcoming experimental subsections). However, there is a case where CI might not catch the bug, potentially leading to a broken codebase.
 
 Next, let’s run a series of different experiments to simulate the scenario described in this section and understand why you might need a merge group (or merge queue). After that, while simulating this feature at scale can be challenging, you will conduct a simplified experiment with it and then proceed to just enable the merge group for AWSome Books.
