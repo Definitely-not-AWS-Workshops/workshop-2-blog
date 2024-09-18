@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 13.5 </b> "
 ---
 
-You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet.
+You should set up the required code repositories in [13.2 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/2-prepare-source-code) if you have not done it yet.
 
 In this section, you are going to begin by securing your *main* branch with the *Require branches to be up to date before merging* rule. Next, you create a pull request for person *a*'s code changes, followed by a separate one for person *b*'s. After both pull requests are submitted, you wait for the CI workflows to complete. Since person *a*'s changes have not been merged into *main* branch yet, person *b*'s CI check passes successfully without including person *a*'s updates. Confidently, you merge person *a*'s pull request into the *main* branch. However, with the new branch protection rule in place, person *b*'s pull request triggers an "update required" notification immediately. At this point, you manually update the *person-b* branch, which then invokes a new CI workflow run that tests person *b*'s changes now integrated with person *a*'s updates in the *main* branch.
 

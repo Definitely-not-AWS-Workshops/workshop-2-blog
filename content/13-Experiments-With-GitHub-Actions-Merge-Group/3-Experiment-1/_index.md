@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 13.3 </b> "
 ---
 
-You should set up the required code repositories in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code) if you have not done it yet. 
+You should set up the required code repositories in [13.2 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/2-prepare-source-code) if you have not done it yet. 
 
 In this section, you are going to first merge person *a*'s code changes into the *main* branch. Once that’s done, you create a pull request to integrate person *b*'s updates. This action trigger the CI workflow, and you might discover something interesting along the way. Let's and explore!
 
@@ -80,7 +80,7 @@ git push --set-upstream origin person-b
 
 ![00010](/images/13/2/00010.svg?featherlight=false&width=100pc)
 
-**16.** Expand the **Show main.py content** dropdown, and you might notice the default value of *n* is now 7. You should recall that person *b* did not modify this in his code changes (see step **15** in [13.1 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/1-prepare-source-code)).
+**16.** Expand the **Show main.py content** step dropdown, and you might notice the default value of *n* is now 7. You should recall that person *b* did not modify this in his code changes (see step **15** in [13.2 Prepare Source Code](13-experiments-with-gitHub-actions-merge-group/2-prepare-source-code)).
 
 ![00011](/images/13/2/00011.svg?featherlight=false&width=100pc)
 
