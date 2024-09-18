@@ -1,12 +1,12 @@
 ---
-title : "Broken Codebase With Well-Tested And Conflict-Free Code Changes"
+title : "Broken Codebase With Conflict-Free Code Changes"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 13.1 </b> "
 ---
 
-The following scenario assumes a situation where even well-tested, conflict-free code changes from other branches can unexpectedly disrupt the *main* branch.
+The following scenario assumes a situation where even conflict-free code changes from other branches can unexpectedly disrupt the *main* branch.
 
 {{% notice note %}}
 The following scenario is purely for illustration purposes and does not adhere to any engineering practices.
