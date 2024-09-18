@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 13.2 </b> "
 ---
 
-Please begin by reading the following subsections, **Experiment-n** (where *n* ranges from **1** to **4**). You then return to this section to complete the codebase setup for each section.
+Please begin by reading the following subsections, *Experiment n* (where *n* ranges from **1** to **4**). You then return to this section to complete the codebase setup for each section.
 
 {{% notice note %}}
 The provided code does not adhere to best practices and is intended solely for demonstration purposes.

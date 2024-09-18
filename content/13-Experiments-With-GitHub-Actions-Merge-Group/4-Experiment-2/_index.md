@@ -34,7 +34,7 @@ git push --set-upstream origin person-a
 
 **5.** Click **Create pull request**.
 
-![0002](/images/13/2/0002.svg?featherlight=false&width=100pc)
+![0002](/images/13/3/0002.svg?featherlight=false&width=100pc)
 
 **6.** On your local repository, switch to *person-b* branch.
 
@@ -54,7 +54,7 @@ git push --set-upstream origin person-b
 
 **9.** Click **Create pull request**.
 
-![0004](/images/13/2/0009.svg?featherlight=false&width=100pc)
+![0004](/images/13/3/0009.svg?featherlight=false&width=100pc)
 
 **10.** You should now have passed CI workflow executions of both pull requests. Do not click **Merge pull request** yet.
 
