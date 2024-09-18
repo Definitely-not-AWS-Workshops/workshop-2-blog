@@ -127,7 +127,7 @@ git push --set-upstream origin person-b
 
 ![00017](/images/13/5/0008.svg?featherlight=false&width=100pc)
 
-**22.** Another CI workflow execution should trigger.
+**22.** Another CI workflow execution should be triggered.
 
 ![00018](/images/13/5/0009.svg?featherlight=false&width=100pc)
 
