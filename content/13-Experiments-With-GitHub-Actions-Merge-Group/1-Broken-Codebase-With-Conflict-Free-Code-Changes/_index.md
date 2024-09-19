@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 13.1 </b> "
 ---
 
-The following scenario assumes a situation where even conflict-free code changes from other branches can unexpectedly disrupt the *main* branch.
+The following scenario assumes a situation where even conflict-free code changes from different branches can unexpectedly disrupt the *main* branch.
 
 {{% notice note %}}
 The following scenario is purely for illustration purposes and does not adhere to any engineering practices.
