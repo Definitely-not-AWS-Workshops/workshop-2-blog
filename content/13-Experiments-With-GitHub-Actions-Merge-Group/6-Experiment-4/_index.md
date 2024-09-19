@@ -112,46 +112,54 @@ git push --set-upstream origin person-b
 
 ![00012](/images/13/6/0009.svg?featherlight=false&width=100pc)
 
-**18.** Click **Confirm merge when ready**. Your pull request now should be added to the merge queue.
+**18.** Click **Confirm merge when ready**. 
+
+![00013](/images/13/6/00010.svg?featherlight=false&width=100pc)
+
+ **19.** Your pull request now should be added to the merge queue. Click **merge queue** to view the queue.
+
+![00014](/images/13/6/00011.svg?featherlight=false&width=100pc)
+
+
 
 ![00013](/images/13/6/00010.svg?featherlight=false&width=100pc)
 
 **19.** On the person *b*'s pull request console, click **Merge when ready**.
 
-![00014](/images/13/6/00011.svg?featherlight=false&width=100pc)
+![00014](/images/13/6/00013.svg?featherlight=false&width=100pc)
 
 **20.** Click **Confirm merge when ready**. Your pull request now should be added to the merge queue.
 
-![00015](/images/13/6/00012.svg?featherlight=false&width=100pc)
+![00015](/images/13/6/00014.svg?featherlight=false&width=100pc)
 
 **21.** Click **merge queue** to see the queue. 
 
-![00016](/images/13/6/00013.svg?featherlight=false&width=100pc)
+![00016](/images/13/6/00015.svg?featherlight=false&width=100pc)
 
 **22.** Your merge queue should now contain two pull requests, with pull request **#1** which is the person *a*'s pull request at the front of the line. 
 
-![00017](/images/13/6/00014.svg?featherlight=false&width=100pc)
+![00017](/images/13/6/00016.svg?featherlight=false&width=100pc)
 
 Wait for all pull request merges to be completed and fully dequeued, then move to the next step.
 
 **23.**  On the person *a*'s pull request console, you might notice that this pull request has been merged into the *main* branch since all checks have passed. Click **Details** to discover the logs.
 
-![00017](/images/13/6/00015.svg?featherlight=false&width=100pc)
+![00017](/images/13/6/00017.svg?featherlight=false&width=100pc)
 
 **24.** You can see that the checkout codebase should include just the change of the person *a*. 
 
-![00018](/images/13/6/00016.svg?featherlight=false&width=100pc)
+![00018](/images/13/6/00018.svg?featherlight=false&width=100pc)
 
 **25.** In the queue, since person *a*'s code changes have passed all tests after being integrated with the *main* branch, his pull request should successfully merge into the *main* branch.
 
-![00019](/images/13/6/00017.svg?featherlight=false&width=100pc)
+![00019](/images/13/6/00019.svg?featherlight=false&width=100pc)
 
 **26.** On person *b*'s pull request console, you might see a notification **github-merge-queue bot removed this pull request from the merge queue due to failed status checks**. Click **Details** to explore further.
 
-![00020](/images/13/6/00018.svg?featherlight=false&width=100pc)
+![00020](/images/13/6/00020.svg?featherlight=false&width=100pc)
 
 **27.** As expected with how the merge queue operates, under the **Show main.py content** dropdown, you might notice that person *b*'s pull request includes both person *a*'s changes and the current state of the *main* branch. As a result, person *b*'s pull request is expected to fail and will be rejected from merging into the *main* branch.
 
-![00021](/images/13/6/00019.svg?featherlight=false&width=100pc)
+![00021](/images/13/6/00021.svg?featherlight=false&width=100pc)
 
 In the previous experiment, the **Require branches to be up to date before merging** rule would block other pull requests if one was ahead, requiring you to wait for the preceding pull requests to complete before manually merging yours into the *main* branch. In contrast, the merge queue streamlines this process by allowing multiple pull requests to enter the queue at once. It automatically integrates each pull request with those ahead of it and the latest *main* codebase. While there may still be cases where your pull request has not passed CI checks and requires correction, if it does pass, your code changes can be merged into the *main* branch automatically — eliminating the need to wait for preceding pull requests to be processed and merging your pull request manually.
