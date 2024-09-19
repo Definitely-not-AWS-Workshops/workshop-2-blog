@@ -115,7 +115,7 @@ git push --set-upstream origin person-b
 
 ![00014](/images/13/4/0007.svg?featherlight=false&width=100pc)
 
-**19.** On the person *b*'s pull request console, you should now see the **This branch is out-of-date with the base branch** notification. Before you manually update the branch, click **Details** to review the logs from the previous CI check.
+**19.** At the time you click the **Confirm merge** button on the person *a*'s pull request in step **17**, you should now see the **This branch is out-of-date with the base branch** notification immediately on the person *b*'s pull request console. Before you manually update the branch, click **Details** to review the logs from the previous CI check.
 
 ![00015](/images/13/5/0006.svg?featherlight=false&width=100pc)
 
@@ -123,7 +123,7 @@ git push --set-upstream origin person-b
 
 ![00016](/images/13/5/0007.svg?featherlight=false&width=100pc)
 
-**21.** Back to the person *b*'s pull request console, click **Update branch**.
+**21.** Back to the person *b*'s pull request console, click **Update branch** to synchronize the person *b*'s pull request with the *main* branch.
 
 ![00017](/images/13/5/0008.svg?featherlight=false&width=100pc)
 
@@ -143,7 +143,7 @@ Wait for seconds, you should see that the CI check has failed.
 
 ![00021](/images/13/5/00012.svg?featherlight=false&width=100pc)
 
-In this experiment, you see that the **Require branches to be up to date before merging** rule forces the *person-b* branch to be synced with the *main* branch before merging.
+In this experiment, you see that the **Require branches to be up to date before merging** rule forces the *person-b* branch to be manually synced with the *main* branch before merging.
 
 Though your *main* branch is now protected, this can lead to a scenario where one merge blocks others. For instance, imagine 100 pull requests, all with passing CI checks, ready to be merged into the *main* branch. If one pull request merges first, the others will have to be updated manually. Additionally, any updated pull request could fail later when rerun against the newly updated *main* branch and need to be resolved. In the worst case, a single pull request might have to wait for 99 others to merge first before it can be integrated.
 

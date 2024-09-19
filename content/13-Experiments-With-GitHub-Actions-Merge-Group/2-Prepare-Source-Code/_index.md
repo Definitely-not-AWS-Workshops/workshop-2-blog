@@ -8,10 +8,6 @@ pre : " <b> 13.2 </b> "
 
 Please begin by reading the following subsections, *Experiment n* (where *n* ranges from **1** to **4**). You then return to this section to complete the codebase setup for each section.
 
-{{% notice note %}}
-The provided code does not adhere to best practices and is intended solely for demonstration purposes.
-{{% /notice %}}
-
 **1.** Go to your GitHub organization created in [4.1 Create AWSome Books Repository](4-Preparation/1-Create-AWSome-Books-Repository).
 
 - Click the dropdown.
@@ -27,7 +23,7 @@ The provided code does not adhere to best practices and is intended solely for d
 
 ![0002](/images/13/2/0002.svg?featherlight=false&width=100pc)
 
-**3.** Choose your favorite workspace on your local machine. Clone this remote repository [Definitely-not-AWS-Workshops/get-1s](https://github.com/Definitely-not-AWS-Workshops/get-1s).
+**3.** Choose your favorite workspace on your local machine. Clone this remote repository [github.com/Definitely-not-AWS-Workshops/get-1s](https://github.com/Definitely-not-AWS-Workshops/get-1s).
 
 ```git
 git clone https://github.com/Definitely-not-AWS-Workshops/get-1s
@@ -168,6 +164,6 @@ It should be successful for your test to run.
 git add . && git commit -m "modify the get_1s return and add another test"
 ```
 
-Your code changes on each branch have passed all local tests successfully! However, if either person *a* or person *b* merges their changes into the *main* branch first, and you then forget to pull the latest updates from *main* before running your local tests again, you might run into unexpected issues when creating a pull request and merging back to *main*.
+Your code changes on each branch have passed all local tests successfully! However, if either person *a* or person *b* merges their changes into the *main* branch first, and on the other branch you then forget to pull the latest updates from *main* before running your local tests again, you might run into unexpected issues when creating a pull request and merging back to *main*.
 
 To investigate, you run a series of experiments to see if your well-tested local code changes could still fail during pull requests, even when there are no visible code conflicts.
