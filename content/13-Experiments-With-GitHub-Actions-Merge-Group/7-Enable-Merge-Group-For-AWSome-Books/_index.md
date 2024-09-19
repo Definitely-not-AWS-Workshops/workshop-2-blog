@@ -41,6 +41,8 @@ you just need to enable the **Require merge queue** rule in the ruleset.
 ![0002](/images/13/6/0003.svg?featherlight=false&width=100pc)
 
 
-**3.** Scroll down to the bottom, click **Save change**.
+**3.** Scroll down to the bottom, click **Save changes**.
 
 ![0003](/images/13/7/0002.svg?featherlight=false&width=100pc)
+
+Now, the AWSDSC-XUT team can accelerate code integration into a busy branch, while ensuring it remains stable and free from incompatible changes.

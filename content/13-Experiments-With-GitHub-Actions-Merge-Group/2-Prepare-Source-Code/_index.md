@@ -29,6 +29,44 @@ Please begin by reading the following subsections, *Experiment n* (where *n* ran
 git clone https://github.com/Definitely-not-AWS-Workshops/get-1s
 ```
 
+Along with the unchanged content of *main.py* and *test.py* from the previous section, let's now get an overview of the CI workflow defined in *.github/workflows/ci.yml*.
+
+```yml
+name: CI
+
+on:
+  pull_request:
+
+  merge_group:
+    branches: [main]
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Extend the workflow duration by an additional 10 seconds.
+        run: sleep 10
+
+      - name: Show main.py content
+        run: cat main.py
+
+      - name: Show test.py content
+        run: cat test.py
+
+      - name: Run tests
+        run: python test.py
+```
+
+In general, this workflow is triggered when a pull request is created or when a branch is part of a merge group (*main* branch). It sets up a CI job on an Ubuntu machine, checks out the code, installs Python 3.9, prints the contents of two files (*main.py* and *test.py*) for troubleshooting, and finally runs the test file (*test.py*) to validate the code changes. The sleep 10 step appears to add a delay, possibly for debugging purposes.
+
 **4.** Change the directory name to `experiment-n` where *n* is the experimental subsection you are working on.
 
 ```git
@@ -53,7 +91,7 @@ git init
 git remote add origin https://github.com/fcj-workshops-2024/experiment-n.git
 ```
 
-**8.** Make the first commit and push to the remote repository.
+**8.** Make your first commit and push to the remote repository.
 
 ```git
 git add . && git commit -m "first commit" && git push --set-upstream origin main
