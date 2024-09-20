@@ -46,7 +46,7 @@ git add . && git commit -m "experiment 5: the second workflow execution" && git 
 
 ![0002](/images/14/3/0002.svg?featherlight=false&width=100pc)
 
-As you can see, GitHub Actions enables multiple workflow runs to occur simultaneously by default, which can lead to the drawbacks we discussed in the previous section.
+As you can see, GitHub Actions enables multiple workflow runs to occur simultaneously by default, which can lead to the drawbacks we discussed in [14.1 You Might Want A Single Workflow Execution At A Time!](14-experiments-with-gitHub-actions-concurrency-group/1-you-might-want-a-single-workflow-execution-at-a-time!).
 
 
 
