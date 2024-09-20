@@ -194,4 +194,4 @@ Oops! The *main* branch is now broken. If you run the test, you will find that t
 
 Running CI triggered by pull requests is a fantastic way to catch this kind of bug before they reach the *main* branch (as you will see in the upcoming experimental subsections). However, there is a case where CI might not catch the bug, potentially leading to a broken codebase.
 
-Next, let’s run a series of different experiments to simulate the scenario described in this section and understand why you might need a merge group (or merge queue). After that, while simulating this feature at scale can be challenging, you will conduct a simplified experiment with it and then proceed to just enable the merge group for AWSome Books.
+Next, let’s run a series of different experiments to simulate the scenario described in this section and understand why you might need a *merge group* (or *merge queue*). After that, while simulating this feature at scale can be challenging, you will conduct a simplified experiment with it and then proceed to just enable the *merge group* for AWSome Books.

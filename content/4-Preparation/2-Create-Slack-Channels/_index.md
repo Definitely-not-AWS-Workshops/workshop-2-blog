@@ -81,7 +81,7 @@ Click **Skip Step**.
 
 **12.** Do the same from step **8** to **11** to create the following private channels
 - `gha-ci` for CI notifications from GitHub Actions, 
-- `gha-merge-group` for merge group notifications from GitHub Actions, 
+- `gha-merge-group` for *merge group* notifications from GitHub Actions, 
 - `gha-release` for release notifications from GitHub Actions, and 
 - `gha-rollback` for rollback notifications from GitHub Actions
  

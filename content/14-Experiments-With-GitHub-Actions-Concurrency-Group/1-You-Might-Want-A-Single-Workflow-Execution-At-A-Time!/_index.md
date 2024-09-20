@@ -38,8 +38,8 @@ Allowing multiple pipeline executions simultaneously can lead to several potenti
 
 GitHub Actions also provides the flexibility to control concurrency with [concurrency group](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobs), ensuring that only one workflow run, job, or step is executed at a time in specific contexts. This feature can be crucial for managing resources efficiently, avoiding conflicts, and preventing unexpected overuse of Actions minutes and storage when running multiple workflows simultaneously.
 
-Therefore, with concurrency group,
+Therefore, with *concurrency group*,
 
-- **Continuous Deployment to Production Environment** can be streamlined by utilizing a concurrency group, which ensures that only one deployment is active at any given time for a specific environment. If a new commit is pushed, the current deployment can be canceled, allowing only the latest version to be deployed seamlessly.
+- **Continuous Deployment to Production Environment** can be streamlined by utilizing a *concurrency group*, which ensures that only one deployment is active at any given time for a specific environment. If a new commit is pushed, the current deployment can be canceled, allowing only the latest version to be deployed seamlessly.
 
-- **Running Tests on Feature Branches** can be enhanced with a concurrency group, which automatically cancels any ongoing tests when a new commit is pushed to the same branch. This ensures that only the most recent changes are evaluated.
+- **Running Tests on Feature Branches** can be enhanced with a *concurrency group*, which automatically cancels any ongoing tests when a new commit is pushed to the same branch. This ensures that only the most recent changes are evaluated.

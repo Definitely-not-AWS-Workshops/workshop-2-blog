@@ -16,7 +16,7 @@ It offers the same benefits as the **Require branches to be up to date before me
 
 This feature is especially valuable for branches receiving a high volume of pull requests daily from multiple contributors.
 
-Once a pull request passes all necessary branch protection checks, a user with write access can add it to the queue. The merge queue then ensures that the pull request's changes pass all required status checks against the latest version of the target branch and any other pull requests already in the queue.
+Once a pull request passes all necessary branch protection checks, a user with write access can add it to the queue. The *merge queue* then ensures that the pull request's changes pass all required status checks against the latest version of the target branch and any other pull requests already in the queue.
 
 **1.** On the remote repository,
 
@@ -121,7 +121,7 @@ git push --set-upstream origin person-b
 
 ![00013](/images/13/6/00010.svg?featherlight=false&width=100pc)
 
- **19.** The person *a*'s pull request now should be added to the merge queue. Click **merge queue** to view the queue.
+ **19.** The person *a*'s pull request now should be added to the *merge queue*. Click **merge queue** to view the queue.
 
 ![00014](/images/13/6/00011.svg?featherlight=false&width=100pc)
 
@@ -137,7 +137,7 @@ git push --set-upstream origin person-b
 
 ![00017](/images/13/6/00014.svg?featherlight=false&width=100pc)
 
-**23.** The person *b*'s pull request now should be added to the merge queue. Click **merge queue** to view the queue.
+**23.** The person *b*'s pull request now should be added to the *merge queue*. Click **merge queue** to view the queue.
 
 ![00018](/images/13/6/00015.svg?featherlight=false&width=100pc)
 
@@ -163,12 +163,12 @@ Wait for all pull request merges to complete and be fully dequeued, then move to
 
 ![00023](/images/13/6/00020.svg?featherlight=false&width=100pc)
 
-**29.** As expected with how the merge queue operates, under the **Show main.py content** dropdown, you might notice that person *b*'s pull request includes both person *a*'s changes and the current state of the *main* branch in additon to person *b*'s code changes. As a result, person *b*'s pull request is expected to fail and will be rejected from merging into the *main* branch.
+**29.** As expected with how the *merge queue* operates, under the **Show main.py content** dropdown, you might notice that person *b*'s pull request includes both person *a*'s changes and the current state of the *main* branch in additon to person *b*'s code changes. As a result, person *b*'s pull request is expected to fail and will be rejected from merging into the *main* branch.
 
 ![00024](/images/13/6/00021.svg?featherlight=false&width=100pc)
 
-In the previous experiment, the **Require branches to be up to date before merging** rule would block other pull requests if one was ahead, requiring you to wait for the preceding pull requests to complete before manually merging yours into the *main* branch. In contrast, the merge queue streamlines this process by allowing multiple pull requests to enter the queue at once. It automatically integrates each pull request with those ahead of it and the latest *main* codebase. While there may still be cases where your pull request has not passed CI checks and requires correction, if it does pass, your code changes can be merged into the *main* branch automatically — eliminating the need to wait for preceding pull requests to be processed and merging your pull request manually.
+In the previous experiment, the **Require branches to be up to date before merging** rule would block other pull requests if one was ahead, requiring you to wait for the preceding pull requests to complete before manually merging yours into the *main* branch. In contrast, the *merge queue* streamlines this process by allowing multiple pull requests to enter the queue at once. It automatically integrates each pull request with those ahead of it and the latest *main* codebase. While there may still be cases where your pull request has not passed CI checks and requires correction, if it does pass, your code changes can be merged into the *main* branch automatically — eliminating the need to wait for preceding pull requests to be processed and merging your pull request manually.
 
-While GitHub lets you activate both the **Require branches to be up to date before merging** rule and the merge queue, using both can be redundant. The merge queue effectively manages all pull requests simultaneously, automatically integrating each one with changes from preceding requests. This removes the need to wait for earlier pull requests to complete, making the merging process smoother and more efficient. In other words, once your code review is approved, you simply add your pull request to the queue and let it handle the rest. If your pull request fails, you can correct it without any further delays.
+While GitHub lets you activate both the **Require branches to be up to date before merging** rule and the merge queue, using both can be redundant. The *merge queue* effectively manages all pull requests simultaneously, automatically integrating each one with changes from preceding requests. This removes the need to wait for earlier pull requests to complete, making the merging process smoother and more efficient. In other words, once your code review is approved, you simply add your pull request to the queue and let it handle the rest. If your pull request fails, you can correct it without any further delays.
 
-To boost commit rates and speed up merging code changes back into the *main* branch, the AWSome Books project might want to try a merge queue. Next, you simply activate the merge queue, and let it streamline and accelerate your merging process!
+To boost commit rates and speed up merging code changes back into the *main* branch, the AWSome Books project might want to try a *merge queue*. Next, you simply activate the *merge queue*, and let it streamline and accelerate your merging process!

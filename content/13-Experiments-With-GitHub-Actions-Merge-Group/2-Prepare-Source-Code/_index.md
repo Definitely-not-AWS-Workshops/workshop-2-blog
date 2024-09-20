@@ -65,7 +65,7 @@ jobs:
         run: python test.py
 ```
 
-In general, this workflow is triggered when a pull request is created or when a branch is part of a merge group (*main* branch). It sets up a CI job on an Ubuntu machine, checks out the code, installs Python 3.9, prints the contents of two files (*main.py* and *test.py*) for troubleshooting, and finally runs the test file (*test.py*) to validate the code changes. The sleep 10 step appears to add a delay, possibly for debugging purposes.
+In general, this workflow is triggered when a pull request is created or when a branch is part of a *merge group* (*main* branch). It sets up a CI job on an Ubuntu machine, checks out the code, installs Python 3.9, prints the contents of two files (*main.py* and *test.py*) for troubleshooting, and finally runs the test file (*test.py*) to validate the code changes. The sleep 10 step appears to add a delay, possibly for debugging purposes.
 
 **4.** Change the directory name to `experiment-n` where *n* is the experimental subsection you are working on.
 

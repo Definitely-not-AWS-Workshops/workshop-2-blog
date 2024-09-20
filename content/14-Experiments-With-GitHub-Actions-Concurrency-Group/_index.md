@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 14. </b> "
 ---
 
-Let's conduct a series of experiments, independent of the AWSome Books project, to explore how implementing concurrency groups can significantly enhance CI/CD pipeline efficiency.
+Let's conduct a series of experiments, independent of the AWSome Books project, to explore how implementing *concurrency group*s can significantly enhance CI/CD pipeline efficiency.
 
 #### Content
 
