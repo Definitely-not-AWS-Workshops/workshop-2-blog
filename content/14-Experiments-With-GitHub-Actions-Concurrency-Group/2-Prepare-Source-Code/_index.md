@@ -62,10 +62,10 @@ jobs:
   run-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Extend the workflow duration by an additional 180 seconds.
-        run: sleep 180
+      - name: Extend the workflow duration by an additional 300 seconds.
+        run: sleep 300
 ```
 
-Overall, this workflow serves a very basic purpose: it will trigger whenever there is a push to the *main* branch and will extend the execution time by 180 seconds for testing or to simulate a longer running job.
+Overall, this workflow serves a very basic purpose: it will trigger whenever there is a push to the *main* branch and will extend the execution time by 300 seconds for testing or to simulate a longer running job.
 
 Next, let’s first dive into the fifth experiment without utilizing the *concurrency group*.

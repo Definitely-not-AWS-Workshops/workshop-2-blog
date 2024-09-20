@@ -30,7 +30,7 @@ git add . && git commit -m "experiment 5: the first workflow execution" && git p
 
 ![0001](/images/14/3/0001.svg?featherlight=false&width=100pc)
 
-**5.** In your local repository, update the *README.md* file with the following content.
+**5.** On your local repository, update the *README.md* file with the following content.
 
 ```git
 echo "experiment 5: the second workflow execution!" > README.md
