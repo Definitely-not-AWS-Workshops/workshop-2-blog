@@ -40,6 +40,8 @@ GitHub Actions also provides the flexibility to control concurrency with [concur
 
 Therefore, with *concurrency group*,
 
+- **Running Tests on Feature Branches** can be enhanced with a *concurrency group*, which automatically cancels any ongoing tests when a new commit is pushed to the same branch. This ensures that only the most recent changes are evaluated.
+
 - **Continuous Deployment to Production Environment** can be streamlined by utilizing a *concurrency group*, which ensures that only one deployment is active at any given time for a specific environment. If a new commit is pushed, the current deployment can be canceled, allowing only the latest version to be deployed seamlessly.
 
-- **Running Tests on Feature Branches** can be enhanced with a *concurrency group*, which automatically cancels any ongoing tests when a new commit is pushed to the same branch. This ensures that only the most recent changes are evaluated.
+To keep the AWSome Books project organized and tidy, it is a great idea to conduct experiments separately. Next, let’s run a series of experiments to compare the results with and without this feature. This way, we can clearly evaluate its impact!

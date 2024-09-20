@@ -20,3 +20,52 @@ pre : " <b> 14.2 </b> "
 - Select **Public** option.
 
 ![0002](/images/14/2/0001.svg?featherlight=false&width=100pc)
+
+**3.** Scroll down to the botttom. Click **Create repository**.
+
+![0003](/images/4/1/00010.svg?featherlight=false&width=100pc)
+
+**4.** Choose your favorite workspace on your local machine. Next, create and move to the experiment folder.
+
+```git
+mkdir experiment-5-6-7 && cd experiment-5-6-7
+```
+
+**5.** Initialize the local git repository.
+
+```git
+git init
+```
+
+**6.** Link to the remote repository that you have just created.
+
+```git
+git remote add origin https://github.com/fcj-workshops-2024/experiment-5-6-7.git
+```
+
+**7.** Create *.github/workflows/main.yml* file.
+
+```git
+mkdir -p .github/workflows && touch .github/workflows/main.yml
+```
+
+**8.** Add the following content to *.github/workflows/main.yml* file:
+
+```yml
+name: main
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extend the workflow duration by an additional 180 seconds.
+        run: sleep 180
+```
+
+Overall, this workflow serves a very basic purpose: it will trigger whenever there is a push to the *main* branch and will extend the execution time by 180 seconds for testing or to simulate a longer running job.
+
+Next, let’s first dive into the fifth experiment without utilizing the *concurrency group*.

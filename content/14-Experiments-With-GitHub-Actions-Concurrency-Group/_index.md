@@ -1,12 +1,12 @@
 ---
-title : "Experiment With GitHub Actions Concurrency Group"
+title : "Experiments With GitHub Actions Concurrency Group"
 date : "`r Sys.Date()`"
 weight : 14
 chapter : false
 pre : " <b> 14. </b> "
 ---
 
-Let's conduct a series of experiments, independent of the AWSome Books project, to explore how implementing *concurrency group*s can significantly enhance CI/CD pipeline efficiency.
+Let's first explore several situations to understand why you might need the *concurrency group* feature. Then, you can conduct a series of experiments, independent of the AWSome Books project, to examine how implementing *concurrency group*s can significantly enhance the efficiency of the CI/CD pipeline.
 
 #### Content
 
