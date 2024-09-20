@@ -1,9 +1,9 @@
 ---
-title : "Experiment 2"
+title : "Experiment 6"
 date : "`r Sys.Date()`"
-weight : 2
+weight : 4
 chapter : false
-pre : " <b> 14.2 </b> "
+pre : " <b> 14.4 </b> "
 ---
 
 concurency group without cancel

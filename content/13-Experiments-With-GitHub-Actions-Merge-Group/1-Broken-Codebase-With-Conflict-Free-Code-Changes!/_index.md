@@ -1,5 +1,5 @@
 ---
-title : "Broken Codebase With Conflict-Free Code Changes"
+title : "Broken Codebase With Conflict-Free Code Changes!"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
