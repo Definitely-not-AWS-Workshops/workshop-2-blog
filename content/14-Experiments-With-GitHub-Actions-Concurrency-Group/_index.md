@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 14. </b> "
 ---
 
-Let's first explore several situations to understand why you might need the *concurrency group* feature. Then, you can conduct a series of experiments, independent of the AWSome Books project, to examine how implementing *concurrency group*s can significantly enhance the efficiency of the CI/CD pipeline.
+Let's first explore several situations to understand why you might need the *concurrency group* feature. Then, you can conduct a series of experiments, independent of the AWSome Books project, to examine how implementing *concurrency group* can significantly enhance the efficiency of the CI/CD pipeline.
 
 #### Content
 

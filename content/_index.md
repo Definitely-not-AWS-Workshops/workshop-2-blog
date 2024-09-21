@@ -31,7 +31,7 @@ You might notice that the VPC is primarily private, with no public subnets or In
 I believe the word "DevOps" involves more than just toolings; it is about cultivating the right team culture and applying tool-agnostic techniques to truly speed up the development process. This workshop aims to show the core ideas of a DevOps-driven CI/CD pipeline, rather than mastering security scanning, testing, or CI/CD technologies (other components of DevOps, including monitoring and observability, will not be covered). Once you grasp the fundamentals of a CI/CD pipeline, you can choose your preferred tools for implementation!
 {{% /notice %}}
 
-This workshop is inspired by one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca). This book explores the essentials of continuous delivery and provides practical examples for applying these concepts. Although it mainly offers theoretical insights and smaller examples, I have developed a full-scale project utilizing modern tools and AWS to partly showcase how these principles can be effectively implemented. Give it a read if you are interested in accelerating the software delivery process with any stack.
+This workshop is inspired my own ideas and one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca). This book explores the essentials of continuous delivery and provides practical examples for applying these concepts. Although it mainly offers theoretical insights and smaller examples, I have developed a full-scale project utilizing modern tools and AWS to partly showcase how these principles can be effectively implemented. Give it a read if you are interested in accelerating the software delivery process with any stack.
 
 ![0002](/images/0/0001.jpg?featherlight=false&width=18pc)
 
@@ -92,6 +92,7 @@ To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section aft
 11. [Your First CI Workflow Executions](11-your-first-ci-workflow-executions)
 12. [Branch Protection With Ruleset](12-branch-protection-with-ruleset)
 13. [Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group)
+14. [Experiments With GitHub Actions Concurrency Group](14-experiments-with-gitHub-actions-concurrency-group)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
 
 {{% notice info %}}

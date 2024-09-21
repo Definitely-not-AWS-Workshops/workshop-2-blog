@@ -6,6 +6,8 @@ chapter : false
 pre : " <b> 14.2 </b> "
 ---
 
+You are going to set up the required codebase first.
+
 **1.** Go to your GitHub organization created in [4.1 Create AWSome Books Repository](4-Preparation/1-Create-AWSome-Books-Repository).
 
 - Click the dropdown.
@@ -68,4 +70,4 @@ jobs:
 
 Overall, this workflow serves a very basic purpose: it will trigger whenever there is a push to the *main* branch and will extend the execution time by 300 seconds for testing or to simulate a longer running job.
 
-Next, let’s first dive into the fifth experiment without utilizing the *concurrency group*.
+Next, let’s dive into the fifth experiment without utilizing the *concurrency group*.
