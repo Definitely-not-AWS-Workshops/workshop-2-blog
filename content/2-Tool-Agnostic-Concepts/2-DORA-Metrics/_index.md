@@ -37,3 +37,6 @@ As part of their evaluation, the DORA team also categorized software development
 
 To achieve *high* or even *elite* performance in software delivery, it is crucial to adopt tool-agnostic methodologies and, more importantly, ensure that your team is equipped with the knowledge and skills to implement them effectively. 
 
+---
+
+In this workshop, the AWSDSC-XUT team may not focus on DORA metrics. In real-world scenarios, your team will need to put more effort in evaluating the efficiency of your software development and delivery processes.

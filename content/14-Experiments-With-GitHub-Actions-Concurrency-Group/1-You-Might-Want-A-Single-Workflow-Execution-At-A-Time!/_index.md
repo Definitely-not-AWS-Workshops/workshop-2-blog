@@ -28,9 +28,9 @@ Have you ever encountered any of these challenges during your software developme
 
 Allowing multiple pipeline executions simultaneously can lead to several potential drawbacks:
 
-- *Duplicate Workflows:* multiple jobs run simultaneously for the same task (e.g., multiple deployments, tests, or builds), leading to redundant or wasted effort.
+- *Duplicate workflows:* multiple jobs run simultaneously for the same task (e.g., multiple deployments, tests, or builds), leading to redundant or wasted effort.
   
-- *Resource Waste:* unnecessary consumption of CI/CD resources (e.g., CPU, memory, storage) due to running duplicate jobs or workflows.
+- *Resource waste:* unnecessary consumption of CI/CD resources (e.g., CPU, memory, storage) due to running duplicate jobs or workflows.
   
 - *Conflicts:* jobs modifying the same resources or environments simultaneously, causing race conditions, inconsistent states, or overwriting each other's work.
 

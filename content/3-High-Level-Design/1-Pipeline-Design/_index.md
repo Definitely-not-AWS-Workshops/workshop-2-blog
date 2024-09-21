@@ -14,11 +14,38 @@ Let's first take a look at several tools that the AWSDSC-XUT team may find us
 
 [GitHub Actions](https://github.com/features/actions) is a robust CI/CD and automation tool embedded within GitHub, designed to streamline the development workflow. Here are its key features:
 
-- *seamless integration with GitHub:* directly integrated with GitHub repositories, enabling smooth automation of development processes.
-- *custom workflows:* create and manage workflows using YAML configuration files to automate tasks such as building, testing, and deploying code.
-- *extensive marketplace:* access a wide range of pre-built actions for various tasks, enhancing functionality and saving time.
-- *cross-platform support:* run workflows across multiple operating systems and environments either GitHub-hosted or self-hosted, including Linux, Windows, and macOS.
-- *complex workflow management:* utilize features like conditions and matrix builds to handle sophisticated automation scenarios efficiently.
+- *Seamless integration with GitHub:* directly integrated with GitHub repositories, enabling smooth automation of development processes.
+- *Custom workflows:* create and manage workflows using YAML configuration files to automate tasks such as building, testing, and deploying code.
+- *Extensive marketplace:* access a wide range of pre-built actions for various tasks, enhancing functionality and saving time.
+- *Cross-platform support:* run workflows across multiple operating systems and environments either GitHub-hosted or self-hosted, including Linux, Windows, and macOS.
+- *Complex workflow management:* utilize features like conditions and matrix builds to handle sophisticated automation scenarios efficiently.
+
+Here are several important concepts within GitHub Actions:
+
+**Workflow**
+
+A *workflow* is an automated process defined in a *YAML* file within your repository. Workflows are stored in the *.github/workflows/* directory and are triggered by events such as pushes, pull requests, or scheduled intervals. A repository can have multiple workflows.
+
+**Events**
+
+Workflows are triggered by *events*, which can be various actions that occur in your repository. Common events include:
+
+- push: When code is pushed to the repository.
+- pull_request: When a pull request is opened or updated.
+- schedule: Triggered on a schedule, such as daily or weekly.
+- workflow_dispatch: Manually triggered workflows.
+
+**Jobs**
+
+A *job* is a set of steps executed by a runner. Each job runs in its own virtual environment and can consist of one or more steps. Jobs in the same workflow can run sequentially or in parallel.
+
+**Steps**
+
+*Steps* are individual tasks within a job. Each step can run a shell command or call an action (prebuilt or custom). Steps are executed sequentially within a job.
+
+**Runners**
+
+A *runner* is a server that runs your jobs. GitHub provides hosted runners, but you can also self-host runners to control the environment. The runner will execute the steps of a job.
 
 The AWSDSC-XUT team is well-versed in using GitHub but has yet to explore GitHub Actions. Given its seamless integration with GitHub and powerful features, the team is excited to leverage GitHub Actions for building their CI/CD pipelines.
 
@@ -28,17 +55,17 @@ The AWSDSC-XUT team is well-versed in using GitHub but has yet to explore GitHub
 
 Prior to adopting Slack, the AWSDSC-XUT team faced several challenges in collaboration:
 
-- *siloed communication:* communication between the team members are usually fragmented across different tools. In other words, without Slack and ChatOps, team members often switch between various tools (e.g., GitHub, AWS) to perform tasks like checking system health or deployment status.
+- *Siloed communication:* communication between the team members are usually fragmented across different tools. In other words, without Slack and ChatOps, team members often switch between various tools (e.g., GitHub, AWS) to perform tasks like checking system health or deployment status.
 
-- *delayed feedback loops:* it does not provide immediate feedback for tasks such as deployments, incident response, or code merges. Team members cannot see logs, results, and errors right in the chat, increasing delays caused by waiting for email notifications or checking dashboards.
+- *Delayed feedback loops:* it does not provide immediate feedback for tasks such as deployments, incident response, or code merges. Team members cannot see logs, results, and errors right in the chat, increasing delays caused by waiting for email notifications or checking dashboards.
 
 [Slack](https://slack.com/) simplifies [ChatOps](https://www.atlassian.com/incident-management/devops/chatops). The combination addresses the challenge of improving communication and collaboration in software development, IT operations, and DevOps processes. The core problems it solves include:
 
-- *operational visibility:* all stakeholders can view the execution of tasks like deployments, system health checks, or incident handling in real-time, fostering transparency and alignment among teams.
+- *Operational visibility:* all stakeholders can view the execution of tasks like deployments, system health checks, or incident handling in real-time, fostering transparency and alignment among teams.
 
-- *incident response efficiency:* during outages or incidents, teams can use ChatOps to trigger remediation actions, gather metrics, or coordinate responses without leaving Slack, improving response times.
+- *Incident response efficiency:* during outages or incidents, teams can use ChatOps to trigger remediation actions, gather metrics, or coordinate responses without leaving Slack, improving response times.
 
-- *automation:* teams can automate repetitive tasks, such as triggering builds or deploying applications, directly from Slack, improving efficiency and reducing human error.
+- *Automation:* teams can automate repetitive tasks, such as triggering builds or deploying applications, directly from Slack, improving efficiency and reducing human error.
 
 While ChatOps offers extensive capabilities, the AWSDSC-XUT team could start by experimenting with a simple approach — integrating deployment and pipeline notifications into Slack. This would provide valuable insights and a streamlined communication process in one place.
 
@@ -54,7 +81,7 @@ The notation used in this workshop is BPMN 2.0. BPMN 2.0 has a unique notation w
 
 #### From Local Development to Integration of Code Changes to the Remote Main Branch
 
-The AWSDSC-XUT team may want to experiment with a simplified *trunk-based development* branching strategy that consists of the *main* (*trunk*) branch and short-lived *feature* branches. All thoroughly tested code changes should be merged via pull requests and reviewed by your team members before being integrated into the *main* branch. This minimal setup allows for direct deployment of the AWSome Books application from the *main* branch at any time. 
+The AWSDSC-XUT team may want to experiment with a simplified *trunk-based development* branching strategy that consists of the *main* (*trunk*) branch and short-lived *feature* branches. Ensure all code changes are merged through pull requests, pass CI checks, and receive a team review before being integrated into the *main* branch. This minimal setup allows for direct deployment of the AWSome Books application from the *main* branch at any time. 
 
 {{% notice tip %}}
 You can refer to [trunk-based development](https://trunkbaseddevelopment.com/) for other advanced variants of this branching strategy or design your own for a customized branching strategy that nevertheless adheres to DevOps practices.
@@ -73,7 +100,7 @@ In general, start your local development process for AWSome Books by writing tes
 
 ![0004](/images/3/1/0004.svg?featherlight=false&width=100pc)
 
-In other words, to align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be performed locally first to discover issues early before creating a pull request, is one of the software development methodologies that couple particularly well with DevOps practices.
+In other words, to align with DevOps' fast feedback principles, which emphasize the need to detect issues as soon as possible, your initial code change verifications should begin with *feature* branches on your local machine. [Test-Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) (TDD), where tests are developed before the actual code and your code changes should be tested locally first to discover issues early before creating a pull request, is one of the software development methodologies that couple particularly well with DevOps practices.
 
 {{% notice tip %}}
 In addition to unit tests, you may also carry out different static and dynamic code analyses if needed. Remember to keep the analysis execution duration as reasonable as possible in order to get quick feedback. Extended analyses should be saved for later phases.
@@ -81,7 +108,7 @@ In addition to unit tests, you may also carry out different static and dynamic c
 
 During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world circumstances. 
 
-**Integration of Code Changes to the Remote Main Branch**
+**The Integration of Code Changes to the Remote Main Branch**
 
 Make sure to run tests on your local machine for fast feedback before submitting a pull request. If a team member skips this step and creates a pull request, the CI workflow should automatically run the tests on the remote branch.
 
@@ -101,7 +128,7 @@ Let's take a look at the integration of code changes from the local machine to t
 
 **4.** Make sure your team members review and approve the PR (you may skip simulating this in the hands-on sections).
 
-- If they have not done so already, they should conduct a code review before moving on to step **5**.
+- Make sure to conduct a code review if it has not been done yet or if previous code review has not been approved, before proceeding to step **5**.
 
 - If your PR has been reviewed and approved, an automatic process merges the PR to the *main* (*trunk*) branch. Proceed to step **6**.
 
