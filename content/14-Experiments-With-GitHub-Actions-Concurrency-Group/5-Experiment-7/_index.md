@@ -6,6 +6,8 @@ chapter : false
 pre : " <b> 14.5 </b> "
 ---
 
+There are times when you may need to cancel any currently running workflow within the same *concurrency group*. To do this, simply set **cancel-in-progress: true**.
+
 **1.** Make sure you are still in the right project folder.
 
 ```git
@@ -61,14 +63,11 @@ echo "experiment 7: the second workflow execution!" > README.md
 git add . && git commit -m "experiment 7: the second workflow execution" && git push
 ```
 
-**8.** On your remote repository, under the **Actions** tab, while the first workflow execution is running, you may notice that the second workflow execution is in the **Pending** state.
+**8.** On your remote repository, under the **Actions** tab, you may notice that the first workflow execution has been canceled, while the second workflow is now running.
 
 ![0002](/images/14/5/0002.svg?featherlight=false&width=100pc)
 
-
-
-As you can see, GitHub Actions enables multiple workflow runs to occur simultaneously by default, which can lead to the drawbacks we discussed in [14.1 You Might Want A Single Workflow Execution At A Time!](14-experiments-with-gitHub-actions-concurrency-group/1-you-might-want-a-single-workflow-execution-at-a-time!).
-
+Throughout the experiments, leveraging a *concurrency group* proves beneficial, allowing you to run a single workflow at a time. This is particularly useful for managing your account's or organization's resources, especially in situations where running multiple workflows simultaneously could lead to conflicts or unexpectedly high consumption of Actions minutes and storage.
 
 
 
