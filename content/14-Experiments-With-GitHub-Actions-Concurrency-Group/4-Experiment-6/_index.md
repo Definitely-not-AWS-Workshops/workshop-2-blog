@@ -6,13 +6,19 @@ chapter : false
 pre : " <b> 14.4 </b> "
 ---
 
+Now, you add a *concurrency group* but have not enabled **cancel-in-progress**, which would automatically cancel any currently running workflows within the same *concurrency group*.
+
 **1.** Make sure you are still in the right project folder.
 
 ```git
 cd path/to/experiment-5-6-7
 ```
 
-**2.** In the *.github/workflows/main.yml* file, add *concurrency group* at the workflow level.
+**2.** In the *.github/workflows/main.yml* file,
+
+- Add *concurrency group* at the workflow level to ensure that only a single workflow using the same *concurrency group* will run at a time.
+  
+- With a group named **main**, when a workflow is queued, it will remain pending if a different workflow using the **main** group is already in progress. If another workflow enters the queue, any pending workflow in the *concurrency group* will be canceled. This ensures that at any given time, there can be a maximum of one running job and one pending job in the group.
 
 ```yml {linenos=table,hl_lines=["7-8"],linenostart=1}
 name: main
@@ -76,12 +82,11 @@ echo "experiment 6: the third workflow execution!" > README.md
 git add . && git commit -m "experiment 6: the third workflow execution" && git push
 ```
 
-**11.** On your remote repository, under the **Actions** tab, while the first workflow execution is running, you may notice that the second workflow execution is canceled and the third workflow execution is in **Pending** state.
+**11.** On your remote repository, under the **Actions** tab, as the first workflow runs, you might notice the second workflow gets canceled, while the third goes in a **Pending** state, waiting for its turn.
 
 ![0003](/images/14/4/0003.svg?featherlight=false&width=100pc)
 
-As you can see, GitHub Actions enables multiple workflow runs to occur simultaneously by default, which can lead to the drawbacks we discussed in [14.1 You Might Want A Single Workflow Execution At A Time!](14-experiments-with-gitHub-actions-concurrency-group/1-you-might-want-a-single-workflow-execution-at-a-time!).
-
+A *merge group* without **cancel-in-progress** enabled ensures that, at any moment, there can be no more than one running job and one pending job within the group.
 
 
 

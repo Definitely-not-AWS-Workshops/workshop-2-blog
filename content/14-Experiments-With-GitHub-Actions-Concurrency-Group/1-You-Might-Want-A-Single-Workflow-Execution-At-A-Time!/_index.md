@@ -20,7 +20,7 @@ Have you ever encountered any of these challenges during your software developme
 
 **Continuous Deployment to Production Environment**
 
-- *Scenario:* you have a CI/CD pipeline that automatically deploys to a production environment after passing tests.
+- *Scenario:* you have a CI/CD pipeline that seamlessly deploys to the production environment as soon as changes are merged into the *main* branch.
 
 - *Problem:* multiple developers push updates to the repository in a short span, triggering multiple deployments to production. This could cause a race condition where one deployment overwrites another or causes downtime.
 
@@ -44,4 +44,4 @@ Therefore, with *concurrency group*,
 
 - **Continuous Deployment to Production Environment** can be streamlined by utilizing a *concurrency group*, which ensures that only one deployment is active at any given time for a specific environment. If a new commit is pushed, the current deployment can be canceled, allowing only the latest version to be deployed seamlessly.
 
-To keep the AWSome Books project organized and tidy, it is a great idea to conduct experiments separately. Next, let’s run a series of experiments to compare the results with and without this feature. This way, we can clearly evaluate its impact!
+To keep the AWSome Books project organized and tidy, it is a great idea to conduct experiments separately on a lighter codebase. Next, let’s run a series of experiments to compare the results with and without this feature. This way, we can clearly evaluate its impact!

@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 14.3 </b> "
 ---
 
-In this section, let’s experiment by running two workflow executions without utilizing *concurrency group*. Let’s find out what happens!
+In this section, let’s experiment by running two workflow executions without *concurrency group*. Let’s find out what happens!
 
 **1.** Make sure you are still in the right project folder.
 
