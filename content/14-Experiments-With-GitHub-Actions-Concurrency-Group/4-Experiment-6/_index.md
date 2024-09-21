@@ -18,7 +18,7 @@ cd path/to/experiment-5-6-7
 
 - Add *concurrency group* at the workflow level to ensure that only a single workflow using the same *concurrency group* will run at a time.
   
-- With a group named **main**, when a workflow is queued, it will remain pending if a different workflow using the **main** group is already in progress. If another workflow enters the queue, any pending workflow in the *concurrency group* will be canceled. This ensures that at any given time, there can be a maximum of one running job and one pending job in the group.
+- With a group named **main**, when a workflow is queued, it will be in the pending state if a different workflow using the **main** group is already in progress. If another workflow enters the queue, any pending workflow in the group will be canceled. This ensures that at any given time, there can be a maximum of one running job and one pending job in the group.
 
 ```yml {linenos=table,hl_lines=["7-8"],linenostart=1}
 name: main
