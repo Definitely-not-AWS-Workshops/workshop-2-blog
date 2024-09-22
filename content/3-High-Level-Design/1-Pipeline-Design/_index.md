@@ -106,7 +106,7 @@ In other words, to align with DevOps' fast feedback principles, which emphasiz
 In addition to unit tests, you may also carry out different static and dynamic code analyses if needed. Remember to keep the analysis execution duration as reasonable as possible in order to get quick feedback. Extended analyses should be saved for later phases.
 {{% /notice %}}
 
-During the hands-on sections, you just skip this phase. It is essential to incorporate TDD into your development process in real-world circumstances. 
+During the hands-on sections, you just skip this phase. However, it is essential to incorporate TDD into your development process in real-world circumstances. 
 
 **The Integration of Code Changes to the Remote Main Branch**
 
@@ -136,7 +136,7 @@ Let's take a look at the integration of code changes from the local machine to t
 
 - If the PR is not approved, start by reviewing the issues and comments. Resolve these on your local branch, then recommit and push the updated code changes as step **1**.
 
-- Otherwise, you can add the PR to the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) (or merge group), which helps increase velocity by automating PR merges into a busy branch and ensuring the branch is never broken by incompatible changes (see [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group) for more experiments on why you might want to use this feature). This will trigger another CI workflow execution to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
+- Otherwise, you can add the PR to the [merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) (or *merge group*), which helps increase velocity by automating PR merges into a busy branch and ensuring the branch is never broken by incompatible changes (see [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group) for more experiments on why you might want to use this feature). This will trigger another CI workflow execution to validate the code changes from the *feature* branch integrated with the *main* branch. You might need to revisit step **3**.
 
 **6.** If the cache key has changed or the cache entry does not exist, merging the PR may cause an Update dependency cache workflow to start, which automatically uploads the dependency cache to the GitHub Actions Cache storage for the *main* branch.  (see [11. Your First CI Workflow Executions](11-your-first-ci-workflow-executions) for more experiments showing how caching reduces your pipeline execution time).
 
@@ -168,7 +168,7 @@ Let's examine the Release process, which enables you to make available the most 
 - If it finds no vulnerabilities, move on to the following step.
 - If not, the workflow will stop the execution and alert the Slack channel.
 
-**5.** Your *Release* job delivers the AWSome Books to AWS ECS using the version that was chosen in step **1**. Part of this job is uploading the container image to the AWS ECR. If you want to, you may think about splitting the image publishing to another job. Whether the process succeeds or fails, it will then stop execution and send a notification to the Slack channel.
+**5.** Your *Release* job delivers the AWSome Books to AWS ECS using the version specified in step **1**. Part of this job is uploading the container image to the AWS ECR. If you want to, you may think about splitting the image publishing to another job. Whether the process succeeds or fails, it will then stop execution and send a notification to the Slack channel.
 
 You may have noticed that the jobs in the workflow are interdependent and must be completed in the correct order. Any job failure has the potential to bring down the Release workflow as a whole. The workflow will alert the Slack channel and then finish, whether it is successful or not.
 
