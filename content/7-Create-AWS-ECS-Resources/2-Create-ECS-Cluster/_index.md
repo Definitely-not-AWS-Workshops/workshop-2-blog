@@ -115,6 +115,3 @@ Enter the same for target group 2, replace **Target group 2 name** as `green-tg-
 - For the **Name** column, note down the CodeDeploy Deployment Group name.
 
 ![00016](/images/7/2/00016.svg?featherlight=false&width=100pc)
-
-**16.** Navigate to your Slack Workspace created in [4.2 Create Slack Channels](4-preparation/2-create-slack-channels).
-

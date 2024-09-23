@@ -100,3 +100,18 @@ pre : " <b> 15.1 </b> "
 - Click **Create**.
 
 ![00016](/images/15/1/00015.svg?featherlight=false&width=100pc)
+
+**19.** Navigate to your Slack Workspace created in [4.2 Create Slack Channels](4-preparation/2-create-slack-channels).
+
+- Expand the **Apps** dropdown.
+- Click **Add apps**.
+
+![00017](/images/15/1/00016.svg?featherlight=false&width=100pc)
+
+**20.** Filter with value `aws`, click **Add** for **AWS Chatbot**.
+
+![00018](/images/15/1/00017.svg?featherlight=false&width=100pc)
+
+**21.** Click **Add to Slack**.
+
+![00019](/images/15/1/00018.svg?featherlight=false&width=100pc)
