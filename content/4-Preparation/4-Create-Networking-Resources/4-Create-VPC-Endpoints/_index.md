@@ -23,7 +23,7 @@ pre : " <b> 4.4.4 </b> "
 ![0002](/images/4/4/4/0002.svg?featherlight=false&width=100pc)
 
 **4.** In the **Services** section,
-- Filter with `ecr.dkr` value.
+- Filter with value `ecr.dkr`.
 - Choose **com.amazonaws.us-east-1.ecr.dkr**.
 
 ![0003](/images/4/4/4/0003.svg?featherlight=false&width=100pc)
@@ -106,7 +106,7 @@ pre : " <b> 4.4.4 </b> "
 ![00010](/images/4/4/4/0009.svg?featherlight=false&width=100pc)
 
 **4.** In the **Services** section,
-- Filter with `ecr.api` value.
+- Filter with value `ecr.api`. 
 - Choose **com.amazonaws.us-east-1.ecr.api**.
 
 ![00011](/images/4/4/4/00010.svg?featherlight=false&width=100pc)
@@ -189,7 +189,7 @@ pre : " <b> 4.4.4 </b> "
 ![00018](/images/4/4/4/00011.svg?featherlight=false&width=100pc)
 
 **4.** In the **Services** section,
-- Filter with `gateway` type.
+- Filter with type `gateway`.
 - Choose **com.amazonaws.us-east-1.s3**.
 
 ![00019](/images/4/4/4/00012.svg?featherlight=false&width=100pc)
@@ -244,7 +244,7 @@ pre : " <b> 4.4.4 </b> "
 ![00025](/images/4/4/4/00017.svg?featherlight=false&width=100pc)
 
 **4.** In the **Services** section,
-- Filter with `secretsmanager` value.
+- Filter with value `secretsmanager`.
 - Choose **com.amazonaws.us-east-1.secretsmanager**.
 
 ![00026](/images/4/4/4/00018.svg?featherlight=false&width=100pc)

@@ -89,6 +89,17 @@ pre : " <b> 10.2 </b> "
 
 It migh take a while to create AWS RDS intances and the secret in AWS Secrets Manager.
 
+**14.** Note down the **Endpoint** of the database server you have just created.
+
+![00016](/images/10/2/00016.svg?featherlight=false&width=100pc)
+
+**15.** Go to [AWS Secrets Manager console](https://console.aws.amazon.com/secretsmanager/).
+
+**16.** Note down the **Secret name**, you might need it later!
+
+![00017](/images/10/2/00017.svg?featherlight=false&width=100pc)
+
+
 
 
 

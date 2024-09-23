@@ -87,4 +87,4 @@ Click **Skip Step**.
  
 You finally got 5 private Slack channels created.
 
-![00013](/images/4/2/00013.svg?featherlight=false&width=15pc)
+![00013](/images/4/2/00013.svg?featherlight=false&width=18pc)
