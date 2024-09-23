@@ -98,3 +98,23 @@ Enter the same for target group 2, replace **Target group 2 name** as `green-tg-
 ![00014](/images/7/2/00014.svg?featherlight=false&width=100pc)
 
 
+**13.** Go to [AWS CodeDeploy console](https://console.aws.amazon.com/codedeploy/).
+
+**14.** In the left sidebar,
+
+- Expand the **Deploy - CodeDeploy** dropdown.
+- Select **Applications**.
+- Click **AppECS-fcj-awsome-books**.
+
+![00015](/images/7/2/00015.svg?featherlight=false&width=100pc)
+
+**15.** In the details page of your CodeDeploy Application,
+
+- For **Name**, note down the CodeDeploy Application name.
+- Select the **Deployment groups** tab.
+- For the **Name** column, note down the CodeDeploy Deployment Group name.
+
+![00016](/images/7/2/00016.svg?featherlight=false&width=100pc)
+
+**16.** Navigate to your Slack Workspace created in [4.2 Create Slack Channels](4-preparation/2-create-slack-channels).
+

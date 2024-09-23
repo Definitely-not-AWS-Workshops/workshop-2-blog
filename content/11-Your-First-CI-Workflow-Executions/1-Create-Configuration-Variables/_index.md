@@ -45,8 +45,8 @@ Discover how to efficiently store and manage information in variables within Git
 | `JAVA_VERSION`  | `17`   |
 | `JAVA_DISTRIBUTION`  | `temurin`   |
 | `ECS_CLUSTER`  | `fcj` |
-| `CODEDEPLOY_APPLICATION`  | `AppECS-fcj-awsome-books`   |
-| `CODEDEPLOY_APPLICATION_GROUP`  | `DgpECS-fcj-awsome-books`   |
+| `CODEDEPLOY_APPLICATION`  | enter the CodeDeploy Application name that you have noted down in step **15** in [7.2 Create ECS Cluster](7-create-aws-ecs-Resources/2-create-ecs-cluster)   |
+| `CODEDEPLOY_APPLICATION_GROUP`  | enter the CodeDeploy Deployment Group name that you have noted down in step **15** in [7.2 Create ECS Cluster](7-create-aws-ecs-Resources/2-create-ecs-cluster)   |
 
 
 By the end, you should have a total of 8 variables configured at the repository level.
