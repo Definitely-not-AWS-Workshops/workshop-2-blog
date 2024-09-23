@@ -115,3 +115,11 @@ pre : " <b> 15.1 </b> "
 **21.** Click **Add to Slack**.
 
 ![00019](/images/15/1/00018.svg?featherlight=false&width=100pc)
+
+**22.** Back to your Slack Workspace, enter `invite @aws` in the **aws-codedeploy** channel and then click send icon.
+
+![00020](/images/15/1/00019.svg?featherlight=false&width=100pc)
+
+**23.** Click **Invite Them**.
+
+![00021](/images/15/1/00020.svg?featherlight=false&width=100pc)
