@@ -38,7 +38,7 @@ pre : " <b> 9.2 </b> "
 
 - For **HTTP method**, select **ANY**.
 - For **VPC link**, select **[Use stage variable]** and enter `${stageVariables.vpcLinkId}`. You define the vpcLinkId stage variable after deploying the API to a stage and set its value to the ID of the VpcLink.
-- For **Endpoint URL**, enter the Network Load Balancer's DNS name you have noted down in step **12** in [7. Create Network Load Balancer](7-create-network-load-balancer).
+- For **Endpoint URL**, enter the Network Load Balancer's DNS name you have noted down in step **12** in [8. Create Network Load Balancer](8-create-network-load-balancer).
 
 ![0005](/images/9/2/0005.svg?featherlight=false&width=100pc)
 
@@ -71,12 +71,12 @@ pre : " <b> 9.2 </b> "
 ![00011](/images/9/2/00011.svg?featherlight=false&width=100pc)
 
 - For **Name**, enter `vpcLinkId`.
-- For **Value**, enter the VPC Link ID you have noted down in step **6** in [8.1 Create VPC Link](8-create-aws-api-gateway-resources/1-create-vpc-link).
+- For **Value**, enter the VPC Link ID you have noted down in step **6** in [9.1 Create VPC Link](9-create-aws-api-gateway-resources/1-create-vpc-link).
 - Click **Save**.
 
 ![00012](/images/9/2/00012.svg?featherlight=false&width=100pc)
 
-**12.** To view the results, use the URL you obtained in step **9**. If you try to invoke more than once, you should see 2 internal IP addresses in 2 seperate subnets (Yours should be different from mine).
+**12.** To view the results, use the URL you obtained in step **9**. If you try to invoke more than once, you should see 2 internal IP addresses in 2 seperate subnets (Yours could be different from mine).
 
 ![00013](/images/9/2/00013.svg?featherlight=false&width=100pc)
 

@@ -37,7 +37,7 @@ You next create an ECS service that run the AWSome Books application at scale.
 
 **7.** In the **Deployment configuration** section,
 
-- For **Family**, choose **awsome-books**.
+- For **Family**, choose **awsome-books** (LATEST should be your default **Revision**).
 - For **Service name**, enter `awsome-books`.
 
 ![0006](/images/7/2/0006.svg?featherlight=false&width=100pc)
@@ -53,7 +53,7 @@ You next create an ECS service that run the AWSome Books application at scale.
 - For **VPC**, choose the VPC named **fcj**.
 - For **Subnets**, select subnets **fcj-private-02** and **fcj-private-05**.
 - For **Security group**, select **fcj-ecs-fargate**.
-- For **Public IP**, disable **Turned off**.
+- For **Public IP**, leave it as **Turned off**.
 
 ![0008](/images/7/2/0008.svg?featherlight=false&width=100pc)
 

@@ -7,7 +7,7 @@ pre : " <b> 7.1 </b> "
 ---
 
 
-Let's create an AWS ECS Task Definition - a JSON file that defines the configuration of a task in Amazon Elastic Container Service (ECS). It acts like a blueprint that tells ECS how to run a Docker container, including information about the container image, resources, environment variables, networking, logging, and IAM roles.
+Let's create an AWS ECS Task Definition - a JSON file that defines the configuration of a task in Amazon Elastic Container Service (ECS). It acts like a blueprint that tells AWS ECS how to run a Docker container, including information about the container image, resources, environment variables, networking, logging, and IAM roles.
 
 **1.** Go to [AWS ECS console](https://console.aws.amazon.com/ecs/).
 
@@ -33,7 +33,7 @@ Let's create an AWS ECS Task Definition - a JSON file that defines the configura
 **5.** In the **Container - 1** section, 
 
 - For **Name**, enter `awsome-books`.
-- For **Image URI**, choose one that you have noted down in step **7** in [4. Create AWS ECR](4-create-aws-ecr).
+- For **Image URI**, choose one that you have noted down in step **7** in [5. Create AWS ECR](5-create-aws-ecr).
 - For **Container port**, enter `8080`.
 
 ![0004](/images/7/1/0004.svg?featherlight=false&width=100pc)

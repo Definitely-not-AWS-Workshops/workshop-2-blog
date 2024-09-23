@@ -36,3 +36,11 @@ sed -i 's/<YOUR-AWS-SECRECTS-MANAGER-NAME>/<AWS-SECRECTS-MANAGER-NAME>/g' src/ma
 ```git
 git add . && git commit -m "configure database credentials" && git push --set-upstream origin config-db
 ```
+
+**5.** On your remote repository, click **Compare & pull request**.
+
+![0001](/images/16/1/0001.svg?featherlight=false&width=100pc)
+
+**6.** Click **Create pull request**.
+
+![0002](/images/16/1/0002.svg?featherlight=false&width=100pc)
