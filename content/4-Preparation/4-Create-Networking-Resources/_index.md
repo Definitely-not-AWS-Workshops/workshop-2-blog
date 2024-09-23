@@ -12,5 +12,5 @@ In this section, you are going to create the necessary networking resources for 
 
 1. [Create VPC](1-create-vpc)
 2. [Create Subnets](2-create-subnets)
-3. [Create Internet Gateway](3-create-internet-gateway)
-4. [Create Security Groups](4-create-security-groups)
+3. [Create Security Groups](3-create-security-groups)
+4. [Create VPC Endpoints](4-create-vpc-endpoints)
