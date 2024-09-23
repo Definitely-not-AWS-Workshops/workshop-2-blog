@@ -1,7 +1,7 @@
 ---
 title : "Create ECS Task Role"
 date : "`r Sys.Date()`"
-weight : 4
+weight : 2
 chapter : false
 pre : " <b> 4.3.2 </b> "
 ---
@@ -32,34 +32,35 @@ pre : " <b> 4.3.2 </b> "
         }
     ]
 }
-
 ```
 
 ![0002](/images/4/3/2/0002.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Next**.
+**4.** Scroll down to the bottom. Click **Next**.
 
 ![0003](/images/4/3/2/0003.svg?featherlight=false&width=100pc)
 
-**4.** In **Policy details** section, enter `ecsTaskRolePolicy` for **Policy name**.
+**5.** In **Policy details** section, enter `ecsTaskRolePolicy` for **Policy name**.
 
 ![0004](/images/4/3/2/0004.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create policy**.
+**6.** Scroll down to the bottom, click **Create policy**.
 
 ![0005](/images/4/3/2/0005.svg?featherlight=false&width=100pc)
 
-**5.** In the left sidebar,
+**7.** Back to [AWS IAM console](https://console.aws.amazon.com/iam/).
+
+**8.** In the left sidebar,
 - Choose **Roles**.
 - Click **Create role**.
 
 ![0006](/images/4/3/1/0001.svg?featherlight=false&width=100pc)
 
-**6.** In **Trusted entity type** section, choose **Custom trust policy**.
+**9.** In **Trusted entity type** section, choose **Custom trust policy**.
 
 ![0007](/images/4/3/2/0006.svg?featherlight=false&width=100pc)
 
-In **Custom trust policy** section, fill out the following policy.
+**10.** In **Custom trust policy** section, fill out the following policy.
 
 ```
 {
@@ -79,21 +80,21 @@ In **Custom trust policy** section, fill out the following policy.
 
 ![0008](/images/4/3/2/0007.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Next**.
+**11.** Scroll down to the bottom, click **Next**.
 
 ![0009](/images/4/3/2/0008.svg?featherlight=false&width=100pc)
 
-**7.** In the **Permissions policies** section,
+**12.** In the **Permissions policies** section,
 - Filter with the value `ecsTaskRolePolicy`.
 - Select **ecsTaskRolePolicy**.
 - Click **Next**.
 
 ![00010](/images/4/3/2/0009.svg?featherlight=false&width=100pc)
 
-**8.** In **Role details** section, enter `ecsTaskRole` for **Role name**.
+**13.** In **Role details** section, enter `ecsTaskRole` for **Role name**.
 
 ![00011](/images/4/3/2/00010.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create role**.
+**14.** Scroll down to the bottom. Click **Create role**.
 
 ![00012](/images/4/3/2/00011.svg?featherlight=false&width=100pc)
