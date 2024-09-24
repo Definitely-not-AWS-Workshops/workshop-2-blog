@@ -1,5 +1,5 @@
 ---
-title : "AWS CodeDeploy Notification To Slack"
+title : "AWS CodeDeploy Notifications To Slack"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
