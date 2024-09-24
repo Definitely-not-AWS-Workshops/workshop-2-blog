@@ -47,3 +47,45 @@ pre : " <b> 15.2 </b> "
 **9.** Enter the code you have copied in the step **7** and click **Submit**.
 
 ![0009](/images/15/2/0009.svg?featherlight=false&width=100pc)
+
+**10.** Enter `invite @GitHub` in the **gha-ci** channel and then click send icon.
+
+![00010](/images/15/2/00010.svg?featherlight=false&width=100pc)
+
+**11.** Click **Invite them**.
+
+![00011](/images/15/2/00011.svg?featherlight=false&width=100pc)
+
+**12.** Enter `/github subscribe fcj-workshops-2024/awsome-books` and then click send icon.
+
+![00012](/images/15/2/00012.svg?featherlight=false&width=100pc)
+
+**13.** Click **Install GitHub App**.
+
+![00013](/images/15/2/00013.svg?featherlight=false&width=100pc)
+
+**14.** Select **fcj-workshops-2024** GitHub organization.
+
+![00014](/images/15/2/00014.svg?featherlight=false&width=100pc)
+
+**15.**
+
+- Select **Only select repositories**.
+- For **Select repositories**, filter with value `awsome-books`.
+- Select **fcj-workshops-2024/awsome-books**.
+
+![00015](/images/15/2/00015.svg?featherlight=false&width=100pc)
+
+**16.** Scroll down to the bottom, click **Install**.
+
+![00016](/images/15/2/00016.svg?featherlight=false&width=100pc)
+
+**17.** Enter `/github subscribe list` and then click send icon.
+
+![00017](/images/15/2/00017.svg?featherlight=false&width=100pc)
+
+**18.** Your **gha-ci** Slack channel should now be subscribed to **fcj-workshops-2024/awsome-books** repository.
+
+![00017](/images/15/2/00018.svg?featherlight=false&width=100pc)
+
+**19.** Apply the same steps (**10** to **18**) to the **gha-merge-group**, **gha-release**, and **gha-rollback** channels, but you can skip steps **13** through **16** for these.
