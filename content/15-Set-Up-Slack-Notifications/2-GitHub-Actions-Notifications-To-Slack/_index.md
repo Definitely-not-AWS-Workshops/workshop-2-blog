@@ -101,6 +101,5 @@ Your **gha-ci** Slack channel should now be subscribed to **fcj-workshops-2024/a
 In the step **20**,
 
 - For **gha-merge-group**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"CI" event:"merge_group"}` to subscribe to the CI workflow on "merge_group" event.
-- For **gha-merge-group**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"CI" event:"merge_group"}` to subscribe to the CI workflow on "merge_group" event.
 - For **gha-release**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"Release" event:"push"}` to subscribe to the Release workflow on "push" event.
 - For **gha-rollback**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"Rollback" event:"workflow_dispatch"}` to subscribe to the Rollback workflow on "workflow_dispatch" event.

@@ -44,3 +44,27 @@ git add . && git commit -m "configure database credentials" && git push --set-up
 **6.** Click **Create pull request**.
 
 ![0002](/images/16/1/0002.svg?featherlight=false&width=100pc)
+
+**7.** A notification indicates the workflow was triggered via the pull request sent to the **gha-ci** Slack channel. 
+
+![0003](/images/16/1/0003.svg?featherlight=false&width=100pc)
+
+After a while, you might notice that the CI success notification has been sent to the channel.
+
+![0004](/images/16/1/0004.svg?featherlight=false&width=100pc)
+
+**8.** Back to the pull request details console, click **Merge when ready**.
+
+![0005](/images/16/1/0005.svg?featherlight=false&width=100pc)
+
+**9.** Click **Confirm merge when ready**.
+
+![0006](/images/16/1/0006.svg?featherlight=false&width=100pc)
+
+**10.**
+
+![0007](/images/16/1/0007.svg?featherlight=false&width=100pc)
+
+**11.**
+
+![0008](/images/16/1/0008.svg?featherlight=false&width=100pc)
