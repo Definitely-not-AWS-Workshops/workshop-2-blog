@@ -97,7 +97,6 @@ Enter the same for target group 2, replace **Target group 2 name** as `green-tg-
 
 ![00014](/images/7/2/00014.svg?featherlight=false&width=100pc)
 
-
 **13.** Go to [AWS CodeDeploy console](https://console.aws.amazon.com/codedeploy/).
 
 **14.** In the left sidebar,
