@@ -84,8 +84,23 @@ pre : " <b> 15.2 </b> "
 
 ![00017](/images/15/2/00017.svg?featherlight=false&width=100pc)
 
-**18.** Your **gha-ci** Slack channel should now be subscribed to **fcj-workshops-2024/awsome-books** repository.
+Your **gha-ci** Slack channel should now be subscribed to **fcj-workshops-2024/awsome-books** repository.
 
-![00017](/images/15/2/00018.svg?featherlight=false&width=100pc)
+![00018](/images/15/2/00018.svg?featherlight=false&width=100pc)
 
-**19.** Apply the same steps (**10** to **18**) to the **gha-merge-group**, **gha-release**, and **gha-rollback** channels, but you can skip steps **13** through **16** for these.
+**19.** Unsubscribe the channel from default event subscriptions with `/github unsubscribe fcj-workshops-2024/awsome-books issues pulls commits releases deployments` command.
+
+![00019](/images/15/2/00019.svg?featherlight=false&width=100pc)
+
+**20.** Enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"CI" event:"pull_request" branch:"main"}` to subscribe to the CI workflow on "pull_request" event. Click the send icon.
+
+![00020](/images/15/2/00020.svg?featherlight=false&width=100pc)
+
+**21.** Apply the same steps (**10** to **20**) to the **gha-merge-group**, **gha-release**, and **gha-rollback** channels, but you can skip steps **13** through **16** for these.
+
+In the step **20**,
+
+- For **gha-merge-group**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"CI" event:"merge_group"}` to subscribe to the CI workflow on "merge_group" event.
+- For **gha-merge-group**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"CI" event:"merge_group"}` to subscribe to the CI workflow on "merge_group" event.
+- For **gha-release**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"Release" event:"push"}` to subscribe to the Release workflow on "push" event.
+- For **gha-rollback**, enter `/github subscribe fcj-workshops-2024/awsome-books workflows:{name:"Rollback" event:"workflow_dispatch"}` to subscribe to the Rollback workflow on "workflow_dispatch" event.
