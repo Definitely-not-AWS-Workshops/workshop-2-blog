@@ -11,9 +11,9 @@ chapter : false
 
 Join our enjoyable workshop designed to elevate your Continuous Integration / Continuous Delivery (CI/CD) practices! Here’s what you will dive into:
 
-- experience the simplified *trunk-based development* branching strategy to reduce merge conflicts and make code reviews easier.
-- craft and optimize *automation pipelines* using GitHub Actions, leveraging job parallelism, dependency caching, merge queue, and concurrency group techniques.
-- implement *blue/green deployment* with AWS CodeDeploy to minimize application deployment downtime.
+- Experience the simplified *trunk-based development* branching strategy to reduce merge conflicts and make code reviews easier.
+- Craft and optimize *automation pipelines* using GitHub Actions, leveraging job parallelism, dependency caching, merge queue, and concurrency group techniques.
+- Implement *blue/green deployment* with AWS CodeDeploy to minimize application deployment downtime.
 
 In addition, a simple ChatOps approach will be used to centralize the pipeline and deployment results to Slack channels.
   
@@ -23,7 +23,8 @@ You might implement the following AWS architecture. Exciting, right?
 
 ![0001](/images/0/0001.svg?featherlight=false&width=100pc)
 
-*If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1T6UTfYhVNh_XZzH9yYn-3AG1LSZwzfXg/view?usp=sharing).*
+
+*If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1YuVMfHeR6bTuoOPd-djev-ztyRLQvyeq/view?usp=sharing).*
 
 You might notice that the VPC is primarily private, with no public subnets or Internet Gateway configurations. In this workshop, you are going to discover how to securely access private resources from the outside and how these resources initiate connections with other AWS services!
 
@@ -31,12 +32,12 @@ You might notice that the VPC is primarily private, with no public subnets or In
 I believe the word "DevOps" involves more than just toolings; it is about cultivating the right team culture and applying tool-agnostic techniques to truly speed up the development process. This workshop aims to show the core ideas of a DevOps-driven CI/CD pipeline, rather than mastering security scanning, testing, or CI/CD technologies (other components of DevOps, including monitoring and observability, will not be covered). Once you grasp the fundamentals of a CI/CD pipeline, you can choose your preferred tools for implementation!
 {{% /notice %}}
 
-This workshop is inspired my own ideas and one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca). This book explores the essentials of continuous delivery and provides practical examples for applying these concepts. Although it mainly offers theoretical insights and smaller examples, I have developed a full-scale project utilizing modern tools and AWS to partly showcase how these principles can be effectively implemented. Give it a read if you are interested in accelerating the software delivery process with any stack.
+This workshop is inspired my own ideas and one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca). This book explores the essentials of continuous delivery and provides practical examples for applying these concepts. Give it a read if you are interested in accelerating the software delivery process with any stack.
 
 ![0002](/images/0/0001.jpg?featherlight=false&width=18pc)
 
 {{% notice note %}}
-You should work more on setting up and configuring this workshop to fit your needs and your projects, as it was made for me to learn from and has not been used on any real-world projects yet.
+You should work more on setting up and configuring this workshop to fit your needs and your projects.
 {{% /notice %}}
 
 <!-- Take a look at some of the operations you might be engaged in. Do not worry if you do not understand now, it will be clear later!
@@ -68,13 +69,13 @@ To participate in this workshop, the following prerequisites are recommended:
 You do not need deep knowledge on any of these, and if needed, you can research them as you go!
 
 #### Duration
-The estimated duration for completing this workshop is **around 10 hours**.
+The estimated duration for completing this workshop is **around 8 hours**.
 
 #### Costs
 The services used in this workshop charge per usage, although most of them have a free tier, so unless you used the free tier for other workloads, it will cost you **around $2.0** to run this workshop. Please look at the different services' pricing pages to see their cost.
 
 {{% notice note %}}
-To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section after the workshop to clean up the resources provisioned.
+To avoid incurring charges, move to the [19. Clean Up](19-clean-up) section after the workshop to clean up the resources provisioned.
 {{% /notice %}}
 
 #### Main Content
@@ -93,6 +94,12 @@ To avoid incurring charges, move to the [8. Cleanup](./8-cleanup/) section aft
 12. [Branch Protection With Ruleset](12-branch-protection-with-ruleset)
 13. [Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group)
 14. [Experiments With GitHub Actions Concurrency Group](14-experiments-with-gitHub-actions-concurrency-group)
+15. [Set Up Slack Notifications](15-set-up-slack-notifications)
+16. [Your First Release Workflow Executions](16-your-first-release-workflow-executions)
+17. [Test AWS RDS Failover](17-test-aws-rds-failover)
+18. [Your First Rollback Workflow Executions](18-your-first-rollback-workflow-executions)
+19. [Clean Up](19-clean-up)
+20. [Further Improvements](20-further-improvements)
 <!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
 
 {{% notice info %}}
