@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 19. </b> "
 ---
 
-Congratulations! You have done your lengthy workshop with running your pipelines and AWS services smoothly.  Let's clean up AWS resources to avoid additional charge.  
+Congratulations on completing the workshop and smoothly running your pipelines and AWSome Books on AWS services! Now, let’s clean up your AWS resources to prevent any unnecessary charges.
 
 **1.** Go to [AWS API Gateway console](https://console.aws.amazon.com/apigateway/).
 
