@@ -199,3 +199,13 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00026](/images/19/00026.svg?featherlight=false&width=100pc)
 
+**36.** Go to [AWS IAM console](https://console.aws.amazon.com/iam).
+
+**37.** In the left sidebar,
+
+- Select **Roles**.
+- Select **chatbot-role**, **ecsCodeDeployRole**, **ecsTaskExecutionRole**, **ecsTaskRole**, and **gha-role** roles.
+- Click **Delete**.
+
+![00027](/images/19/00027.svg?featherlight=false&width=100pc)
+
