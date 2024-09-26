@@ -10,7 +10,7 @@ pre : " <b> 9.1 </b> "
 
 **2.** In the left sidebar,
 
-- Choose **VPC Link**.
+- Choose **VPC link**.
 - Click **Create**.
 
 ![0001](/images/9/1/0001.svg?featherlight=false&width=100pc)
