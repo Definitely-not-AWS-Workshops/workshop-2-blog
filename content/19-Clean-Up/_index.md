@@ -29,6 +29,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 - Choose **VPC links**.
 - Select **vpc-link-nlb**
+- Click **Delete**.
 
 ![0003](/images/19/0003.svg?featherlight=false&width=100pc)
 
@@ -41,11 +42,11 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 **7.** In the left sidebar,
 
 - Select **Clusters**.
-- Click the **fcj** cluster.
+- Click **fcj** cluster.
   
 ![0005](/images/19/0005.svg?featherlight=false&width=100pc)
 
-**8.** Click **Delete**.
+**8.** Click **Delete cluster**.
 
 ![0006](/images/19/0006.svg?featherlight=false&width=100pc)
 
@@ -62,7 +63,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 - Select **Target Groups**.
 - Choose **blue-tg-fcj-awsome-books** and **tg-alb** target groups.
-- Expand **Actions**.
+- Expand the **Actions** dropdown.
 - Click **Delete**.
 
 ![0008](/images/19/0008.svg?featherlight=false&width=100pc)
@@ -75,7 +76,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 - Select **Load Balancers**.
 - Choose **fcj-nlb** and **fcj-alb** load balancers.
-- Expand **Actions**.
+- Expand the **Actions** dropdown.
 - Click **Delete load balancer**.
 
 ![00010](/images/19/00010.svg?featherlight=false&width=100pc)
@@ -93,7 +94,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 - Select **Databases**.
 - Choose **awsome-books** database.
-- Expand **Actions**.
+- Expand the **Actions** dropdown.
 - Click **Delete**.
 
 ![00012](/images/19/00012.svg?featherlight=false&width=100pc)
@@ -108,7 +109,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00013](/images/19/00013.svg?featherlight=false&width=100pc)
 
-**18.**
+**18.** In the left sidebar,
 
 - Click **Subnet groups**.
 - Select **awsome-books** subnet group.
@@ -126,7 +127,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 - Select **Endpoints**.
 - Select **ecr-dkr-endpoint**, **ecr-api-endpoint**, **s3-endpoint**, and **secretsmanager-endpoint**.
-- Expand **Actions**.
+- Expand the **Actions** dropdown.
 - Click **Delete VPC endpoints**.
 
 ![00016](/images/19/00016.svg?featherlight=false&width=100pc)
@@ -138,11 +139,11 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00017](/images/19/00017.svg?featherlight=false&width=100pc)
 
-**23.**
+**23.** In the left sidebar,
 
 - Select **Your VPCs**.
 - Select **fcj** VPC.
-- Expand **Actions**.
+- Expand the **Actions** dropdown.
 - Click **Delete VPC**.
 
 ![00018](/images/19/00018.svg?featherlight=false&width=100pc)
@@ -158,7 +159,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 **26.** In the left sidebar,
 
-- Click **Repositoires** under **Private registry**.
+- Click **Repositoires** under **Private registry** dropdown.
 - Select **awsome-books** repository.
 - Click **Delete**.
 
@@ -177,9 +178,9 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00022](/images/19/00022.svg?featherlight=false&width=100pc)
 
-**31.**
+**31.** In the Slack workspace details page,
 
-- Select **fcj-slack** channels.
+- Select **fcj-slack** channel.
 - Click **Delete**.
 
 ![00023](/images/19/00023.svg?featherlight=false&width=100pc)
@@ -188,20 +189,20 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00024](/images/19/00024.svg?featherlight=false&width=100pc)
 
-**34.** Click **Remove workspace configuration**.
+**33.** Click **Remove workspace configuration**.
 
 ![00025](/images/19/00025.svg?featherlight=false&width=100pc)
 
-**35.**
+**34.**
 
 - Enter your **Workspace ID**.
 - Click **Remove workspace configuration**.
 
 ![00026](/images/19/00026.svg?featherlight=false&width=100pc)
 
-**36.** Go to [AWS IAM console](https://console.aws.amazon.com/iam).
+**35.** Go to [AWS IAM console](https://console.aws.amazon.com/iam).
 
-**37.** In the left sidebar,
+**36.** In the left sidebar,
 
 - Select **Roles**.
 - Select **chatbot-role**, **ecsCodeDeployRole**, **ecsTaskExecutionRole**, **ecsTaskRole**, and **gha-role** roles.
@@ -209,3 +210,28 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00027](/images/19/00027.svg?featherlight=false&width=100pc)
 
+**37.**
+
+- Enter `delete`.
+- Click **Delete**.
+
+![00028](/images/19/00028.svg?featherlight=false&width=100pc)
+
+**38.** In the left sidebar,
+
+- Select **Policies**.
+- Filter with value `ecsTaskRolePolicy`.
+- For **Filter by Type**, select **Customer managed** .
+- For **Policy name**, select **ecsTaskRolePolicy**.
+- Click **Delete**.
+
+![00029](/images/19/00029.svg?featherlight=false&width=100pc)
+
+**39.**
+
+- Enter `ecsTaskRolePolicy`.
+- Click **Delete**.
+
+![00030](/images/19/00030.svg?featherlight=false&width=100pc)
+
+**40.** Repeat the step **38** and **39** but with `gha-policy` value instead.
