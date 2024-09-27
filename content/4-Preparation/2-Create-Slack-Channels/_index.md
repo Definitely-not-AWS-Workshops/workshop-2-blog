@@ -12,7 +12,7 @@ In this section, you are going to create [Slack channels](https://slack.com/help
 The Slack setup in the workshop does not fully align with Slack's best practices. For more details, please refer to the [Slack Docs](https://slack.com/help). 
 {{% /notice %}}
 
-Let’s start by creating a Slack workspace that represents your company or team.
+Let’s start by creating a Slack Workspace that represents your company or team.
 
 **1.** Go to Slack [get started](https://slack.com/get-started#/createnew) page. Sign in with Google or another method of your choice.
 

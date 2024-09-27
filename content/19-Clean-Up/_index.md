@@ -159,7 +159,8 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 **26.** In the left sidebar,
 
-- Click **Repositoires** under **Private registry** dropdown.
+- Expand the **Private registry** dropdown.
+- Click **Repositories**.
 - Select **awsome-books** repository.
 - Click **Delete**.
 
@@ -178,7 +179,7 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00022](/images/19/00022.svg?featherlight=false&width=100pc)
 
-**30.** In the Slack workspace details page,
+**30.** In the Slack Workspace details page,
 
 - Select **fcj-slack** channel.
 - Click **Delete**.
