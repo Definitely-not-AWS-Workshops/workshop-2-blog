@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 18.1 </b> "
 ---
 
-You now try to roll back an inexisting version and your Rollback workflow should allow that.
+Now, when you attempt to roll back to a non-existent version, your Rollback workflow will prevent this action.
 
 **1.** On your remote **awsome-books** repository,
 
@@ -26,6 +26,6 @@ You now try to roll back an inexisting version and your Rollback workflow should
 
 ![0003](/images/18/1/0003.svg?featherlight=false&width=100pc)
 
-**4.** In your Slack Workspace, you also receive roll back workflow fail to execute on **gha-rollback** channel. 
+**4.** In your Slack Workspace, you also receive Rollback workflow fail to execute on **gha-rollback** channel. 
 
 ![0004](/images/18/1/0004.svg?featherlight=false&width=100pc)

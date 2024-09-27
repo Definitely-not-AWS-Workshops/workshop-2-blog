@@ -119,7 +119,7 @@ When you run the Release process with the correct SemVer format, AWSome Books pr
 
 ![00013](/images/16/3/00015.svg?featherlight=false&width=30pc)
 
-**22.** Access the AWSome Books project with the AWS API Gateway endpoint you have noted down in step **9** in [9.2 Create AWS API Gateway](9-create-aws-api-gateway-resources/2-create-aws-api-gateway) .
+**22.** Access the AWSome Books project with the AWS API Gateway endpoint you have noted down in step **9** in [9.2 Create AWS API Gateway](9-create-aws-api-gateway-resources/2-create-aws-api-gateway).
 
 ![00017](/images/16/3/00022.svg?featherlight=false&width=100pc)
 
