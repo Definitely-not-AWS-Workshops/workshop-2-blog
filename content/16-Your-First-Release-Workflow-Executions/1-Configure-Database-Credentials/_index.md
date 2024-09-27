@@ -6,6 +6,8 @@ chapter : false
 pre : " <b> 16.1 </b> "
 ---
 
+The necessary database credentials must first be configured before the AWSbome Books project is released.
+
 **1.** Make sure you are in the **awsome-books** local repository.
 
 ```git
