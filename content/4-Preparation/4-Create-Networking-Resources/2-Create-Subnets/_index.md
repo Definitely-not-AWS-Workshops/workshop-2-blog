@@ -19,19 +19,19 @@ pre : " <b> 4.4.2 </b> "
 
 ![0002](/images/4/4/2/0002.svg?featherlight=false&width=100pc)
 
-In the **Subnet settings** section,
+**4.** In the **Subnet settings** section,
 
-- For **Subnet name**, enter `fcj-public-01`.
+- For **Subnet name**, enter `fcj-private-01`.
 - For **Availability Zone**, choose `US East (N. Virginia) / us-east-1a`.
 - For **IPv4 subnet CIDR block**, enter `10.0.0.0/19`.
 
 ![0003](/images/4/4/2/0003.svg?featherlight=false&width=100pc)
 
-Click **Add new subnet**.
+**5.** Click **Add new subnet**.
 
-![0004-1](/images/4/4/2/0004-1.svg?featherlight=false&width=100pc)
+![0004-1](/images/4/4/2/0004.svg?featherlight=false&width=100pc)
 
-Do the same to add the other subnets. Replace the value of each field using the following tables.
+**6.** Do the same from step **4** to **5** to add the other subnets. Replace the value of each field using the following tables.
 
 - For **fcj-private-02** subnet. 
 
@@ -73,7 +73,7 @@ Do the same to add the other subnets. Replace the value of each field using the 
 | Availability Zone |    `US East (N. Virginia) / us-east-1b`   |
 | IPv4 subnet CIDR block | `10.0.160.0/19` |
     
-After completing, you got 6 private subnets. Click **Create subnet**.
+**7.** After completing, you got 6 private subnets. Click **Create subnet**.
 
 ![0004-2](/images/4/4/2/0004-2.svg?featherlight=false&width=100pc)
 

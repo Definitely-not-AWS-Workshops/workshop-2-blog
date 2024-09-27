@@ -292,9 +292,3 @@ pre : " <b> 4.4.4 </b> "
 **9.** Scroll down to the bottom. Click **Create endpoint**.
 
 ![00031](/images/4/4/4/00020.svg?featherlight=false&width=100pc)
-
-#### Create CloudWatch Logs Interface Endpoint
-
-{{% notice tip %}}
-CloudWatch Logs seem to be really essential for debugging your AWS services in many circumstances. For example, without enabling logging, it could take hours or even days to analyze AWS ECS tasks that failed to run properly.
-{{% /notice %}}

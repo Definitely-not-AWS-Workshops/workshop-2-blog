@@ -11,5 +11,5 @@ In this section, you are going to create required IAM roles for GitHub Actions w
 #### Content
 
 1. [Create GitHub Actions Role](1-create-github-actions-role)
-2. [Create ECS CodeDeploy Role](2-create-ecs-codedeploy-role)
-3. [Create ECS Task Role](3-create-ecs-task-role)
+2. [Create ECS Task Role](2-create-ecs-task-role)
+3. [Create ECS CodeDeploy Role](3-create-ecs-codedeploy-role)

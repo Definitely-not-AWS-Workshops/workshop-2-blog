@@ -20,15 +20,15 @@ pre : " <b> 4.4.1 </b> "
 
 ![0002](/images/4/4/1/0002.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create VPC**.
+**4.** Scroll down to the bottom. Click **Create VPC**.
 
 ![0003](/images/4/4/1/0003.svg?featherlight=false&width=100pc)
 
-**4.** Click the **Actions** dropdown and then choose **Edit VPC settings**.
+**5.** Click the **Actions** dropdown and then choose **Edit VPC settings**.
 
 ![0004](/images/4/4/1/0004.svg?featherlight=false&width=100pc)
 
-**5.** In the **DNS settings** section,
+**6.** In the **DNS settings** section,
 
 - Tick **Enable DNS hostnames**.
 - Click **Save**.

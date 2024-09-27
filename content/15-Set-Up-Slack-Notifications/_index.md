@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 15. </b> "
 ---
 
-You next configure the required configuration for CodeDeploy and GitHub Actions notifications to Slack.
+You next configure the required configurations for CodeDeploy and GitHub Actions notifications to Slack.
 
 #### Content
 
