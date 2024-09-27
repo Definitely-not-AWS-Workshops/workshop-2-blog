@@ -10,7 +10,7 @@ By setting up AWS API Gateway with the REST APIs type, you now have access to ad
 
 - Your AWS API Gateway is now accessible to anyone with internet access. To enhance security, consider integrating [AWS Cognito](https://docs.aws.amazon.com/cognito/) with a user pool as an authorizer.
 
-- Your AWS API Gateway is using the default endpoint. For enhanced security and branding, consider setting up a custom domain with SSL/TLS encryption through [AWS Route 53](https://docs.aws.amazon.com/route53/) and [AWS Certificate Manager](https://docs.aws.amazon.com/acm//).
+- Your AWS API Gateway is using the default endpoint. For enhanced security and branding, consider setting up a custom domain with SSL/TLS encryption through [AWS Route 53](https://docs.aws.amazon.com/route53/) and [AWS Certificate Manager](https://docs.aws.amazon.com/acm/).
 
 <!-- Your AWS architecture would then look like this:
 

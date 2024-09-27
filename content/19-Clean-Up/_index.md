@@ -171,38 +171,38 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 **28.** Go to [AWS Chatbot console](https://console.aws.amazon.com/chatbot).
 
-**30.** In the left sidebar,
+**29.** In the left sidebar,
 
 - Select **Configured clients**.
 - Select **Slack - fcj**.
 
 ![00022](/images/19/00022.svg?featherlight=false&width=100pc)
 
-**31.** In the Slack workspace details page,
+**30.** In the Slack workspace details page,
 
 - Select **fcj-slack** channel.
 - Click **Delete**.
 
 ![00023](/images/19/00023.svg?featherlight=false&width=100pc)
 
-**32.** Click **Delete**.
+**31.** Click **Delete**.
 
 ![00024](/images/19/00024.svg?featherlight=false&width=100pc)
 
-**33.** Click **Remove workspace configuration**.
+**32.** Click **Remove workspace configuration**.
 
 ![00025](/images/19/00025.svg?featherlight=false&width=100pc)
 
-**34.**
+**33.**
 
 - Enter your **Workspace ID**.
 - Click **Remove workspace configuration**.
 
 ![00026](/images/19/00026.svg?featherlight=false&width=100pc)
 
-**35.** Go to [AWS IAM console](https://console.aws.amazon.com/iam).
+**34.** Go to [AWS IAM console](https://console.aws.amazon.com/iam).
 
-**36.** In the left sidebar,
+**35.** In the left sidebar,
 
 - Select **Roles**.
 - Select **chatbot-role**, **ecsCodeDeployRole**, **ecsTaskExecutionRole**, **ecsTaskRole**, and **gha-role** roles.
@@ -210,28 +210,28 @@ Congratulations on completing the workshop and smoothly running your pipelines a
 
 ![00027](/images/19/00027.svg?featherlight=false&width=100pc)
 
-**37.**
+**36.**
 
 - Enter `delete`.
 - Click **Delete**.
 
 ![00028](/images/19/00028.svg?featherlight=false&width=100pc)
 
-**38.** In the left sidebar,
+**37.** In the left sidebar,
 
 - Select **Policies**.
 - Filter with value `ecsTaskRolePolicy`.
-- For **Filter by Type**, select **Customer managed** .
-- For **Policy name**, select **ecsTaskRolePolicy**.
+- For **Filter by Type**, select **Customer managed**.
+-  Select **ecsTaskRolePolicy** policy.
 - Click **Delete**.
 
 ![00029](/images/19/00029.svg?featherlight=false&width=100pc)
 
-**39.**
+**38.**
 
 - Enter `ecsTaskRolePolicy`.
 - Click **Delete**.
 
 ![00030](/images/19/00030.svg?featherlight=false&width=100pc)
 
-**40.** Repeat the step **38** and **39** but with `gha-policy` value instead.
+**39.** Repeat the step **37** and **38** but with `gha-policy` value instead.

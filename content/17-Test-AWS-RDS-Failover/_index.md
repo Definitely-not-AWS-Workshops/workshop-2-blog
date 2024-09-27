@@ -14,7 +14,7 @@ Let’s put your database servers to the test by initiating a reboot to simulate
 
 - Click **Databases**.
 - Select **awsome-books** database.
-- Expand **Actions**.
+- Expand the **Actions** dropdown.
 - Click **Reboot**.
 
 ![0001](/images/17/0001.svg?featherlight=false&width=100pc)
@@ -26,7 +26,7 @@ Let’s put your database servers to the test by initiating a reboot to simulate
 
 ![0002](/images/17/0002.svg?featherlight=false&width=100pc)
 
-You might notice that your database server is in **Rebooting** status. Its current AZ should be **us-east-1a**.
+You might notice that your primary database server is in **Rebooting** status. Its current AZ should be **us-east-1a**.
 
 ![0003](/images/17/0003.svg?featherlight=false&width=100pc)
 
