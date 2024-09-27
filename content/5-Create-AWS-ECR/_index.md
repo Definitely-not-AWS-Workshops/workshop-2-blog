@@ -21,28 +21,28 @@ You now create a AWS ECR private repository and push a dummy Docker image to it.
 
 ![0002](/images/5/0002.svg?featherlight=false&width=100pc)
 
-Scroll down to the bottom. Click **Create repository**.
+**4.** Scroll down to the bottom, click **Create repository**.
 
 ![0003](/images/5/0003.svg?featherlight=false&width=100pc)
 
-**4.** Turn on [Docker Desktop](https://www.docker.com/products/docker-desktop/) or any program that can build and push your Docker image to AWS ECR repository. This workshop will use Docker Desktop as an example.
+**5.** Turn on [Docker Desktop](https://www.docker.com/products/docker-desktop/) or any program that can build and push your Docker image to AWS ECR repository. This workshop will use Docker Desktop as an example.
 
 ![0004](/images/5/0004.svg?featherlight=false&width=100pc)
 
-**5.** Clone the following repository [github.com/Definitely-not-AWS-Workshops/ip-printer](https://github.com/Definitely-not-AWS-Workshops/ip-printer).
+**6.** Clone the following repository [github.com/Definitely-not-AWS-Workshops/ip-printer](https://github.com/Definitely-not-AWS-Workshops/ip-printer).
 
 ```git
 git clone https://github.com/Definitely-not-AWS-Workshops/ip-printer
 ```
 
-Change the directory to the repository you have just cloned.
+**7.** Change the directory to the repository you have just cloned.
 
 
 ```git
 cd ip-printer
 ```
 
-**6.** Run the following commands to build and push Docker image to AWS ECR repository,
+**8.** Run the following commands to build and push Docker image to AWS ECR repository,
 
 - Retrieve an authentication token and authenticate your Docker client to your registry. Replace **\<YOUR-AWS-ACCOUNT-ID\>** with yours. Use the AWS CLI,
 
@@ -68,6 +68,6 @@ docker tag awsome-books:latest <YOUR-AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws
 docker push <YOUR-AWS-ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/awsome-books:v0.0.0
 ```
 
-**7.** Check out your AWS ECR private repository to find the Docker image with the tag v0.0.0. Make a note of the **Image URI** using the **Copy URI** button for a later use.
+**9.** Check out your AWS ECR private repository to find the Docker image with the tag v0.0.0. Make a note of the **Image URI** using the **Copy URI** button for a later use.
 
 ![0005](/images/5/0005.svg?featherlight=false&width=100pc)

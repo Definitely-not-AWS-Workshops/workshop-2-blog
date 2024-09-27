@@ -33,7 +33,7 @@ Let's create an AWS ECS Task Definition - a JSON file that defines the configura
 **5.** In the **Container - 1** section, 
 
 - For **Name**, enter `awsome-books`.
-- For **Image URI**, choose one that you have noted down in step **7** in [5. Create AWS ECR](5-create-aws-ecr).
+- For **Image URI**, choose one that you have noted down in step **9** in [5. Create AWS ECR](5-create-aws-ecr).
 - For **Container port**, enter `8080`.
 
 ![0004](/images/7/1/0004.svg?featherlight=false&width=100pc)
