@@ -57,11 +57,11 @@ When you run the Release process with the correct SemVer format, AWSome Books pr
 
 ![00011](/images/16/3/0005.svg?featherlight=false&width=100pc)
 
-**11.** AWS CodeDeploy is deploying the replacement task set.
+**11.** You might notice that AWS CodeDeploy is deploying the replacement task set.
 
 ![00012](/images/16/3/0006.svg?featherlight=false&width=100pc)
 
-**12.** Once the replacement task set has been deployed successfully, your traffic should to be directed to the newly created task set after some time.
+**12.** Once the replacement task set has been deployed successfully, your traffic should to be directed to the newly created task set after some time. You may stop the current deployment and revert to the previous task set during that period, as your old task set should persist until the timeout has passed.
 
 ![00013](/images/16/3/0007.svg?featherlight=false&width=100pc)
 
