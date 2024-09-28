@@ -1,4 +1,4 @@
-![](https://komarev.com/ghpvc/?username=Definitely-not-AWS-Workshops&repo=workshop-2-blog&color=red&style=for-the-badge)
+![](https://api.visitorbadge.io/api/VisitorHit?user=Definitely-not-AWS-Workshops&repo=workshop-2-blog&countColor=%237B1E7A)
 
 ![AWS architecture](aws-architecture.svg?featherlight=false&width=100pc)
 
