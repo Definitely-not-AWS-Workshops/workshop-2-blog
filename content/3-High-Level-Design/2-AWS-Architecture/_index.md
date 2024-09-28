@@ -128,8 +128,8 @@ You may be wondering about the security of connections from users to the AWS API
 
 In summary:
 
-- connections from users to AWS API Gateway are encrypted over the Internet.
-- communications between AWS Services can be either encrypted or unencrypted over AWS's private network.
+- Connections from users to AWS API Gateway are encrypted over the Internet.
+- Communications between AWS Services can be either encrypted or unencrypted over AWS's private network.
 
 {{% notice tip %}}
 For the highest level of security, it is recommended to encrypt all connections.
@@ -143,4 +143,4 @@ You might build the following AWS architecture for the AWSome Books application,
 
 *If you need complete control over the view of the image, check [here](https://drive.google.com/file/d/1YuVMfHeR6bTuoOPd-djev-ztyRLQvyeq/view?usp=sharing).*
 
- You should not be surprised by the architecture where all subnets are private and no Internet Gateway configurations. We have covered this in detail throughout this section already.
+ You now should not be surprised by the architecture where all subnets are private and no Internet Gateway configurations. We have covered this in detail throughout this section already.
