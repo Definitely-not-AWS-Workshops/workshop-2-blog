@@ -117,15 +117,16 @@ jobs:
 This GitHub Actions workflow is designed to perform release tasks when specific events occur on the repository. Let's take a high-level look at key components of the workflow.
 
 #### Events
-- **push**: triggered when a push event happens on any tag matching the pattern v*.*.* (typically indicating semantic versioning tags like v1.0.0)
+- **push**: triggered when a push event happens on any tag matching the specific pattern (typically indicating semantic versioning tags like v1.0.0)
 
 #### Concurrency
 
-Ensures that only one instance of this workflow runs for a given tag at a time, identified by the workflow name and reference. You might not want to run multiple releases in at the same time.
+Ensures that only one instance of this workflow runs for a given tag at a time, identified by the workflow name and reference. You might not want to run multiple releases in at the same time (explore more about *concurrency group* in [14. Experiments With GitHub Actions Concurrency Group](14-experiments-with-gitHub-actions-concurrency-group)).
+  
 
 #### Jobs
 **validate-version-format**:
-- This job reuses jobs or steps defined in the workflow **.github/workflows/wc-validate-version-format.yml**
+- This job reuses jobs or steps defined in the workflow **.github/workflows/wc-validate-version-format.yml**.
 - Validates the format of the version tag to ensure it follows semantic versioning.
 
 **build-image**
@@ -144,3 +145,7 @@ Ensures that only one instance of this workflow runs for a given tag at a time, 
   - Load the Docker image to Docker engine.
   - Perform image vulnerability scanning.
   - Upload the vulnerability report for review later if the scanning are not canceled.
+
+**release**
+- This job reuses jobs or steps defined in the workflow **./.github/workflows/wc-deploy.yml**.
+- It essentially automates the release of an ECS service using AWS resources defined in the workflow.

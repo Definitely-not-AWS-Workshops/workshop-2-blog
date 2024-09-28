@@ -30,4 +30,4 @@ rm -rf ./workshop-2-awsome-books/.git && cp -r ./workshop-2-awsome-books/. . && 
 code .
 ```
 
-Next, let's go through parts that need to review or change for our CI/CD pipeline.
+Next, let's go through parts that need to review or change for your CI/CD pipeline.

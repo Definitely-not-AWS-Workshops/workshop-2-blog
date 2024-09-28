@@ -61,13 +61,14 @@ jobs:
 This GitHub Actions workflow is designed to update the dependency cache for a project, specifically for Java Gradle-based projects. Let's take a high-level look at key components of the workflow.
 
 #### Events
-**push**: triggers the workflow when the merge group for a given pull request is successful and the PR is actually merged into the *main* branch.
+**push**: triggers the workflow when the *merge group* for a given pull request is successful and the PR is actually merged into the *main* branch.
 
 **workflow_dispatch:** allows the workflow to be manually started for debugging without inputs.
 
 #### Concurrency
 
-Ensures that only one instance of the workflow runs for a specific branch at a time, canceling any in-progress runs if a new one starts.
+Ensures that only one instance of the workflow runs for a specific branch at a time, canceling any in-progress runs if a new one starts (explore more about *concurrency group* in [14. Experiments With GitHub Actions Concurrency Group](14-experiments-with-gitHub-actions-concurrency-group)).
+  
 
 #### Job
 

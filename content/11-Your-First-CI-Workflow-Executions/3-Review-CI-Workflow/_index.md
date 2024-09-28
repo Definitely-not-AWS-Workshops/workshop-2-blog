@@ -220,13 +220,13 @@ This GitHub Actions workflow is designed to perform CI jobs when specific events
 
 **pull_request:** triggers the workflow for pull requests targeting the *main* branch, specifically when they are *opened*, *synchronized*, or *reopened*. It ignores changes to documentation and certain configuration files.
 
-**merge_group:** triggers the workflow when merge groups are created on the main branch.
+**merge_group:** triggers the workflow when *merge group*s are created on the *main* branch (explore more about *merge group* in [13. Experiments With GitHub Actions Merge Group](13-experiments-with-gitHub-actions-merge-group)).
 
 **workflow_dispatch:** allows the workflow to be manually started for debugging without inputs.
   
 #### Concurrency
 
-Ensures that only one instance of the workflow runs for a specific pull request at a time, canceling any in-progress runs if a new one starts for that pull request.
+Ensures that only one instance of the workflow runs for a specific pull request at a time, canceling any in-progress runs if a new one starts for that pull request (explore more about *concurrency group* in [14. Experiments With GitHub Actions Concurrency Group](14-experiments-with-gitHub-actions-concurrency-group)).
   
 #### Jobs
 

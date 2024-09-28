@@ -6,17 +6,17 @@ chapter : false
 pre : " <b> 11.5 </b> "
 ---
 
-As mentioned in the High-Level Design section, there are several reusable jobs in the Release and Rollback workflows.
+Both the Release and Rollback workflows leverage reusable jobs for efficiency:
+
+- The *Validate version format* job is ideal for reuse in both workflows to ensure consistency when handling version inputs.
+- The *Release* and *Rollback* jobs, which interact with AWS ECS and AWS CodeDeploy for deploying and rolling back project versions, can be streamlined into a reusable component through the Deploy workflow.
+   
 
 ![0001](/images/11/5/0001.svg?featherlight=false&width=100pc)
 
 ![0002](/images/11/5/0002.svg?featherlight=false&width=100pc)
 
-- **Validate version format** job can be reused in both workflows to check [semantic versioning](https://semver.org/) of the project.
-- A **Release** job (in the Release workflow) and a **Rollback** job (in the Rollback process) can be combined to create a reusable job.
-
-
-You now explore the reusable workflows.
+<!-- You now explore the reusable workflows.
 
 #### "Validate format of semantic version" Workflow
 
@@ -57,4 +57,4 @@ jobs:
           ${{ steps.scripts.outputs.path }}/validate-version-format.sh ${{ inputs.version }}
 ```
 
-#### "Deploy" Workflow
+#### "Deploy" Workflow -->
