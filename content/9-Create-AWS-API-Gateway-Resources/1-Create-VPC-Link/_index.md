@@ -22,7 +22,7 @@ pre : " <b> 9.1 </b> "
 **4.** In the **VPC link details** section,
 
 - For **Name**, enter `vpc-link-nlb`.
-- For **Target NLB**, enter the arn of Network Load Balancer named **fcj-nlb** you have created.
+- For **Target NLB**, enter the ARN of Network Load Balancer you have noted down in step **12** in [8. Create Network Load Balancer](8-create-network-load-balancer).
 
 ![0003](/images/9/1/0003.svg?featherlight=false&width=100pc)
 

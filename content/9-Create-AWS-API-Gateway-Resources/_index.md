@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 9. </b> "
 ---
 
-You are going to create an AWS API Gateway with REST APIs type for maintaining and exposing the application's RESTful APIs, since the ALB is used for general web traffic load balancing. Setting up the VPC Link is also necessary for private integration with the VPC's private resources.
+Since the ALB is used for general web traffic load balancing, you are going to create an AWS API Gateway with REST APIs type for maintaining and exposing the application's RESTful APIs. Setting up the VPC Link is also necessary for private integration with the VPC's private resources.
 
 #### Content
 

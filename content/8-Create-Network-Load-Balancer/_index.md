@@ -63,7 +63,7 @@ You next create a Network Load Balancer that passes through the unencrypted traf
 
 ![00010](/images/8/00010.svg?featherlight=false&width=100pc)
 
-**12.** Note down the DNS name of Network Load balancer for later use.
+**12.** Note down the ARN and DNS name of Network Load balancer for later use.
 
 ![00011](/images/8/00011.svg?featherlight=false&width=100pc)
 
