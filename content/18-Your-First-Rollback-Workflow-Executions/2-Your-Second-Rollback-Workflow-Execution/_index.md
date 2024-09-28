@@ -46,6 +46,6 @@ In the absence of the **books** resource, the response might be the private IP a
 
 ![0008](/images/18/2/0008.svg?featherlight=false&width=100pc)
 
-**8.** Additionally, the **gha-release** channel will likely receive a success notification for your Release workflow.
+**8.** Additionally, the **gha-release** channel will likely receive a success notification for your Rollback workflow.
 
 ![0009](/images/18/2/0009.svg?featherlight=false&width=100pc)

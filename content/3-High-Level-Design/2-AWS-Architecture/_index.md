@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
-While the AWSDSC-XUT team will focus on building advanced features, you are going to concentrate on optimizing the core infrastructure for seamless operations and scalability. With a minimal working version of the [AWSome Books]() already in place, your goal is to recommend and deploy the essential AWS services needed to efficiently run a containerized RESTful API application at scale.
+While the AWSDSC-XUT team will focus on building advanced features, you are going to concentrate on optimizing the core infrastructure for seamless operations and scalability. With a minimal working version of the [AWSome Books](https://github.com/Definitely-not-AWS-Workshops/workshop-2-awsome-books) already in place, your goal is to recommend and deploy the essential AWS services needed to efficiently run a containerized RESTful API application at scale.
 
 Before we dive into the AWSome Books AWS architecture, let's first examine the key AWS services that can effortlessly support a containerized RESTful API application.
 
@@ -14,9 +14,9 @@ Before we dive into the AWSome Books AWS architecture, let's first examine the k
 
 **AWS RDS**
 
-![0001](/images/3/2/0001.svg?featherlight=false&width=4pc)
-
 [AWS RDS](https://docs.aws.amazon.com/rds/) simplifies the setup, operation, and scaling of relational databases in the cloud, offering cost-efficient, resizable capacity while handling common administrative tasks.
+
+![0001](/images/3/2/0001.svg?featherlight=false&width=4pc)
 
 The AWSome Books project leverages PostgreSQL as its relational database, fully supported by Amazon RDS. By enabling [Multi-AZ instance deployments](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZSingleStandby.html), AWS RDS ensures high availability and automatic failover, offering robust support and resilience for your database with a standby instance in another availability zone.
 
@@ -82,7 +82,7 @@ The [AWS Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing
 
 The AWSDSC-XUT team aims to make the AWS ALB internal and accessible only through the AWS API Gateway with REST APIs type. REST APIs type, however, lacks built-in support for direct integration with an internal ALB. To solve this, you set up a VPC Link in API Gateway and use an AWS NLB as a pass-through service to seamlessly proxy requests from the VPC Link to the internal ALB.
 
-**AWS Certificate Manager**
+<!-- **AWS Certificate Manager**
 
 [AWS Certificate Manager](https://docs.aws.amazon.com/acm/) (ACM) helps you to provision, manage, and renew publicly trusted TLS certificates on AWS based websites.
 
@@ -94,13 +94,23 @@ AWS Certificate Manager integrates seamlessly with AWS API Gateway to secure use
 
 [AWS Cognito](https://docs.aws.amazon.com/cognito/) simplifies user authentication and authorization for your web and mobile apps. With user pools, you can effortlessly add secure sign-up and sign-in capabilities, while identity pools (federated identities) provide temporary credentials for users to access specific AWS resources—whether they are signed in or browsing anonymously."
 
-![00010](/images/3/2/00010.svg?featherlight=false&width=4pc)
+![00010](/images/3/2/00010.svg?featherlight=false&width=4pc) -->
 
 **AWS CodeDeploy**
 
 [AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/) is a deployment service that enables developers to automate the deployment of applications to instances and to update the applications as required.
 
 ![00011](/images/3/2/00011.svg?featherlight=false&width=4pc)
+
+AWS CodeDeploy offers built-in support for Blue/Green deployments with ECS tasks, saving you the hassle of building a custom solution from scratch. Simplify your deployments and focus on scaling your applications with ease!
+
+**AWS Chatbot**
+
+[AWS Chatbot](https://docs.aws.amazon.com/chatbot/) allows you to monitor and respond to AWS operational events directly in Amazon Chime, Microsoft Teams, or Slack. It processes events from Amazon SNS, delivers notifications to chat channels, and supports AWS User Notifications. With AWS Chatbot, you can diagnose issues, run CLI commands, retrieve resource info, and identify remediation paths through a conversational interface.
+
+![00012](/images/3/2/00012.svg?featherlight=false&width=4pc)
+
+While AWS Chatbot offers great potential, the AWSDSC-XUT team might want to start by centralizing AWS CodeDeploy notifications to Slack, alongside GitHub Actions workflow notifications, for a more streamlined approach.
 
 #### The Security of Connections
 
