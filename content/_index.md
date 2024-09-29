@@ -69,7 +69,7 @@ To participate in this workshop, the following prerequisites are recommended:
 You do not need deep knowledge on any of these, and if needed, you can research them as you go!
 
 #### Duration
-The estimated duration for completing this workshop is **around 8 hours**.
+The estimated duration for completing this workshop is **around 6 hours**.
 
 #### Costs
 The services used in this workshop charge per usage, although most of them have a free tier, so unless you used the free tier for other workloads, it will cost you **around $2.0** to run this workshop. Please look at the different services' pricing pages to see their cost.
