@@ -34,7 +34,7 @@ I believe the word "DevOps" involves more than just toolings; it is about cultiv
 
 This workshop is inspired my own ideas and one of my favorite books, [continuous delivery](https://www.amazon.co.uk/Grokking-Continuous-Delivery-Christie-Wilson/dp/1617298255) by [Christie Wilson](https://www.linkedin.com/in/christieawilson/?originalSubdomain=ca). This book explores the essentials of continuous delivery and provides practical examples for applying these concepts. Give it a read if you are interested in accelerating the software delivery process with any stack.
 
-![0002](/images/0/0001.jpg?featherlight=false&width=18pc)
+![0002](/images/0/0002.svg?featherlight=false&width=18pc)
 
 {{% notice note %}}
 You should work more on setting up and configuring this workshop to fit your needs and your projects.
